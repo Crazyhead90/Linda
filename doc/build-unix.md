@@ -126,9 +126,7 @@ symbols, which reduces the executable size by about 90%.
 ```
         sudo apt-get install libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev
 ```
-```
-	sudo apt-get install libboost-all-dev
-```
+
 4) Install the db4.8 packages:
 ```
     sudo add-apt-repository ppa:bitcoin/bitcoin
