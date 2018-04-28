@@ -46,7 +46,7 @@ Dependency Build Instructions: Ubuntu & Debian
 ----------------------------------------------
 Build requirements:
 
-    sudo apt-get install build-essential libtool automake autotools-dev autoconf pkg-config libssl-dev libgmp3-dev libevent-dev bsdmainutils
+    sudo apt-get install build-essential libtool automake autotools-dev autoconf pkg-config libssl-dev libgmp3-dev libevent-dev bsdmainutils python
 
 On at least Ubuntu 14.04+ and Debian 7+ there are generic names for the
 individual boost development packages, so the following can be used to only
@@ -85,7 +85,7 @@ pass `--with-incompatible-bdb` to configure.
 
 To build Secp256k1:
 
-    cd src/secp256k1/ && ./configure && make
+    cd src/secp256k1/ && chmod +x ./autogen.sh && ./autogen.sh && ./configure && make
     sudo make install
     sudo ldconfig
 
@@ -111,7 +111,6 @@ libqrencode (optional) can be installed with:
 Once these are installed, they will be found by configure and a Linda-qt executable will be
 built by default.
 
-```
 
 Notes
 -----
@@ -120,39 +119,50 @@ Notes
 2) The release is built with GCC and then "strip transferd" to strip the debug
 symbols, which reduces the executable size by about 90%.
 
-If you get an error about secp256k1
-cd secp256k1/
-./autogen.sh
-./configure.sh
-make
-cd ..
-make -f makefile.unix
-strip Lindad
-
+3) Build requirements:
+```
+    sudo apt-get install build-essential libtool automake autotools-dev autoconf pkg-config libssl-dev libgmp3-dev libevent-dev bsdmainutils python
+```
+```
+        sudo apt-get install libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev
+```
+```
+	sudo apt-get install libboost-all-dev
+```
+4) Install the db4.8 packages:
+```
+    sudo add-apt-repository ppa:bitcoin/bitcoin
+    sudo apt-get update
+    sudo apt-get install libdb4.8-dev libdb4.8++-dev
+```
+5) Build Secp256k1:
+```    
+    cd src/secp256k1/ && chmod +x ./autogen.sh && ./autogen.sh && ./configure && make
+```
+6) Make build_detect_platform executable:
+```
+    chmod +x src/leveldb/build_detect_platform
+```    
 To Build Lindad
 --------
 
 With UPNP:
-
+```
     cd src && \
     make -f makefile.unix && \
     strip Lindad
-
+```
 (Recommended) Without UPNP:
-
+```
     cd src && \
     make -f makefile.unix USE_UPNP= && \
     strip Lindad
-
+```
 To Build Linda-QT
 --------
 
-With UPNP:
-    qmake -qt=qt5 && \
-    make \
-
 (Recommended) Without UPNP:
-
+```
     qmake -qt=qt5 USE_UPNP=- && \
     make \
 ```
