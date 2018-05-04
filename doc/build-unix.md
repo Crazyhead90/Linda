@@ -6,165 +6,6 @@ the OpenSSL Toolkit (http://www.openssl.org/).  This product includes
 cryptographic software written by Eric Young (eay@cryptsoft.com) and UPnP
 software written by Thomas Bernard.
 
-
-UNIX BUILD NOTES
-================
-
-Dependencies
----------------------
-
-These dependencies are required:
-
- Library     | Purpose          | Description
- ------------|------------------|----------------------
- libssl      | Crypto           | Random Number Generation
- libgmp      | Secp256k1        | Secp256k1 Dependency
- libboost    | Utility          | Library for threading, data structures, etc
- libevent    | Networking       | OS independent asynchronous networking
- libdb4.8    | Berkeley DB      | Wallet storage (only needed when wallet enabled)
- libsecp256k1| Secp256k1        | Elliptic Curve Cryptography
-
-Optional dependencies:
-
- Library     | Purpose          | Description
- ------------|------------------|----------------------
- miniupnpc   | UPnP Support     | Firewall-jumping support
- qt          | GUI              | GUI toolkit (only needed when GUI enabled)
- protobuf    | Payments in GUI  | Data interchange format used for payment protocol (only needed when GUI enabled)
- libqrencode | QR codes in GUI  | Optional for generating QR codes (only needed when GUI enabled)
-
-For the versions used in the release, see [release-process.md](release-process.md) under *Fetch and build inputs*.
-
-System requirements
---------------------
-
-C++ compilers are memory-hungry. It is recommended to have at least 1 GB of
-memory available when compiling LindaCoin Core. With 512MB of memory or less
-compilation will take much longer due to swap thrashing.
-
-Dependency Build Instructions: Ubuntu & Debian
-----------------------------------------------
-Build requirements:
-
-    sudo apt-get install build-essential libtool automake autotools-dev autoconf pkg-config libssl-dev libgmp3-dev libevent-dev bsdmainutils python
-
-On at least Ubuntu 14.04+ and Debian 7+ there are generic names for the
-individual boost development packages, so the following can be used to only
-install necessary parts of boost:
-
-    sudo apt-get install libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev
-
-If that doesn't work, you can install all boost development packages with:
-
-    sudo apt-get install libboost-all-dev
-
-BerkeleyDB is required for the wallet. db4.8 packages are available [here](https://launchpad.net/~bitcoin/+archive/bitcoin).
-You can add the repository and install using the following commands:
-
-    sudo add-apt-repository ppa:bitcoin/bitcoin
-    sudo apt-get update
-    sudo apt-get install libdb4.8-dev libdb4.8++-dev
-    
-If that does not work alternatively download and compile: 
-    
-    cd ~
-    mkdir bitcoin/db4/
-    
-    wget 'http://download.oracle.com/berkeley-db/db-4.8.30.NC.tar.gz'
-    tar -xzvf db-4.8.30.NC.tar.gz
-    cd db-4.8.30.NC/build_unix/
-    ../dist/configure --enable-cxx
-    make
-    sudo make install
-
- 
-Ubuntu and Debian have their own libdb-dev and libdb++-dev packages, but these will install
-BerkeleyDB 5.1 or later, which break binary wallet compatibility with the distributed executables which
-are based on BerkeleyDB 4.8. If you do not care about wallet compatibility,
-pass `--with-incompatible-bdb` to configure.
-
-To build Secp256k1:
-
-    cd src/secp256k1/ && chmod +x ./autogen.sh && ./autogen.sh && ./configure && make
-    sudo make install
-    sudo ldconfig
-
-Optional:
-
-    sudo apt-get install libminiupnpc-dev (see --with-miniupnpc and --enable-upnp-default)
-
-Dependencies for the GUI: Ubuntu & Debian
------------------------------------------
-
-If you want to build Linda-Qt, make sure that the required packages for Qt development
-are installed. Qt 5 is necessary to build the GUI.
-If both Qt 4 and Qt 5 are installed, Qt 5 will be used.
-
-To build with Qt 5 (recommended) you need the following:
-
-    sudo apt-get install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler
-
-libqrencode (optional) can be installed with:
-
-    sudo apt-get install libqrencode-dev
-
-Once these are installed, they will be found by configure and a Linda-qt executable will be
-built by default.
-
-
-Notes
------
-1) You only need Berkeley DB if the wallet is enabled (see the section *Disable-Wallet mode* below).
-
-2) The release is built with GCC and then "strip transferd" to strip the debug
-symbols, which reduces the executable size by about 90%.
-
-3) Build requirements:
-```
-    sudo apt-get install build-essential libtool automake autotools-dev autoconf pkg-config libssl-dev libgmp3-dev libevent-dev bsdmainutils python
-```
-```
-        sudo apt-get install libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev
-```
-
-4) Install the db4.8 packages:
-```
-    sudo add-apt-repository ppa:bitcoin/bitcoin
-    sudo apt-get update
-    sudo apt-get install libdb4.8-dev libdb4.8++-dev
-```
-5) Build Secp256k1:
-```    
-    cd src/secp256k1/ && chmod +x ./autogen.sh && ./autogen.sh && ./configure && make
-```
-6) Make build_detect_platform executable:
-```
-    chmod +x src/leveldb/build_detect_platform
-```    
-To Build Lindad
---------
-
-With UPNP:
-```
-    cd src && \
-    make -f makefile.unix && \
-    strip Lindad
-```
-(Recommended) Without UPNP:
-```
-    cd src && \
-    make -f makefile.unix USE_UPNP= && \
-    strip Lindad
-```
-To Build Linda-QT
---------
-
-(Recommended) Without UPNP:
-```
-    qmake -qt=qt5 USE_UPNP=- && \
-    make \
-```
-
 # STATIC BUILD INSTRUCTIONS
 The following instructions have been tested on the following distributions:
 
@@ -177,16 +18,19 @@ The advantage of building the wallet this way is that it will be able to be exec
 
 Open a terminal window. If git is not installed in your system, install it by issuing the following command
 ```
-sudo apt-get install git
+sudo apt install git
 ```
 Install Linux development tools 
 ```
-sudo apt-get install build-essential libtool automake autotools-dev autoconf pkg-config libgmp3-dev libevent-dev bsdmainutils
+sudo apt-get install build-essential libtool automake autotools-dev autoconf pkg-config libgmp3-dev libevent-dev bsdmainutils 
+```
+```
+sudo apt-get install libxcb-randr0-dev libxcb-xtest0-dev libxcb-xinerama0-dev libxcb-shape0-dev libxcb-xkb-dev libx11-dev 
 ```
 ## Compile all dependencies manually and use their static libs
 ### Download and build BerkeleyDB 5.0.32.NC
 ```
-cd ~/
+cd ~/deps
 wget 'http://download.oracle.com/berkeley-db/db-5.0.32.NC.tar.gz'
 tar -xzvf db-5.0.32.NC.tar.gz
 cd db-5.0.32.NC/build_unix/
@@ -203,6 +47,7 @@ Put the archive in ~/deps
 
 ```
 cd ~/deps
+wget https://sourceforge.net/projects/boost/files/boost/1.58.0/boost_1_58_0.tar.gz
 tar xvfz boost_1_58_0.tar.gz
 cd ~/deps/boost_1_58_0
 ./bootstrap.sh
@@ -217,10 +62,13 @@ Install Miniupnpc. Download it from here http://miniupnp.free.fr/files/download.
 and place it in your deps folder, then :
 ```
 cd ~/deps
+
+wget http://miniupnp.free.fr/files/download.php?file=miniupnpc-1.9.tar.gz
+
 tar xvfz miniupnpc-1.9.tar.gz
 
 cd miniupnpc-1.9
-make init upnpc-static
+make upnpc-static
 ```
 ==> Important : don't forget to rename "miniupnpc-1.9" directory to "miniupnpc"
 
@@ -229,6 +77,8 @@ make init upnpc-static
 download 1.0.2g version here : https://www.openssl.org/source/old/1.0.2/openssl-1.0.2g.tar.gz<br>
 place archive in deps folders then :
 ```
+cd ~/deps
+wget https://www.openssl.org/source/old/1.0.2/openssl-1.0.2g.tar.gz
 tar xvfz openssl-1.0.2g.tar.gz
 cd openssl-1.0.2g 
 ./config no-shared no-dso
@@ -241,14 +91,21 @@ Download QT 5.4.2 sources
 https://download.qt.io/archive/qt/5.4/5.4.2/single/qt-everywhere-opensource-src-5.4.2.tar.gz<br>
 Extract in deps folder
 ```
+cd ~/deps
+
+wget https://download.qt.io/archive/qt/5.4/5.4.2/single/qt-everywhere-opensource-src-5.4.2.tar.gz
+
 tar xvfz qt-everywhere-opensource-src-5.4.2.tar.gz
 ```
 after everything is extracted, create another directory where static libs will be installed. 
 For example, i created ~/deps/Qt/5.4.2_static and used that directory in configure command below (it may take a while) :
 ```
-cd ~/deps/qt-everywhere-opensource-src-5.4.2
+mkdir ~/deps/Qt/5.4.2_static
 
-./configure -static -opensource -release -confirm-license -no-compile-examples -nomake tests -prefix ~/deps/Qt/5.4.2_static -qt-zlib -qt-libpng -no-libjpeg -qt-xcb -qt-freetype -qt-pcre -qt-harfbuzz -largefile -no-openssl -gtkstyle -skip wayland -skip qtserialport -skip script -pulseaudio -alsa -c++11 -nomake tools
+cd ~/deps/qt-everywhere-opensource-src-5.4.2
+```
+```
+./configure -static -opensource -release -confirm-license -no-compile-examples -nomake tests -prefix ~/deps/Qt/5.4.2_static -qt-zlib -qt-libpng -no-libjpeg -qt-xcb -qt-freetype -qt-pcre -qt-harfbuzz -largefile -no-openssl -gtkstyle -skip wayland -skip qtserialport -skip script -alsa -c++11 -nomake tools -continue
 ```
 After it successfuly ends :
 ```
@@ -274,6 +131,7 @@ make libleveldb.a libmemenv.a
 build libsecp256k1
 ```
 cd ~/Linda/src/secp256k1
+chmod +x autogen.sh
 ./autogen.sh
 ./configure --enable-static --disable-shared
 make
