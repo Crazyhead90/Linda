@@ -1,7 +1,3 @@
-/*
- * W.J. van der Laan 2011-2012
- */
-
 #include <QApplication>
 
 #include "bitcoingui.h"
@@ -19,24 +15,44 @@
 #include "macdockiconhandler.h"
 #endif
 
+#include <QApplication>
+#include <QDebug>
+#include <QLibraryInfo>
+#include <QLocale>
 #include <QMessageBox>
+#include <QSettings>
+#include <QThread>
 #include <QTextCodec>
 #include <QLocale>
 #include <QTimer>
 #include <QTranslator>
 #include <QSplashScreen>
-#include <QLibraryInfo>
 
-#if defined(BITCOIN_NEED_QT_PLUGINS) && !defined(_BITCOIN_QT_PLUGINS_INCLUDED)
-#define _BITCOIN_QT_PLUGINS_INCLUDED
-#define __INSURE__
+
+#if defined(QT_STATICPLUGIN)
 #include <QtPlugin>
+#if QT_VERSION < 0x050000
 Q_IMPORT_PLUGIN(qcncodecs)
 Q_IMPORT_PLUGIN(qjpcodecs)
 Q_IMPORT_PLUGIN(qtwcodecs)
 Q_IMPORT_PLUGIN(qkrcodecs)
 Q_IMPORT_PLUGIN(qtaccessiblewidgets)
+#else
+Q_IMPORT_PLUGIN(AccessibleFactory)
+#if defined(QT_QPA_PLATFORM_XCB)
+Q_IMPORT_PLUGIN(QXcbIntegrationPlugin);
+#elif defined(QT_QPA_PLATFORM_WINDOWS)
+Q_IMPORT_PLUGIN(QWindowsIntegrationPlugin);
+#elif defined(QT_QPA_PLATFORM_COCOA)
+Q_IMPORT_PLUGIN(QCocoaIntegrationPlugin);
 #endif
+#endif
+#endif
+
+#if QT_VERSION < 0x050000
+#include <QTextCodec>
+#endif
+
 
 // Need a global reference for the notifications to find the GUI
 static BitcoinGUI *guiref;
@@ -80,9 +96,20 @@ static bool ThreadSafeAskFee(int64_t nFeeRequired, const std::string& strCaption
 
 static void InitMessage(const std::string &message)
 {
+    const QColor splashTextColor = QColor(35,35,35);
+
     if(splashref)
     {
-        splashref->showMessage(QString::fromStdString(message), Qt::AlignBottom|Qt::AlignHCenter, QColor(232,186,63));
+        // Ensure bold text for static object
+        if (!splashref->font().bold())
+        {
+            QFont newFont = splashref->font();
+            newFont.setBold(true);
+            splashref->setFont(newFont);
+        }
+
+        // Paint text
+        splashref->showMessage(QString::fromStdString(message), Qt::AlignBottom|Qt::AlignHCenter, splashTextColor);
         QApplication::instance()->processEvents();
     }
     LogPrintf("init message: %s\n", message);
@@ -101,7 +128,7 @@ static std::string Translate(const char* psz)
 static void handleRunawayException(std::exception *e)
 {
     PrintExceptionContinue(e, "Runaway exception");
-    QMessageBox::critical(0, "Runaway exception", BitcoinGUI::tr("A fatal error occurred. BlackCoin can no longer continue safely and will quit.") + QString("\n\n") + QString::fromStdString(strMiscWarning));
+    QMessageBox::critical(0, "Runaway exception", BitcoinGUI::tr("A fatal error occurred. Clam can no longer continue safely and will quit.") + QString("\n\n") + QString::fromStdString(strMiscWarning));
     exit(1);
 }
 
@@ -115,6 +142,7 @@ void DebugMessageHandler(QtMsgType type, const char * msg)
 #else
 void DebugMessageHandler(QtMsgType type, const QMessageLogContext& context, const QString &msg)
 {
+    Q_UNUSED(context);
     const char *category = (type == QtDebugMsg) ? "qt" : NULL;
     LogPrint(category, "GUI: %s\n", msg.toStdString());
 }
@@ -160,7 +188,7 @@ int main(int argc, char *argv[])
     {
         // This message can not be translated, as translation is not initialized yet
         // (which not yet possible because lang=XX can be overridden in bitcoin.conf in the data directory)
-        QMessageBox::critical(0, "BlackCoin",
+        QMessageBox::critical(0, "Clam",
                               QString("Error: Specified data directory \"%1\" does not exist.").arg(QString::fromStdString(mapArgs["-datadir"])));
         return 1;
     }
@@ -168,12 +196,12 @@ int main(int argc, char *argv[])
 
     // Application identification (must be set before OptionsModel is initialized,
     // as it is used to locate QSettings)
-    app.setOrganizationName("BlackCoin");
+    app.setOrganizationName("Clam");
     //XXX app.setOrganizationDomain("");
     if(GetBoolArg("-testnet", false)) // Separate UI settings for testnet
-        app.setApplicationName("BlackCoin-Qt-testnet");
+        app.setApplicationName("Clam-Qt-testnet");
     else
-        app.setApplicationName("BlackCoin-Qt");
+        app.setApplicationName("Clam-Qt");
 
     // ... then GUI settings:
     OptionsModel optionsModel;
@@ -241,9 +269,6 @@ int main(int argc, char *argv[])
 
     try
     {
-        if (fUseBlackTheme)
-            GUIUtil::SetBlackThemeQSS(app);
-
         // Regenerate startup link, to fix links to old versions
         if (GUIUtil::GetStartOnSystemStartup())
             GUIUtil::SetStartOnSystemStartup(true);
@@ -276,22 +301,18 @@ int main(int argc, char *argv[])
 
                 // If -min option passed, start window minimized.
                 if(GetBoolArg("-min", false))
-                {
                     window.showMinimized();
-                }
-                else
-                {
-                    window.show();
-                }
 
                 // Now that initialization/startup is done, process any command-line
                 // bitcoin: URIs
                 QObject::connect(paymentServer, SIGNAL(receivedURI(QString)), &window, SLOT(handleURI(QString)));
                 QTimer::singleShot(100, paymentServer, SLOT(uiReady()));
 
+                // tell BitcoinGUI the backend is finished
+                QTimer::singleShot(100, &window, SLOT(uiReady()));
+
                 app.exec();
 
-                window.hide();
                 window.setClientModel(0);
                 window.setWalletModel(0);
                 guiref = 0;

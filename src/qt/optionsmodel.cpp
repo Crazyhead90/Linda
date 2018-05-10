@@ -1,3 +1,7 @@
+#if defined(HAVE_CONFIG_H)
+#include "bitcoin-config.h"
+#endif
+
 #include "optionsmodel.h"
 
 #include "bitcoinunits.h"
@@ -6,9 +10,15 @@
 #include "walletdb.h"
 #include "guiutil.h"
 
+#include <QDebug>
 #include <QSettings>
 
-bool fUseBlackTheme;
+// shared UI settings in guiutil.h
+bool fUseClamTheme;
+bool fUseClamSpeech;
+bool fUseClamSpeechRandom;
+int nClamSpeechIndex;
+int nStyleSheetVersion;
 
 OptionsModel::OptionsModel(QObject *parent) :
     QAbstractListModel(parent)
@@ -20,17 +30,21 @@ bool static ApplyProxySettings()
 {
     QSettings settings;
     CService addrProxy(settings.value("addrProxy", "127.0.0.1:9050").toString().toStdString());
+    int nSocksVersion(settings.value("nSocksVersion", 5).toInt());
     if (!settings.value("fUseProxy", false).toBool()) {
         addrProxy = CService();
+        nSocksVersion = 0;
         return false;
     }
-    if (!addrProxy.IsValid())
+    if (nSocksVersion && !addrProxy.IsValid())
         return false;
     if (!IsLimited(NET_IPV4))
-        SetProxy(NET_IPV4, addrProxy);
-    if (!IsLimited(NET_IPV6))
-        SetProxy(NET_IPV6, addrProxy);
-    SetNameProxy(addrProxy);
+        SetProxy(NET_IPV4, addrProxy, nSocksVersion);
+    if (nSocksVersion > 4) {
+        if (!IsLimited(NET_IPV6))
+            SetProxy(NET_IPV6, addrProxy, nSocksVersion);
+        SetNameProxy(addrProxy, nSocksVersion);
+    }
     return true;
 }
 
@@ -46,7 +60,11 @@ void OptionsModel::Init()
     nTransactionFee = settings.value("nTransactionFee").toLongLong();
     nReserveBalance = settings.value("nReserveBalance").toLongLong();
     language = settings.value("language", "").toString();
-    fUseBlackTheme = settings.value("fUseBlackTheme", true).toBool();
+    fUseClamTheme = settings.value("fUseClamTheme", true).toBool();
+    fUseClamSpeech = settings.value("fUseClamSpeech", true).toBool();
+    fUseClamSpeechRandom = settings.value("fUseClamSpeechRandom", true).toBool();
+    nClamSpeechIndex = settings.value("nClamSpeechIndex", 0).toInt();
+    nStyleSheetVersion = settings.value("nStyleSheetVersion", 0).toInt();
 
     // These are shared with core Bitcoin; we want
     // command-line options to override the GUI settings:
@@ -54,8 +72,14 @@ void OptionsModel::Init()
         SoftSetBoolArg("-upnp", settings.value("fUseUPnP").toBool());
     if (settings.contains("addrProxy") && settings.value("fUseProxy").toBool())
         SoftSetArg("-proxy", settings.value("addrProxy").toString().toStdString());
+    if (settings.contains("nSocksVersion") && settings.value("fUseProxy").toBool())
+        SoftSetArg("-socks", settings.value("nSocksVersion").toString().toStdString());
+    if (settings.contains("fMinimizeCoinAge"))
+        SoftSetBoolArg("-minimizecoinage", settings.value("fMinimizeCoinAge").toBool());
     if (!language.isEmpty())
         SoftSetArg("-lang", language.toStdString());
+
+    qDebug() << "QSettings loaded.";
 }
 
 int OptionsModel::rowCount(const QModelIndex & parent) const
@@ -83,17 +107,19 @@ QVariant OptionsModel::data(const QModelIndex & index, int role) const
         case ProxyIP: {
             proxyType proxy;
             if (GetProxy(NET_IPV4, proxy))
-                return QVariant(QString::fromStdString(proxy.ToStringIP()));
+                return QVariant(QString::fromStdString(proxy.first.ToStringIP()));
             else
                 return QVariant(QString::fromStdString("127.0.0.1"));
         }
         case ProxyPort: {
             proxyType proxy;
             if (GetProxy(NET_IPV4, proxy))
-                return QVariant(proxy.GetPort());
+                return QVariant(proxy.first.GetPort());
             else
                 return QVariant(9050);
         }
+        case ProxySocksVersion:
+            return settings.value("nSocksVersion", 5);
         case Fee:
             return QVariant((qint64) nTransactionFee);
         case ReserveBalance:
@@ -104,8 +130,16 @@ QVariant OptionsModel::data(const QModelIndex & index, int role) const
             return settings.value("language", "");
         case CoinControlFeatures:
             return QVariant(fCoinControlFeatures);
-        case UseBlackTheme:
-            return QVariant(fUseBlackTheme);
+        case MinimizeCoinAge:
+            return settings.value("fMinimizeCoinAge", GetBoolArg("-minimizecoinage", false));
+        case UseClamTheme:
+            return QVariant(fUseClamTheme);
+        case UseClamSpeech:
+            return QVariant(fUseClamSpeech);
+        case UseClamSpeechRandom:
+            return QVariant(fUseClamSpeechRandom);
+        case ClamSpeechIndex:
+            return QVariant(nClamSpeechIndex);
         default:
             return QVariant();
         }
@@ -142,25 +176,35 @@ bool OptionsModel::setData(const QModelIndex & index, const QVariant & value, in
             break;
         case ProxyIP: {
             proxyType proxy;
-            proxy = CService("127.0.0.1", 9050);
+            proxy.first = CService("127.0.0.1", 9050);
             GetProxy(NET_IPV4, proxy);
 
             CNetAddr addr(value.toString().toStdString());
-            proxy.SetIP(addr);
-            settings.setValue("addrProxy", proxy.ToStringIPPort().c_str());
+            proxy.first.SetIP(addr);
+            settings.setValue("addrProxy", proxy.first.ToStringIPPort().c_str());
             successful = ApplyProxySettings();
-        }
-        break;
+            }
+            break;
         case ProxyPort: {
             proxyType proxy;
-            proxy = CService("127.0.0.1", 9050);
+            proxy.first = CService("127.0.0.1", 9050);
             GetProxy(NET_IPV4, proxy);
 
-            proxy.SetPort(value.toInt());
-            settings.setValue("addrProxy", proxy.ToStringIPPort().c_str());
+            proxy.first.SetPort(value.toInt());
+            settings.setValue("addrProxy", proxy.first.ToStringIPPort().c_str());
             successful = ApplyProxySettings();
-        }
-        break;
+            }
+            break;
+        case ProxySocksVersion: {
+            proxyType proxy;
+            proxy.second = 5;
+            GetProxy(NET_IPV4, proxy);
+
+            proxy.second = value.toInt();
+            settings.setValue("nSocksVersion", proxy.second);
+            successful = ApplyProxySettings();
+            }
+            break;
         case Fee:
             nTransactionFee = value.toLongLong();
             settings.setValue("nTransactionFee", (qint64) nTransactionFee);
@@ -185,9 +229,25 @@ bool OptionsModel::setData(const QModelIndex & index, const QVariant & value, in
             emit coinControlFeaturesChanged(fCoinControlFeatures);
             }
             break;
-        case UseBlackTheme:
-            fUseBlackTheme = value.toBool();
-            settings.setValue("fUseBlackTheme", fUseBlackTheme);
+        case MinimizeCoinAge:
+            fMinimizeCoinAge = value.toBool();
+            settings.setValue("fMinimizeCoinAge", fMinimizeCoinAge);
+            break;
+        case UseClamTheme:
+            fUseClamTheme = value.toBool();
+            settings.setValue("fUseClamTheme", fUseClamTheme);
+            break;
+        case UseClamSpeech:
+            fUseClamSpeech = value.toBool();
+            settings.setValue("fUseClamSpeech", fUseClamSpeech);
+            break;
+        case UseClamSpeechRandom:
+            fUseClamSpeechRandom = value.toBool();
+            settings.setValue("fUseClamSpeechRandom", fUseClamSpeechRandom);
+            break;
+        case ClamSpeechIndex:
+            nClamSpeechIndex = value.toInt();
+            settings.setValue("nClamSpeechIndex", nClamSpeechIndex);
             break;
         default:
             break;

@@ -20,8 +20,6 @@ WalletModel::WalletModel(CWallet *wallet, OptionsModel *optionsModel, QObject *p
     cachedEncryptionStatus(Unencrypted),
     cachedNumBlocks(0)
 {
-    fForceCheckBalanceChanged = false;
-
     addressTableModel = new AddressTableModel(wallet, this);
     transactionTableModel = new TransactionTableModel(wallet, this);
 
@@ -69,6 +67,16 @@ qint64 WalletModel::getImmatureBalance() const
     return wallet->GetImmatureBalance();
 }
 
+int WalletModel::getNumTransactions() const
+{
+    int numTransactions = 0;
+    {
+        LOCK(wallet->cs_wallet);
+        numTransactions = wallet->mapWallet.size();
+    }
+    return numTransactions;
+}
+
 void WalletModel::updateStatus()
 {
     EncryptionStatus newEncryptionStatus = getEncryptionStatus();
@@ -89,10 +97,8 @@ void WalletModel::pollBalanceChanged()
     if(!lockWallet)
         return;
 
-    if(fForceCheckBalanceChanged || nBestHeight != cachedNumBlocks)
+    if(nBestHeight != cachedNumBlocks)
     {
-        fForceCheckBalanceChanged = false;
-
         // Balance and number of transactions might have changed
         cachedNumBlocks = nBestHeight;
 
@@ -125,7 +131,14 @@ void WalletModel::updateTransaction(const QString &hash, int status)
         transactionTableModel->updateTransaction(hash, status);
 
     // Balance and number of transactions might have changed
-    fForceCheckBalanceChanged = true;
+    checkBalanceChanged();
+
+    int newNumTransactions = getNumTransactions();
+    if(cachedNumTransactions != newNumTransactions)
+    {
+        cachedNumTransactions = newNumTransactions;
+        emit numTransactionsChanged(newNumTransactions);
+    }
 }
 
 void WalletModel::updateAddressBook(const QString &address, const QString &label, bool isMine, int status)
@@ -140,7 +153,7 @@ bool WalletModel::validateAddress(const QString &address)
     return addressParsed.IsValid();
 }
 
-WalletModel::SendCoinsReturn WalletModel::sendCoins(const QList<SendCoinsRecipient> &recipients, const CCoinControl *coinControl)
+WalletModel::SendCoinsReturn WalletModel::sendCoins(const QString &clamspeech, const QList<SendCoinsRecipient> &recipients, const CCoinControl *coinControl)
 {
     qint64 total = 0;
     QSet<QString> setAddress;
@@ -199,9 +212,14 @@ WalletModel::SendCoinsReturn WalletModel::sendCoins(const QList<SendCoinsRecipie
         CWalletTx wtx;
         CReserveKey keyChange(wallet);
         int64_t nFeeRequired = 0;
-        bool fCreated = wallet->CreateTransaction(vecSend, wtx, keyChange, nFeeRequired, coinControl);
+	
 
-        if(!fCreated)
+       	std::string strCLAMSpeech = clamspeech.toStdString();
+        if (!strCLAMSpeech.empty())
+            strCLAMSpeech = strCLAMSpeech;
+
+        bool fCreated = wallet->CreateTransaction(vecSend, wtx, keyChange, nFeeRequired, strCLAMSpeech, coinControl);
+ 	if(!fCreated)
         {
             if((total + nFeeRequired) > nBalance) // FIXME: could cause collisions in the future
             {
@@ -238,7 +256,6 @@ WalletModel::SendCoinsReturn WalletModel::sendCoins(const QList<SendCoinsRecipie
             }
         }
     }
-    checkBalanceChanged(); // update balance immediately, otherwise there could be a short noticeable delay until pollBalanceChanged hits
 
     return SendCoinsReturn(OK, 0, hex);
 }
@@ -408,6 +425,49 @@ void WalletModel::UnlockContext::CopyFrom(const UnlockContext& rhs)
     rhs.relock = false;
 }
 
+void WalletModel::searchNotaryTx(uint256 hash)
+{
+    std::vector<std::pair<std::string, int> > txResults;
+    wallet->SearchNotaryTransactions(hash, txResults);
+    emit notarySearchComplete(txResults);
+}
+
+void WalletModel::sendNotaryTx(std::string hash)
+{
+    CWalletTx wtx;
+    std::string prefix = "notary";
+    std::string txError = wallet->SendCLAMSpeech(wtx, hash, prefix);
+    emit notaryTxSent(wtx.GetHash().GetHex(), txError);
+}
+
+void WalletModel::searchClamours(std::string pid)
+{
+    CClamour *pResult(wallet->GetClamour(pid));
+    emit clamourSearchComplete(pResult);
+}
+
+void WalletModel::sendClamourTx(std::string hash)
+{
+    CWalletTx wtx;
+    std::string prefix = "clamour";
+    std::string txError = wallet->SendCLAMSpeech(wtx, hash, prefix);
+    emit clamourTxSent(wtx.GetHash().GetHex(), txError);
+}
+
+void WalletModel::getPetitionSupport(int nWindow)
+{
+    std::map<std::string, int> mapSupport;
+    int nBlock = nBestHeight;
+    for (int i = nBlock + 1 - nWindow; i <= nBlock; i++) {
+        CBlockIndex* pblockindex = FindBlockByHeight(i);
+        std::set<string> sup = pblockindex->GetSupport();
+        BOOST_FOREACH(const string &s, sup) {
+            mapSupport[s]++;
+        }
+    }
+    emit petitionSupportRetrieved(mapSupport);
+}
+
 bool WalletModel::getPubKey(const CKeyID &address, CPubKey& vchPubKeyOut) const
 {
     return wallet->GetPubKey(address, vchPubKeyOut);   
@@ -480,4 +540,9 @@ void WalletModel::unlockCoin(COutPoint& output)
 void WalletModel::listLockedCoins(std::vector<COutPoint>& vOutpts)
 {
     return;
+}
+
+void WalletModel::clearOrphans()
+{
+    wallet->ClearOrphans();
 }

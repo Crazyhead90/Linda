@@ -5,6 +5,16 @@
 #include <QObject>
 #include <QMessageBox>
 
+// UI extern settings defined in optionsmodel.cpp
+extern bool fUseClamTheme;
+extern bool fUseClamSpeech;
+extern bool fUseClamSpeechRandom;
+extern int nClamSpeechIndex;
+extern int nStyleSheetVersion;
+
+const int CURRENT_STYLESHEET_VERSION = 1;
+
+
 class SendCoinsRecipient;
 
 QT_BEGIN_NAMESPACE
@@ -20,6 +30,9 @@ QT_END_NAMESPACE
  */
 namespace GUIUtil
 {
+    // Convert path to DOS 8.3 format
+    QString toDOSPathFormat(const QString &filename);
+
     // Create human-readable string from date
     QString dateTimeStr(const QDateTime &datetime);
     QString dateTimeStr(qint64 nTime);
@@ -31,7 +44,7 @@ namespace GUIUtil
     void setupAddressWidget(QLineEdit *widget, QWidget *parent);
     void setupAmountWidget(QLineEdit *widget, QWidget *parent);
 
-    // Parse "blackcoin:" URI into recipient object, return true on successful parsing
+    // Parse "clam:" URI into recipient object, return true on successful parsing
     // See Bitcoin URI definition discussion here: https://bitcointalk.org/index.php?topic=33490.0
     bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out);
     bool parseBitcoinURI(QString uri, SendCoinsRecipient *out);
@@ -115,8 +128,6 @@ namespace GUIUtil
         QString coreOptions;
         QString uiOptions;
     };
-
-    void SetBlackThemeQSS(QApplication& app);
 
 } // namespace GUIUtil
 

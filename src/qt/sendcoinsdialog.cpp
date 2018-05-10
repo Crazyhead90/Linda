@@ -16,10 +16,16 @@
 #include "coincontrol.h"
 #include "coincontroldialog.h"
 
+#include "clamspeech.h"
+
+#include <QDebug>
+#include <QString>
 #include <QMessageBox>
 #include <QTextDocument>
 #include <QScrollBar>
 #include <QClipboard>
+#include <QDateTime>
+#include <QSettings>
 
 SendCoinsDialog::SendCoinsDialog(QWidget *parent) :
     QDialog(parent),
@@ -34,10 +40,7 @@ SendCoinsDialog::SendCoinsDialog(QWidget *parent) :
     ui->sendButton->setIcon(QIcon());
 #endif
 
-#if QT_VERSION >= 0x040700
-    /* Do not move this to the XML file, Qt before 4.7 will choke on it */
-    ui->lineEditCoinControlChange->setPlaceholderText(tr("Enter a BlackCoin address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)"));
-#endif
+    GUIUtil::setupAddressWidget(ui->lineEditCoinControlChange, this);
 
     addEntry();
 
@@ -56,6 +59,7 @@ SendCoinsDialog::SendCoinsDialog(QWidget *parent) :
     QAction *clipboardFeeAction = new QAction(tr("Copy fee"), this);
     QAction *clipboardAfterFeeAction = new QAction(tr("Copy after fee"), this);
     QAction *clipboardBytesAction = new QAction(tr("Copy bytes"), this);
+    QAction *clipboardPriorityAction = new QAction(tr("Copy priority"), this);
     QAction *clipboardLowOutputAction = new QAction(tr("Copy low output"), this);
     QAction *clipboardChangeAction = new QAction(tr("Copy change"), this);
     connect(clipboardQuantityAction, SIGNAL(triggered()), this, SLOT(coinControlClipboardQuantity()));
@@ -63,6 +67,7 @@ SendCoinsDialog::SendCoinsDialog(QWidget *parent) :
     connect(clipboardFeeAction, SIGNAL(triggered()), this, SLOT(coinControlClipboardFee()));
     connect(clipboardAfterFeeAction, SIGNAL(triggered()), this, SLOT(coinControlClipboardAfterFee()));
     connect(clipboardBytesAction, SIGNAL(triggered()), this, SLOT(coinControlClipboardBytes()));
+    connect(clipboardPriorityAction, SIGNAL(triggered()), this, SLOT(coinControlClipboardPriority()));
     connect(clipboardLowOutputAction, SIGNAL(triggered()), this, SLOT(coinControlClipboardLowOutput()));
     connect(clipboardChangeAction, SIGNAL(triggered()), this, SLOT(coinControlClipboardChange()));
     ui->labelCoinControlQuantity->addAction(clipboardQuantityAction);
@@ -70,6 +75,7 @@ SendCoinsDialog::SendCoinsDialog(QWidget *parent) :
     ui->labelCoinControlFee->addAction(clipboardFeeAction);
     ui->labelCoinControlAfterFee->addAction(clipboardAfterFeeAction);
     ui->labelCoinControlBytes->addAction(clipboardBytesAction);
+    ui->labelCoinControlPriority->addAction(clipboardPriorityAction);
     ui->labelCoinControlLowOutput->addAction(clipboardLowOutputAction);
     ui->labelCoinControlChange->addAction(clipboardChangeAction);
 
@@ -117,6 +123,11 @@ void SendCoinsDialog::on_sendButton_clicked()
     QList<SendCoinsRecipient> recipients;
     bool valid = true;
 
+    if(!model)
+        return;
+
+    QString clamspeech = ui->clamQuotes->currentText();
+
     for(int i = 0; i < ui->entries->count(); ++i)
     {
         SendCoinsEntry *entry = qobject_cast<SendCoinsEntry*>(ui->entries->itemAt(i)->widget());
@@ -142,7 +153,7 @@ void SendCoinsDialog::on_sendButton_clicked()
     QStringList formatted;
     foreach(const SendCoinsRecipient &rcp, recipients)
     {
-        formatted.append(tr("<b>%1</b> to %2 (%3)").arg(BitcoinUnits::formatWithUnit(model->getOptionsModel()->getDisplayUnit(), rcp.amount), Qt::escape(rcp.label), rcp.address));
+        formatted.append(tr("<b>%1</b> to %2 (%3)").arg(BitcoinUnits::formatWithUnit(model->getOptionsModel()->getDisplayUnit(), rcp.amount), GUIUtil::HtmlEscape(rcp.label), rcp.address));
     }
 
     fNewRecipientAllowed = false;
@@ -169,9 +180,9 @@ void SendCoinsDialog::on_sendButton_clicked()
     WalletModel::SendCoinsReturn sendstatus;
 
     if (!model->getOptionsModel() || !model->getOptionsModel()->getCoinControlFeatures())
-        sendstatus = model->sendCoins(recipients);
+        sendstatus = model->sendCoins(clamspeech, recipients);
     else
-        sendstatus = model->sendCoins(recipients, CoinControlDialog::coinControl);
+        sendstatus = model->sendCoins(clamspeech, recipients, CoinControlDialog::coinControl);
 
     switch(sendstatus.status)
     {
@@ -222,9 +233,30 @@ void SendCoinsDialog::on_sendButton_clicked()
     fNewRecipientAllowed = true;
 }
 
+void SendCoinsDialog::clamSpeechIndexChanged(const int &index)
+{
+    if ( index >= clamSpeechQuoteCount )
+    {
+        qDebug() << "New CLAMSpeech quote added at" << index;
+
+        // Add quote
+        quoteList.push_back( ui->clamQuotes->itemText(index).toStdString() );
+    }
+
+    clamSpeechQuoteCount = ui->clamQuotes->count();
+    nClamSpeechIndex = index;
+
+    qDebug() << "saving nClamSpeechIndex =" << index;
+    // Save to QSettings
+    QSettings settings;
+    settings.setValue( "nClamSpeechIndex", nClamSpeechIndex );
+}
+
 void SendCoinsDialog::clear()
 {
-    // Remove entries until only one left
+    ui->clamQuotes->clear();
+    // Remove 
+    //entries until only one left
     while(ui->entries->count())
     {
         delete ui->entries->takeAt(0)->widget();
@@ -259,7 +291,7 @@ SendCoinsEntry *SendCoinsDialog::addEntry()
     // Focus the field, so that entry can start immediately
     entry->clear();
     entry->setFocus();
-    ui->scrollAreaWidgetContents->resize(ui->scrollAreaWidgetContents->sizeHint());
+    //ui->scrollAreaWidgetContents->resize(ui->scrollAreaWidgetContents->sizeHint());
     QCoreApplication::instance()->processEvents();
     QScrollBar* bar = ui->scrollArea->verticalScrollBar();
     if(bar)
@@ -291,6 +323,9 @@ void SendCoinsDialog::removeEntry(SendCoinsEntry* entry)
 
 QWidget *SendCoinsDialog::setupTabChain(QWidget *prev)
 {
+    QWidget::setTabOrder(prev, ui->clamQuotes);
+    prev = ui->clamQuotes;
+
     for(int i = 0; i < ui->entries->count(); ++i)
     {
         SendCoinsEntry *entry = qobject_cast<SendCoinsEntry*>(ui->entries->itemAt(i)->widget());
@@ -355,6 +390,58 @@ void SendCoinsDialog::setBalance(qint64 balance, qint64 stake, qint64 unconfirme
     }
 }
 
+void SendCoinsDialog::loadClamSpeech()
+{
+    if ( !fUseClamSpeech )
+        return;
+
+    // disconnect widget change signal to stop clashing
+    disconnect( ui->clamQuotes, SIGNAL(currentIndexChanged(int)), this, SLOT(clamSpeechIndexChanged(int)) );
+
+    // Load quotes from clamspeech.h
+    ui->clamQuotes->clear();
+    for ( ulong i = 0; i < clamSpeech.size(); i++ )
+        ui->clamQuotes->addItem( QString::fromStdString( clamSpeech.at(i) ) );
+
+    // Hold the index count to detect appending new quotes
+    clamSpeechQuoteCount = ui->clamQuotes->count();
+
+    if ( !clamSpeechQuoteCount )
+        return;
+
+    // Select a random index based on current time, if random option set
+    if ( fUseClamSpeechRandom && clamSpeechQuoteCount )
+    {
+        qDebug() << "Random quote selected";
+
+        qsrand( (QDateTime().toTime_t() * 1000) );
+        ui->clamQuotes->setCurrentIndex( qrand() % ui->clamQuotes->count() );
+    }
+    else // Fixed chosen quote
+    {
+        // Support out of bounds removal with already set index
+        if ( nClamSpeechIndex >= clamSpeechQuoteCount )
+            nClamSpeechIndex = clamSpeechQuoteCount -1;
+
+        ui->clamQuotes->setCurrentIndex( nClamSpeechIndex );
+    }
+
+    // Print debug info
+    qDebug() << clamSpeechQuoteCount << "CLAMSpeech quotes parsed.";
+    qDebug() << "fClamSpeechRandom =" << fUseClamSpeechRandom;
+    qDebug() << "nClamSpeechIndex =" << nClamSpeechIndex;
+    qDebug() << "CLAMSpeech selected index" << ui->clamQuotes->currentIndex();
+
+    // setup clamspeech widget change signal
+    connect( ui->clamQuotes, SIGNAL(currentIndexChanged(int)), this, SLOT(clamSpeechIndexChanged(int)) );
+}
+
+void SendCoinsDialog::uiReady()
+{
+    qDebug() << "SendCoinsDialog::uiReady()";
+    this->loadClamSpeech();
+}
+
 void SendCoinsDialog::updateDisplayUnit()
 {
     setBalance(model->getBalance(), 0, 0, 0);
@@ -388,6 +475,12 @@ void SendCoinsDialog::coinControlClipboardAfterFee()
 void SendCoinsDialog::coinControlClipboardBytes()
 {
     QApplication::clipboard()->setText(ui->labelCoinControlBytes->text());
+}
+
+// Coin Control: copy label "Priority" to clipboard
+void SendCoinsDialog::coinControlClipboardPriority()
+{
+    QApplication::clipboard()->setText(ui->labelCoinControlPriority->text());
 }
 
 // Coin Control: copy label "Low output" to clipboard
@@ -449,7 +542,7 @@ void SendCoinsDialog::coinControlChangeEdited(const QString & text)
         else if (!CBitcoinAddress(text.toStdString()).IsValid())
         {
             ui->labelCoinControlChangeLabel->setStyleSheet("QLabel{color:red;}");
-            ui->labelCoinControlChangeLabel->setText(tr("WARNING: Invalid BlackCoin address"));
+            ui->labelCoinControlChangeLabel->setText(tr("WARNING: Invalid Clam address"));
         }
         else
         {

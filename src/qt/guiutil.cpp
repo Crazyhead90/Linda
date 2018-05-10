@@ -13,13 +13,19 @@
 #include <QDoubleValidator>
 #include <QFont>
 #include <QLineEdit>
-#include <QUrl>
 #include <QTextDocument> // For Qt::escape
 #include <QAbstractItemView>
 #include <QClipboard>
 #include <QFileDialog>
 #include <QDesktopServices>
 #include <QThread>
+
+#if QT_VERSION < 0x050000
+#include <QUrl>
+#else
+#include <QUrlQuery>
+#endif
+
 
 #include <boost/filesystem.hpp>
 #include <boost/filesystem/fstream.hpp>
@@ -83,14 +89,20 @@ void setupAmountWidget(QLineEdit *widget, QWidget *parent)
 
 bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 {
-    // NovaCoin: check prefix
-    if(uri.scheme() != QString("blackcoin"))
+    // return if URI is not valid or is no clam: URI
+    if(!uri.isValid() || uri.scheme() != QString("clam"))
         return false;
 
     SendCoinsRecipient rv;
     rv.address = uri.path();
     rv.amount = 0;
+
+#if QT_VERSION < 0x050000
     QList<QPair<QString, QString> > items = uri.queryItems();
+#else
+    QUrlQuery uriQuery(uri);
+    QList<QPair<QString, QString> > items = uriQuery.queryItems();
+#endif
     for (QList<QPair<QString, QString> >::iterator i = items.begin(); i != items.end(); i++)
     {
         bool fShouldReturnFalse = false;
@@ -129,13 +141,13 @@ bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 
 bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
 {
-    // Convert blackcoin:// to blackcoin:
+    // Convert clam:// to clam:
     //
     //    Cannot handle this later, because bitcoin:// will cause Qt to see the part after // as host,
     //    which will lower-case it (and thus invalidate the address).
-    if(uri.startsWith("blackcoin://"))
+    if(uri.startsWith("clam://"))
     {
-        uri.replace(0, 12, "blackcoin:");
+        uri.replace(0, 12, "clam:");
     }
     QUrl uriInstance(uri);
     return parseBitcoinURI(uriInstance, out);
@@ -143,7 +155,11 @@ bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
 
 QString HtmlEscape(const QString& str, bool fMultiLine)
 {
+#if QT_VERSION < 0x050000
     QString escaped = Qt::escape(str);
+#else
+    QString escaped = str.toHtmlEscaped();
+#endif
     if(fMultiLine)
     {
         escaped = escaped.replace("\n", "<br>\n");
@@ -178,7 +194,11 @@ QString getSaveFileName(QWidget *parent, const QString &caption,
     QString myDir;
     if(dir.isEmpty()) // Default to user documents location
     {
-        myDir = QDesktopServices::storageLocation(QDesktopServices::DocumentsLocation);
+#if QT_VERSION < 0x050000
+    myDir = QDesktopServices::storageLocation(QDesktopServices::DocumentsLocation);
+#else    
+    myDir = QStandardPaths::standardLocations(QStandardPaths::DocumentsLocation).first();
+#endif
     }
     else
     {
@@ -279,7 +299,7 @@ bool ToolTipToRichTextFilter::eventFilter(QObject *obj, QEvent *evt)
 #ifdef WIN32
 boost::filesystem::path static StartupShortcutPath()
 {
-    return GetSpecialFolderPath(CSIDL_STARTUP) / "BlackCoin.lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / "Clam.lnk";
 }
 
 bool GetStartOnSystemStartup()
@@ -361,7 +381,7 @@ boost::filesystem::path static GetAutostartDir()
 
 boost::filesystem::path static GetAutostartFilePath()
 {
-    return GetAutostartDir() / "blackcoin.desktop";
+    return GetAutostartDir() / "clam.desktop";
 }
 
 bool GetStartOnSystemStartup()
@@ -402,7 +422,7 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         // Write a bitcoin.desktop file to the autostart directory:
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
-        optionFile << "Name=BlackCoin\n";
+        optionFile << "Name=Clam\n";
         optionFile << "Exec=" << pszExePath << " -min\n";
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";
@@ -423,10 +443,10 @@ bool SetStartOnSystemStartup(bool fAutoStart) { return false; }
 HelpMessageBox::HelpMessageBox(QWidget *parent) :
     QMessageBox(parent)
 {
-    header = tr("BlackCoin-Qt") + " " + tr("version") + " " +
+    header = tr("Clam-Qt") + " " + tr("version") + " " +
         QString::fromStdString(FormatFullVersion()) + "\n\n" +
         tr("Usage:") + "\n" +
-        "  blackcoin-qt [" + tr("command-line options") + "]                     " + "\n";
+        "  clam-qt [" + tr("command-line options") + "]                     " + "\n";
 
     coreOptions = QString::fromStdString(HelpMessage());
 
@@ -435,7 +455,7 @@ HelpMessageBox::HelpMessageBox(QWidget *parent) :
         "  -min                   " + tr("Start minimized") + "\n" +
         "  -splash                " + tr("Show splash screen on startup (default: 1)") + "\n";
 
-    setWindowTitle(tr("BlackCoin-Qt"));
+    setWindowTitle(tr("Clam-Qt"));
     setTextFormat(Qt::PlainText);
     // setMinimumWidth is ignored for QMessageBox so put in non-breaking spaces to make it wider.
     setText(header + QString(QChar(0x2003)).repeated(50));
@@ -460,38 +480,28 @@ void HelpMessageBox::showOrPrint()
 #endif
 }
 
-void SetBlackThemeQSS(QApplication& app)
+#if defined(WIN32)
+#include <windows.h>
+QString toDOSPathFormat(const QString &file)
 {
-    app.setStyleSheet("QWidget        { background: rgb(41,44,48); }"
-                      "QFrame         { border: none; }"
-                      "QComboBox      { color: rgb(255,255,255); }"
-                      "QComboBox QAbstractItemView::item { color: rgb(255,255,255); }"
-                      "QPushButton    { background: rgb(226,189,121); color: rgb(21,21,21); }"
-                      "QDoubleSpinBox { background: rgb(63,67,72); color: rgb(255,255,255); border-color: rgb(194,194,194); }"
-                      "QLineEdit      { background: rgb(63,67,72); color: rgb(255,255,255); border-color: rgb(194,194,194); }"
-                      "QTextEdit      { background: rgb(63,67,72); color: rgb(255,255,255); }"
-                      "QPlainTextEdit { background: rgb(63,67,72); color: rgb(255,255,255); }"
-                      "QMenuBar       { background: rgb(41,44,48); color: rgb(110,116,126); }"
-                      "QMenu          { background: rgb(30,32,36); color: rgb(222,222,222); }"
-                      "QMenu::item:selected { background-color: rgb(48,140,198); }"
-                      "QLabel         { color: rgb(120,127,139); }"
-                      "QScrollBar     { color: rgb(255,255,255); }"
-                      "QCheckBox      { color: rgb(120,127,139); }"
-                      "QRadioButton   { color: rgb(120,127,139); }"
-                      "QTabBar::tab   { color: rgb(120,127,139); border: 1px solid rgb(78,79,83); border-bottom: none; padding: 5px; }"
-                      "QTabBar::tab:selected  { background: rgb(41,44,48); }"
-                      "QTabBar::tab:!selected { background: rgb(24,26,30); margin-top: 2px; }"
-                      "QTabWidget::pane { border: 1px solid rgb(78,79,83); }"
-                      "QToolButton    { background: rgb(30,32,36); color: rgb(116,122,134); border: none; border-left-color: rgb(30,32,36); border-left-style: solid; border-left-width: 6px; margin-top: 8px; margin-bottom: 8px; }"
-                      "QToolButton:checked { color: rgb(255,255,255); border: none; border-left-color: rgb(215,173,94); border-left-style: solid; border-left-width: 6px; }"
-                      "QProgressBar   { color: rgb(149,148,148); border-color: rgb(255,255,255); border-width: 3px; border-style: solid; }"
-                      "QProgressBar::chunk { background: rgb(255,255,255); }"
-                      "QTreeView::item { background: rgb(41,44,48); color: rgb(212,213,213); }"
-                      "QTreeView::item:selected { background-color: rgb(48,140,198); }"
-                      "QTableView     { background: rgb(66,71,78); color: rgb(212,213,213); gridline-color: rgb(157,160,165); }"
-                      "QHeaderView::section { background: rgb(29,34,39); color: rgb(255,255,255); }"
-                      "QToolBar       { background: rgb(30,32,36); border: none; }");
+    wchar_t* input = new wchar_t[file.size()+1];
+    file.toWCharArray(input);
+    input[file.size()] = L'\0'; // terminate string
+    long length = GetShortPathNameW(input, NULL, 0);
+    wchar_t* output = new wchar_t[length];
+    GetShortPathNameW(input, output, length);
+    QString ret = QString::fromWCharArray(output, length-1); // discard
+    delete []input;
+    delete []output;
+    return ret;
 }
+#else
+QString toDOSPathFormat(const QString &filename)
+{
+    return filename;
+}
+#endif
+
 
 } // namespace GUIUtil
 

@@ -3,8 +3,6 @@
 
 #include <QAbstractListModel>
 
-extern bool fUseBlackTheme;
-
 /** Interface from Qt to configuration data structure for Bitcoin client.
    To Qt, the options are presented as a list with the different options
    laid out vertically.
@@ -26,12 +24,17 @@ public:
         ProxyUse,          // bool
         ProxyIP,           // QString
         ProxyPort,         // int
+        ProxySocksVersion, // int
         Fee,               // qint64
         ReserveBalance,    // qint64
         DisplayUnit,       // BitcoinUnits::Unit
         Language,          // QString
         CoinControlFeatures, // bool
-        UseBlackTheme,     // bool
+        MinimizeCoinAge,   // bool
+        UseClamTheme,      // bool
+        UseClamSpeech,     // bool
+        UseClamSpeechRandom, // bool
+        ClamSpeechIndex,   // int
         OptionIDRowCount,
     };
 

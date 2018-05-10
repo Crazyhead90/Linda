@@ -3,19 +3,19 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About BlackCoin</source>
-        <translation>Acerca de Blackcoin</translation>
+        <source>About Clam</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;BlackCoin&lt;/b&gt; version</source>
-        <translation>Versión &lt;b&gt;BlackCoin&lt;/b&gt; .</translation>
+        <source>&lt;b&gt;Clam&lt;/b&gt; version</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The BlackCoin developers</source>
+Copyright © 2014 The Clam developers</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -23,10 +23,15 @@ Copyright © 2014 The BlackCoin developers</source>
         <source>
 This is experimental software.
 
-Distributed under the MIT/X11 software license, see the accompanying file COPYING or &lt;a href=&quot;http://www.opensource.org/licenses/mit-license.php&quot;&gt;http://www.opensource.org/licenses/mit-license.php&lt;/a&gt;.
+Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (&lt;a href=&quot;https://www.openssl.org/&quot;&gt;https://www.openssl.org/&lt;/a&gt;) and cryptographic software written by Eric Young (&lt;a href=&quot;mailto:eay@cryptsoft.com&quot;&gt;eay@cryptsoft.com&lt;/a&gt;) and UPnP software written by Thomas Bernard.</source>
-        <translation type="unfinished"/>
+This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (http://www.openssl.org/) and cryptographic software written by Eric Young (eay@cryptsoft.com) and UPnP software written by Thomas Bernard.</source>
+        <translation>
+Isto é software experimental.
+
+Distribuído baixo a licencia de software MIT/X11, véxase o arquivo que acompaña COPYING ou http://www.opensource.org/licenses/mit-license.php.
+
+Este produto inclúe software desenvolvido polo OpenSSL Project para o uso no OpenSSL Toolkit (http://www.openssl.org/) e software criptográfico escrito por Eric Young (eay@cryptsoft.com) e software UPnP escrito por Thomas Bernard.</translation>
     </message>
 </context>
 <context>
@@ -34,7 +39,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location filename="../forms/addressbookpage.ui" line="+14"/>
         <source>Address Book</source>
-        <translation>Libreta de direccións</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+22"/>
@@ -42,79 +47,79 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Doble click para editar a dirección ou a etiqueta</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+27"/>
         <source>Create a new address</source>
         <translation>Crear unha nova dirección</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+14"/>
         <source>Copy the currently selected address to the system clipboard</source>
         <translation>Copiar a dirección seleccionada ao cartafol</translation>
     </message>
     <message>
-        <location line="-7"/>
+        <location line="-11"/>
         <source>&amp;New Address</source>
-        <translation>&amp;Nova dirección.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="-43"/>
-        <source>These are your BlackCoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Estas son as túas dIreccións de Blackcoin para recibir os pagos. Pode que quieras asignarlle unha a cada remitente e así reconocer quen te está a pagar.</translation>
+        <location line="-46"/>
+        <source>These are your Clam addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+60"/>
         <source>&amp;Copy Address</source>
         <translation>&amp;Copiar Dirección</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+11"/>
         <source>Show &amp;QR Code</source>
-        <translation>Amosar &amp;QR Code</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Sign a message to prove you own a BlackCoin address</source>
-        <translation>Firma a mensaxe para probar que tes unha dirección Blackcoin</translation>
+        <location line="+11"/>
+        <source>Sign a message to prove you own a Clam address</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>Sign &amp;Message</source>
-        <translation>Firmar &amp;Mensaxe</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+25"/>
         <source>Delete the currently selected address from the list</source>
         <translation>Borrar a dirección actualmente seleccionada da listaxe</translation>
     </message>
     <message>
-        <location line="-10"/>
-        <source>Verify a message to ensure it was signed with a specified BlackCoin address</source>
-        <translation>Verifica a mensaxe para asegurar que foi asinada por unha concreta dirección de Blackcoin</translation>
+        <location line="-14"/>
+        <source>Verify a message to ensure it was signed with a specified Clam address</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>&amp;Verify Message</source>
-        <translation>&amp;Verificar Mensaxe.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+14"/>
         <source>&amp;Delete</source>
         <translation>&amp;Borrar</translation>
     </message>
     <message>
-        <location filename="../addressbookpage.cpp" line="+66"/>
+        <location filename="../addressbookpage.cpp" line="+65"/>
         <source>Copy &amp;Label</source>
         <translation>Copiar &amp;Etiqueta</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>&amp;Edit</source>
         <translation>&amp;Modificar</translation>
     </message>
     <message>
-        <location line="+248"/>
+        <location line="+250"/>
         <source>Export Address Book Data</source>
-        <translation>Exportar datos da libreta de direccións.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -124,18 +129,18 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+13"/>
         <source>Error exporting</source>
-        <translation>Error exportando</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+0"/>
         <source>Could not write to file %1.</source>
-        <translation>Non se puido escribir a arquivo %1</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
     <name>AddressTableModel</name>
     <message>
-        <location filename="../addresstablemodel.cpp" line="+145"/>
+        <location filename="../addresstablemodel.cpp" line="+144"/>
         <source>Label</source>
         <translation>Etiqueta</translation>
     </message>
@@ -180,10 +185,15 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+3"/>
         <source>For staking only</source>
-        <translation>Para &quot;staking&quot; só</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../askpassphrasedialog.cpp" line="+38"/>
+        <location filename="../askpassphrasedialog.cpp" line="+35"/>
+        <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;10 or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
+        <translation>Introduce o novo contrasinal ao moedeiro.&lt;br/&gt;Por favor empregue un contrasinal de &lt;b&gt;10 ou máis caracteres aleatorios&lt;/b&gt;, ou &lt;b&gt;oito ou máis palabras&lt;/b&gt;.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Encrypt wallet</source>
         <translation>Encriptar moedeiro</translation>
     </message>
@@ -218,14 +228,14 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Introduce o vello e novo contrasinais no moedeiro.</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+46"/>
         <source>Confirm wallet encryption</source>
         <translation>Confirmar encriptación de moedeiro</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR COINS&lt;/b&gt;!</source>
-        <translation>Coidado: Se enctriptas a tua carteira e perdes o contrasinal, &lt;b&gt;PERDERÁS TODAS AS TÚAS MOEDAS&lt;/b&gt;!</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+0"/>
@@ -250,14 +260,9 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Moedeiro encriptado</translation>
     </message>
     <message>
-        <location line="-140"/>
-        <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;ten or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
+        <location line="-58"/>
+        <source>Clam will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
         <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+82"/>
-        <source>BlackCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation>BlackCoin pecharase agora para rematar o proceso de encriptación. Recorda que encriptar a túa carteira non te protexe na totalidade do roubo das tuas moedas por infeccións de malware no teu ordenador.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -304,12 +309,22 @@ This product includes software developed by the OpenSSL Project for use in the O
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+297"/>
+        <location filename="../bitcoingui.cpp" line="+282"/>
         <source>Sign &amp;message...</source>
         <translation>&amp;Asinar mensaxe...</translation>
     </message>
     <message>
-        <location line="-64"/>
+        <location line="+251"/>
+        <source>Synchronizing with network...</source>
+        <translation>Sincronizando coa rede...</translation>
+    </message>
+    <message>
+        <location line="-319"/>
+        <source>&amp;Overview</source>
+        <translation>&amp;Vista xeral</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Show general overview of wallet</source>
         <translation>Amosar vista xeral do moedeiro</translation>
     </message>
@@ -326,20 +341,30 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+5"/>
         <source>&amp;Address Book</source>
-        <translation>&amp;Libreta de Direccións</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Edit the list of stored addresses and labels</source>
-        <translation>Edita a lista de direccións e etiquetas almaceadas</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="-18"/>
+        <location line="-13"/>
+        <source>&amp;Receive coins</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Show the list of addresses for receiving payments</source>
-        <translation>Amosa a lista de dirección para recibir os pagos</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="-7"/>
+        <source>&amp;Send coins</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+35"/>
         <source>E&amp;xit</source>
         <translation>&amp;Saír</translation>
     </message>
@@ -349,9 +374,9 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Saír da aplicación</translation>
     </message>
     <message>
-        <location line="+4"/>
-        <source>Show information about BlackCoin</source>
-        <translation>Amosa información sobre BlackCoin</translation>
+        <location line="+6"/>
+        <source>Show information about Clam</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
@@ -374,7 +399,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>&amp;Encriptar Moedeiro...</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+3"/>
         <source>&amp;Backup Wallet...</source>
         <translation>Copia de &amp;Seguridade do Moedeiro...</translation>
     </message>
@@ -383,33 +408,43 @@ This product includes software developed by the OpenSSL Project for use in the O
         <source>&amp;Change Passphrase...</source>
         <translation>&amp;Cambiar contrasinal...</translation>
     </message>
+    <message numerus="yes">
+        <location line="+259"/>
+        <source>~%n block(s) remaining</source>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+    </message>
     <message>
-        <location line="+9"/>
+        <location line="+6"/>
+        <source>Downloaded %1 of %2 blocks of transaction history (%3% done).</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-256"/>
         <source>&amp;Export...</source>
-        <translation>&amp;Exportar...</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="-55"/>
-        <source>Send coins to a BlackCoin address</source>
-        <translation>Enviar moedas a unha dirección Blackcoin</translation>
+        <location line="-64"/>
+        <source>Send coins to a Clam address</source>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+39"/>
-        <source>Modify configuration options for BlackCoin</source>
-        <translation>Modificar opcións de configuración para BlackCoin</translation>
+        <location line="+47"/>
+        <source>Modify configuration options for Clam</source>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>Export the data in the current tab to a file</source>
-        <translation>Exportar datos da pestana actual a un arquivo</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="-13"/>
+        <location line="-14"/>
         <source>Encrypt or decrypt wallet</source>
-        <translation>Encriptar ou desencriptar carteira</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+3"/>
         <source>Backup wallet to another location</source>
         <translation>Facer copia de seguridade do moedeiro noutra localización</translation>
     </message>
@@ -434,20 +469,19 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>&amp;Verificar mensaxe...</translation>
     </message>
     <message>
-        <location line="-214"/>
-        <location line="+555"/>
-        <source>BlackCoin</source>
-        <translation>BlackCoin</translation>
+        <location line="-202"/>
+        <source>Clam</source>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="-555"/>
+        <location line="+0"/>
         <source>Wallet</source>
         <translation>Moedeiro</translation>
     </message>
     <message>
-        <location line="+193"/>
-        <source>&amp;About BlackCoin</source>
-        <translation>&amp;Sobre BlackCoin</translation>
+        <location line="+180"/>
+        <source>&amp;About Clam</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+9"/>
@@ -455,22 +489,22 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>&amp;Amosar/Agachar</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+9"/>
         <source>Unlock wallet</source>
-        <translation>Desbloquear carteira</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>&amp;Lock Wallet</source>
-        <translation>&amp;Bloquear Carteira</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Lock wallet</source>
-        <translation>Bloquear carteira</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+35"/>
         <source>&amp;File</source>
         <translation>&amp;Arquivo</translation>
     </message>
@@ -485,86 +519,121 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>A&amp;xuda</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+12"/>
         <source>Tabs toolbar</source>
         <translation>Barra de ferramentas</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+8"/>
+        <source>Actions toolbar</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+13"/>
         <location line="+9"/>
         <source>[testnet]</source>
         <translation>[testnet]</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+58"/>
-        <source>BlackCoin client</source>
-        <translation>Cliente BlackCoin</translation>
+        <location line="+60"/>
+        <source>Clam client</source>
+        <translation type="unfinished"/>
     </message>
     <message numerus="yes">
-        <location line="+70"/>
-        <source>%n active connection(s) to BlackCoin network</source>
-        <translation><numerusform>%n conexión activa á red de BlackCoin</numerusform><numerusform>%n conexións activas á red de BlackCoin</numerusform></translation>
+        <location line="+75"/>
+        <source>%n active connection(s) to Clam network</source>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
-        <location line="+488"/>
+        <location line="+40"/>
+        <source>Downloaded %1 blocks of transaction history.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+413"/>
         <source>Staking.&lt;br&gt;Your weight is %1&lt;br&gt;Network weight is %2&lt;br&gt;Expected time to earn reward is %3</source>
-        <translation>&quot;Staking&quot;.&lt;br&gt;O teu peso na rede é %1&lt;br&gt;O peso da rede é %2&lt;br&gt;Tempo esperado para gañar a recompensa %3</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+6"/>
         <source>Not staking because wallet is locked</source>
-        <translation>Non &quot;staking&quot; porque a carteira está bloqueada</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>Not staking because wallet is offline</source>
-        <translation>Non &quot;staking&quot; porque a carteira está sen conexión</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>Not staking because wallet is syncing</source>
-        <translation>Non &quot;staking&quot; porque a carteira está a sincronizar.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>Not staking because you don&apos;t have mature coins</source>
-        <translation>Non &quot;staking&quot; porque non tes moedas maduras</translation>
+        <translation type="unfinished"/>
+    </message>
+    <message numerus="yes">
+        <location line="-403"/>
+        <source>%n second(s) ago</source>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
-        <location line="-812"/>
-        <source>&amp;Dashboard</source>
+        <location line="-312"/>
+        <source>About Clam card</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+6"/>
-        <source>&amp;Receive</source>
+        <location line="+1"/>
+        <source>Show information about Clam card</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+6"/>
-        <source>&amp;Send</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+49"/>
+        <location line="+18"/>
         <source>&amp;Unlock Wallet...</source>
-        <translation>&amp;Desbloquear Carteira...</translation>
+        <translation type="unfinished"/>
+    </message>
+    <message numerus="yes">
+        <location line="+297"/>
+        <source>%n minute(s) ago</source>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <location line="+4"/>
+        <source>%n hour(s) ago</source>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <location line="+4"/>
+        <source>%n day(s) ago</source>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+6"/>
         <source>Up to date</source>
         <translation>Actualizado</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+7"/>
         <source>Catching up...</source>
         <translation>Poñendo ao día...</translation>
     </message>
     <message>
-        <location line="+113"/>
+        <location line="+10"/>
+        <source>Last received block was generated %1.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+59"/>
+        <source>This transaction is over the size limit.  You can still send it for a fee of %1, which goes to the nodes that process your transaction and helps to support the network.  Do you want to pay the fee?</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>Confirm transaction fee</source>
-        <translation>Confirmar cuota da transacción</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+27"/>
@@ -598,26 +667,21 @@ Dirección: %4
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid BlackCoin address or malformed URI parameters.</source>
+        <source>URI can not be parsed! This can be caused by an invalid Clam address or malformed URI parameters.</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+9"/>
-        <source>Wallet is &lt;b&gt;not encrypted&lt;/b&gt;</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+8"/>
+        <location line="+18"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
         <translation>O moedeiro está &lt;b&gt;encriptado&lt;/b&gt; e actualmente &lt;b&gt;desbloqueado&lt;/b&gt;</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+10"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
         <translation>O moedeiro está &lt;b&gt;encriptado&lt;/b&gt; e actualmente &lt;b&gt;bloqueado&lt;/b&gt;</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+25"/>
         <source>Backup Wallet</source>
         <translation type="unfinished"/>
     </message>
@@ -637,7 +701,7 @@ Dirección: %4
         <translation type="unfinished"/>
     </message>
     <message numerus="yes">
-        <location line="+91"/>
+        <location line="+76"/>
         <source>%n second(s)</source>
         <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
@@ -647,88 +711,30 @@ Dirección: %4
         <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message numerus="yes">
-        <location line="-429"/>
-        <location line="+433"/>
+        <location line="+4"/>
         <source>%n hour(s)</source>
         <translation><numerusform>%n hora</numerusform><numerusform>%n horas</numerusform></translation>
     </message>
-    <message>
-        <location line="-456"/>
-        <source>Processed %1 blocks of transaction history.</source>
-        <translation type="unfinished"/>
-    </message>
     <message numerus="yes">
-        <location line="+27"/>
-        <location line="+433"/>
+        <location line="+4"/>
         <source>%n day(s)</source>
         <translation><numerusform>%n día</numerusform><numerusform>%n días</numerusform></translation>
     </message>
-    <message numerus="yes">
-        <location line="-429"/>
-        <location line="+6"/>
-        <source>%n week(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
-    </message>
     <message>
-        <location line="+0"/>
-        <source>%1 and %2</source>
-        <translation type="unfinished"/>
-    </message>
-    <message numerus="yes">
-        <location line="+0"/>
-        <source>%n year(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>%1 behind</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+15"/>
-        <source>Last received block was generated %1 ago.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Transactions after this will not yet be visible.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>Error</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Warning</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Information</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+69"/>
-        <source>This transaction is over the size limit. You can still send it for a fee of %1, which goes to the nodes that process your transaction and helps to support the network. Do you want to pay the fee?</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+324"/>
+        <location line="+18"/>
         <source>Not staking</source>
-        <translation>Non &quot;staking&quot;</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../bitcoin.cpp" line="+104"/>
-        <source>A fatal error occurred. BlackCoin can no longer continue safely and will quit.</source>
+        <location filename="../bitcoin.cpp" line="+109"/>
+        <source>A fatal error occurred. Clam can no longer continue safely and will quit.</source>
         <translation type="unfinished"/>
     </message>
 </context>
 <context>
     <name>ClientModel</name>
     <message>
-        <location filename="../clientmodel.cpp" line="+119"/>
+        <location filename="../clientmodel.cpp" line="+90"/>
         <source>Network Alert</source>
         <translation>Alerta de Rede</translation>
     </message>
@@ -756,6 +762,11 @@ Dirección: %4
         <translation>Importe:</translation>
     </message>
     <message>
+        <location line="+32"/>
+        <source>Priority:</source>
+        <translation>Prioridade:</translation>
+    </message>
+    <message>
         <location line="+48"/>
         <source>Fee:</source>
         <translation>Pago:</translation>
@@ -766,7 +777,7 @@ Dirección: %4
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../coincontroldialog.cpp" line="+493"/>
+        <location filename="../coincontroldialog.cpp" line="+551"/>
         <source>no</source>
         <translation>non</translation>
     </message>
@@ -831,7 +842,7 @@ Dirección: %4
         <translation>Prioridade</translation>
     </message>
     <message>
-        <location filename="../coincontroldialog.cpp" line="-456"/>
+        <location filename="../coincontroldialog.cpp" line="-515"/>
         <source>Copy address</source>
         <translation>Copiar dirección</translation>
     </message>
@@ -873,6 +884,11 @@ Dirección: %4
     </message>
     <message>
         <location line="+1"/>
+        <source>Copy priority</source>
+        <translation>Copiar prioridade</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Copy low output</source>
         <translation type="unfinished"/>
     </message>
@@ -882,7 +898,42 @@ Dirección: %4
         <translation>Copiar cambio</translation>
     </message>
     <message>
-        <location line="+423"/>
+        <location line="+317"/>
+        <source>highest</source>
+        <translation>O máis alto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>high</source>
+        <translation>alto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>medium-high</source>
+        <translation>medio-alto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>medium</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>low-medium</source>
+        <translation>medio-baixo</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>low</source>
+        <translation>baixo</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>lowest</source>
+        <translation>o máis baixo</translation>
+    </message>
+    <message>
+        <location line="+155"/>
         <source>DUST</source>
         <translation type="unfinished"/>
     </message>
@@ -892,12 +943,21 @@ Dirección: %4
         <translation>Si</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+10"/>
         <source>This label turns red, if the transaction size is bigger than 10000 bytes.
 
  This means a fee of at least %1 per kb is required.
 
  Can vary +/- 1 Byte per input.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Transactions with higher priority get more likely into a block.
+
+This label turns red, if the priority is smaller than &quot;medium&quot;.
+
+ This means a fee of at least %1 per kb is required.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -917,8 +977,8 @@ Dirección: %4
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+35"/>
-        <location line="+58"/>
+        <location line="+37"/>
+        <location line="+66"/>
         <source>(no label)</source>
         <translation>(sen etiqueta)</translation>
     </message>
@@ -961,7 +1021,7 @@ Dirección: %4
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../editaddressdialog.cpp" line="+21"/>
+        <location filename="../editaddressdialog.cpp" line="+20"/>
         <source>New receiving address</source>
         <translation>Nova dirección para recibir</translation>
     </message>
@@ -987,7 +1047,7 @@ Dirección: %4
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid BlackCoin address.</source>
+        <source>The entered address &quot;%1&quot; is not a valid Clam address.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1004,10 +1064,10 @@ Dirección: %4
 <context>
     <name>GUIUtil::HelpMessageBox</name>
     <message>
-        <location filename="../guiutil.cpp" line="+426"/>
+        <location filename="../guiutil.cpp" line="+420"/>
         <location line="+12"/>
-        <source>BlackCoin-Qt</source>
-        <translation>BlackCoin-Qt</translation>
+        <source>Clam-Qt</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-12"/>
@@ -1027,7 +1087,7 @@ Dirección: %4
     <message>
         <location line="+4"/>
         <source>UI options</source>
-        <translation>Opcións UI</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -1037,7 +1097,7 @@ Dirección: %4
     <message>
         <location line="+1"/>
         <source>Start minimized</source>
-        <translation>Comezar minimizado</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -1075,16 +1135,26 @@ Dirección: %4
     <message>
         <location line="+15"/>
         <source>Reserve</source>
-        <translation>Reserva</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start BlackCoin after logging in to the system.</source>
+        <source>Automatically start Clam after logging in to the system.</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start BlackCoin on system login</source>
+        <source>&amp;Start Clam on system login</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Detach block and address databases at shutdown. This means they can be moved to another data directory, but it slows down shutdown. The wallet is always detached.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&amp;Detach databases at shutdown</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1094,7 +1164,7 @@ Dirección: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the BlackCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the Clam client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1103,7 +1173,17 @@ Dirección: %4
         <translation>Mapear porto empregando &amp;UPnP</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+7"/>
+        <source>Connect to the Clam network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&amp;Connect through SOCKS proxy:</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>Proxy &amp;IP:</source>
         <translation>&amp;IP do Proxy:</translation>
     </message>
@@ -1123,17 +1203,17 @@ Dirección: %4
         <translation>Porto do proxy (exemplo: 9050)</translation>
     </message>
     <message>
-        <location line="-57"/>
-        <source>Connect to the BlackCoin network through a SOCKS5 proxy (e.g. when connecting through Tor).</source>
-        <translation type="unfinished"/>
+        <location line="+7"/>
+        <source>SOCKS &amp;Version:</source>
+        <translation>&amp;Version de SOCKS:</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>&amp;Connect through SOCKS5 proxy:</source>
-        <translation type="unfinished"/>
+        <location line="+13"/>
+        <source>SOCKS version of the proxy (e.g. 5)</source>
+        <translation>Versión SOCKS del proxy (exemplo: 5)</translation>
     </message>
     <message>
-        <location line="+90"/>
+        <location line="+36"/>
         <source>&amp;Window</source>
         <translation>&amp;Xanela</translation>
     </message>
@@ -1169,7 +1249,7 @@ Dirección: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting BlackCoin.</source>
+        <source>The user interface language can be set here. This setting will take effect after restarting Clam.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1184,17 +1264,22 @@ Dirección: %4
     </message>
     <message>
         <location line="+9"/>
+        <source>Whether to show Clam addresses in the transaction list or not.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&amp;Display addresses in transaction list</source>
+        <translation>&amp;Visualizar direccións na listaxe de transaccións</translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Whether to show coin control features or not.</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>Display coin &amp;control features (experts only!)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Use black visual theme (requires restart)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1213,12 +1298,12 @@ Dirección: %4
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../optionsdialog.cpp" line="+47"/>
+        <location filename="../optionsdialog.cpp" line="+55"/>
         <source>default</source>
         <translation>por defecto</translation>
     </message>
     <message>
-        <location line="+147"/>
+        <location line="+149"/>
         <location line="+9"/>
         <source>Warning</source>
         <translation type="unfinished"/>
@@ -1226,7 +1311,7 @@ Dirección: %4
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting BlackCoin.</source>
+        <source>This setting will take effect after restarting Clam.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1243,23 +1328,23 @@ Dirección: %4
         <translation>Formulario</translation>
     </message>
     <message>
-        <location line="+46"/>
-        <location line="+247"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the BlackCoin network after a connection is established, but this process has not completed yet.</source>
+        <location line="+33"/>
+        <location line="+231"/>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Clam network after a connection is established, but this process has not completed yet.</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="-173"/>
+        <location line="-160"/>
         <source>Stake:</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+29"/>
         <source>Unconfirmed:</source>
         <translation>Sen confirmar:</translation>
     </message>
     <message>
-        <location line="-113"/>
+        <location line="-107"/>
         <source>Wallet</source>
         <translation>Moedeiro</translation>
     </message>
@@ -1274,7 +1359,7 @@ Dirección: %4
         <translation>O teu balance actualmente dispoñible</translation>
     </message>
     <message>
-        <location line="+80"/>
+        <location line="+71"/>
         <source>Immature:</source>
         <translation>Inmaduro:</translation>
     </message>
@@ -1284,7 +1369,7 @@ Dirección: %4
         <translation>O balance minado todavía non madurou</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+20"/>
         <source>Total:</source>
         <translation>Total:</translation>
     </message>
@@ -1294,33 +1379,25 @@ Dirección: %4
         <translation>O teu balance actual total</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+46"/>
         <source>&lt;b&gt;Recent transactions&lt;/b&gt;</source>
         <translation>&lt;b&gt;Transaccións recentes&lt;/b&gt;</translation>
     </message>
     <message>
-        <location line="-118"/>
+        <location line="-108"/>
         <source>Total of transactions that have yet to be confirmed, and do not yet count toward the current balance</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="-32"/>
+        <location line="-29"/>
         <source>Total of coins that was staked, and do not yet count toward the current balance</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../overviewpage.cpp" line="+116"/>
+        <location filename="../overviewpage.cpp" line="+113"/>
         <location line="+1"/>
         <source>out of sync</source>
         <translation>non sincronizado</translation>
-    </message>
-</context>
-<context>
-    <name>PaymentServer</name>
-    <message>
-        <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start blackcoin: click-to-pay handler</source>
-        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -1397,11 +1474,13 @@ Dirección: %4
         <location line="+36"/>
         <location line="+53"/>
         <location line="+23"/>
+        <location line="+23"/>
+        <location filename="../rpcconsole.cpp" line="+348"/>
         <source>N/A</source>
         <translation>N/A</translation>
     </message>
     <message>
-        <location line="-194"/>
+        <location line="-217"/>
         <source>Client version</source>
         <translation>Versión do cliente</translation>
     </message>
@@ -1446,34 +1525,12 @@ Dirección: %4
         <translation>Número actual de bloques</translation>
     </message>
     <message>
-        <location line="+197"/>
-        <source>&amp;Network Traffic</source>
-        <translation type="unfinished"/>
+        <location line="+23"/>
+        <source>Estimated total blocks</source>
+        <translation>Bloques totais estimados</translation>
     </message>
     <message>
-        <location line="+52"/>
-        <source>&amp;Clear</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>Totals</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+64"/>
-        <location filename="../rpcconsole.cpp" line="+352"/>
-        <source>In:</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+80"/>
-        <location filename="../rpcconsole.cpp" line="+1"/>
-        <source>Out:</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="-383"/>
+        <location line="+23"/>
         <source>Last block time</source>
         <translation>Hora do último bloque</translation>
     </message>
@@ -1489,7 +1546,7 @@ Dirección: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the BlackCoin-Qt help message to get a list with possible BlackCoin command-line options.</source>
+        <source>Show the Clam-Qt help message to get a list with possible Clam command-line options.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1503,28 +1560,28 @@ Dirección: %4
         <translation>&amp;Consola</translation>
     </message>
     <message>
-        <location line="-237"/>
+        <location line="-260"/>
         <source>Build date</source>
         <translation>Data de construción</translation>
     </message>
     <message>
         <location line="-104"/>
-        <source>BlackCoin - Debug window</source>
+        <source>Clam - Debug window</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+25"/>
-        <source>BlackCoin Core</source>
+        <source>Clam Core</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+256"/>
+        <location line="+279"/>
         <source>Debug log file</source>
         <translation>Arquivo de log de depuración</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the BlackCoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <source>Open the Clam debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1533,8 +1590,8 @@ Dirección: %4
         <translation>Limpar consola</translation>
     </message>
     <message>
-        <location filename="../rpcconsole.cpp" line="-28"/>
-        <source>Welcome to the BlackCoin RPC console.</source>
+        <location filename="../rpcconsole.cpp" line="-33"/>
+        <source>Welcome to the Clam RPC console.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1547,47 +1604,12 @@ Dirección: %4
         <source>Type &lt;b&gt;help&lt;/b&gt; for an overview of available commands.</source>
         <translation>Escribe &lt;b&gt;axuda&lt;/b&gt; para unha vista xeral dos comandos dispoñibles.</translation>
     </message>
-    <message>
-        <location line="+134"/>
-        <source>%1 B</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>%1 KB</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>%1 MB</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>%1 GB</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>%1 m</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>%1 h</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>%1 h %2 m</source>
-        <translation type="unfinished"/>
-    </message>
 </context>
 <context>
     <name>SendCoinsDialog</name>
     <message>
         <location filename="../forms/sendcoinsdialog.ui" line="+14"/>
-        <location filename="../sendcoinsdialog.cpp" line="+179"/>
+        <location filename="../sendcoinsdialog.cpp" line="+182"/>
         <location line="+5"/>
         <location line="+5"/>
         <location line="+5"/>
@@ -1639,7 +1661,25 @@ Dirección: %4
         <translation>Importe:</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+22"/>
+        <location line="+86"/>
+        <location line="+86"/>
+        <location line="+32"/>
+        <source>0.00 CLAM</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-191"/>
+        <source>Priority:</source>
+        <translation>Prioridade:</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>medium</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+32"/>
         <source>Fee:</source>
         <translation>Pago:</translation>
     </message>
@@ -1679,7 +1719,7 @@ Dirección: %4
         <translation>Engadir &amp;Receptor</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Remove all transaction fields</source>
         <translation type="unfinished"/>
     </message>
@@ -1689,12 +1729,17 @@ Dirección: %4
         <translation>Limpar &amp;Todo</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+28"/>
         <source>Balance:</source>
         <translation>Balance:</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+16"/>
+        <source>123.456 CLAM</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+31"/>
         <source>Confirm the send action</source>
         <translation>Confirmar a acción de envío</translation>
     </message>
@@ -1704,8 +1749,8 @@ Dirección: %4
         <translation>&amp;Enviar</translation>
     </message>
     <message>
-        <location filename="../sendcoinsdialog.cpp" line="-171"/>
-        <source>Enter a BlackCoin address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <location filename="../sendcoinsdialog.cpp" line="-173"/>
+        <source>Enter a Clam address (e.g. x8JdtsqUGiV33P6sMUdfSBHnE7JEUyxTaJ)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1735,6 +1780,11 @@ Dirección: %4
     </message>
     <message>
         <location line="+1"/>
+        <source>Copy priority</source>
+        <translation>Copiar prioridade</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Copy low output</source>
         <translation type="unfinished"/>
     </message>
@@ -1744,7 +1794,7 @@ Dirección: %4
         <translation>Copiar cambio</translation>
     </message>
     <message>
-        <location line="+85"/>
+        <location line="+86"/>
         <source>&lt;b&gt;%1&lt;/b&gt; to %2 (%3)</source>
         <translation type="unfinished"/>
     </message>
@@ -1790,7 +1840,7 @@ Dirección: %4
     </message>
     <message>
         <location line="+5"/>
-        <source>Error: Transaction creation failed!</source>
+        <source>Error: Transaction creation failed.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1799,8 +1849,8 @@ Dirección: %4
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+241"/>
-        <source>WARNING: Invalid BlackCoin address</source>
+        <location line="+251"/>
+        <source>WARNING: Invalid Clam address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1832,23 +1882,23 @@ Dirección: %4
         <translation>Pagar &amp;A:</translation>
     </message>
     <message>
-        <location line="+34"/>
-        <source>The address to send the payment to (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+60"/>
-        <location filename="../sendcoinsentry.cpp" line="+26"/>
+        <location line="+24"/>
+        <location filename="../sendcoinsentry.cpp" line="+25"/>
         <source>Enter a label for this address to add it to your address book</source>
         <translation>Introduce unha etiqueta para esta dirección para engadila ao teu libro de direccións</translation>
     </message>
     <message>
-        <location line="-78"/>
+        <location line="+9"/>
         <source>&amp;Label:</source>
         <translation>&amp;Etiqueta:</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+18"/>
+        <source>The address to send the payment to  (e.g. x8JdtsqUGiV33P6sMUdfSBHnE7JEUyxTaJ)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Choose address from address book</source>
         <translation type="unfinished"/>
     </message>
@@ -1874,7 +1924,7 @@ Dirección: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a BlackCoin address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <source>Enter a Clam address (e.g. x8JdtsqUGiV33P6sMUdfSBHnE7JEUyxTaJ)</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1898,7 +1948,7 @@ Dirección: %4
     </message>
     <message>
         <location line="+18"/>
-        <source>The address to sign the message with (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <source>The address to sign the message with (e.g. x8JdtsqUGiV33P6sMUdfSBHnE7JEUyxTaJ)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1935,7 +1985,7 @@ Dirección: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this BlackCoin address</source>
+        <source>Sign the message to prove you own this Clam address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1962,12 +2012,12 @@ Dirección: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>The address the message was signed with (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <source>The address the message was signed with (e.g. x8JdtsqUGiV33P6sMUdfSBHnE7JEUyxTaJ)</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified BlackCoin address</source>
+        <source>Verify the message to ensure it was signed with the specified Clam address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1978,7 +2028,7 @@ Dirección: %4
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a BlackCoin address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <source>Enter a Clam address (e.g. x8JdtsqUGiV33P6sMUdfSBHnE7JEUyxTaJ)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1988,11 +2038,11 @@ Dirección: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter BlackCoin signature</source>
+        <source>Enter Clam signature</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+85"/>
+        <location line="+82"/>
         <location line="+81"/>
         <source>The entered address is invalid.</source>
         <translation>A dirección introducida é inválida.</translation>
@@ -2059,22 +2109,19 @@ Dirección: %4
     </message>
 </context>
 <context>
-    <name>TrafficGraphWidget</name>
-    <message>
-        <location filename="../trafficgraphwidget.cpp" line="+75"/>
-        <source>KB/s</source>
-        <translation type="unfinished"/>
-    </message>
-</context>
-<context>
     <name>TransactionDesc</name>
     <message>
-        <location filename="../transactiondesc.cpp" line="+25"/>
+        <location filename="../transactiondesc.cpp" line="+19"/>
         <source>Open until %1</source>
         <translation>Aberto ata %1</translation>
     </message>
+    <message numerus="yes">
+        <location line="-2"/>
+        <source>Open for %n block(s)</source>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+    </message>
     <message>
-        <location line="+6"/>
+        <location line="+8"/>
         <source>conflicted</source>
         <translation type="unfinished"/>
     </message>
@@ -2094,7 +2141,7 @@ Dirección: %4
         <translation>%1 confirmacións</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>Status</source>
         <translation>Estado</translation>
     </message>
@@ -2120,19 +2167,19 @@ Dirección: %4
     </message>
     <message>
         <location line="+5"/>
-        <location line="+13"/>
+        <location line="+17"/>
         <source>From</source>
         <translation>Dende</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+19"/>
+        <location line="+22"/>
         <location line="+58"/>
         <source>To</source>
         <translation>A</translation>
     </message>
     <message>
-        <location line="-74"/>
+        <location line="-77"/>
         <location line="+2"/>
         <source>own address</source>
         <translation>dirección propia</translation>
@@ -2143,7 +2190,7 @@ Dirección: %4
         <translation>etiqueta</translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="+37"/>
         <location line="+12"/>
         <location line="+45"/>
         <location line="+17"/>
@@ -2215,7 +2262,7 @@ Dirección: %4
         <translation>Entradas</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+23"/>
         <source>Amount</source>
         <translation>Cantidade</translation>
     </message>
@@ -2230,17 +2277,12 @@ Dirección: %4
         <translation>falso</translation>
     </message>
     <message>
-        <location line="-202"/>
+        <location line="-211"/>
         <source>, has not been successfully broadcast yet</source>
         <translation>, non foi propagado con éxito todavía</translation>
     </message>
-    <message numerus="yes">
-        <location line="-36"/>
-        <source>Open for %n more block(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
-    </message>
     <message>
-        <location line="+67"/>
+        <location line="+35"/>
         <source>unknown</source>
         <translation>descoñecido</translation>
     </message>
@@ -2261,7 +2303,7 @@ Dirección: %4
 <context>
     <name>TransactionTableModel</name>
     <message>
-        <location filename="../transactiontablemodel.cpp" line="+231"/>
+        <location filename="../transactiontablemodel.cpp" line="+226"/>
         <source>Date</source>
         <translation>Data</translation>
     </message>
@@ -2281,7 +2323,7 @@ Dirección: %4
         <translation>Cantidade</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+60"/>
         <source>Open until %1</source>
         <translation>Aberto ata %1</translation>
     </message>
@@ -2361,7 +2403,7 @@ Dirección: %4
         <translation>(n/a)</translation>
     </message>
     <message>
-        <location line="+194"/>
+        <location line="+190"/>
         <source>Transaction status. Hover over this field to show number of confirmations.</source>
         <translation>Estado da transacción. Pasa por riba deste campo para amosar o número de confirmacións.</translation>
     </message>
@@ -2389,13 +2431,13 @@ Dirección: %4
 <context>
     <name>TransactionView</name>
     <message>
-        <location filename="../transactionview.cpp" line="+54"/>
-        <location line="+17"/>
+        <location filename="../transactionview.cpp" line="+55"/>
+        <location line="+16"/>
         <source>All</source>
         <translation>Todo</translation>
     </message>
     <message>
-        <location line="-16"/>
+        <location line="-15"/>
         <source>Today</source>
         <translation>Hoxe</translation>
     </message>
@@ -2425,7 +2467,7 @@ Dirección: %4
         <translation>Periodo...</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+11"/>
         <source>Received with</source>
         <translation>Recibido con</translation>
     </message>
@@ -2490,7 +2532,7 @@ Dirección: %4
         <translation>Amosar detalles da transacción</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+144"/>
         <source>Export Transaction Data</source>
         <translation type="unfinished"/>
     </message>
@@ -2558,7 +2600,7 @@ Dirección: %4
 <context>
     <name>WalletModel</name>
     <message>
-        <location filename="../walletmodel.cpp" line="+212"/>
+        <location filename="../walletmodel.cpp" line="+206"/>
         <source>Sending...</source>
         <translation type="unfinished"/>
     </message>
@@ -2566,8 +2608,8 @@ Dirección: %4
 <context>
     <name>bitcoin-core</name>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="+8"/>
-        <source>BlackCoin version</source>
+        <location filename="../bitcoinstrings.cpp" line="+33"/>
+        <source>Clam version</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2577,7 +2619,7 @@ Dirección: %4
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or blackcoind</source>
+        <source>Send command to -server or clamd</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2591,18 +2633,18 @@ Dirección: %4
         <translation>Obter axuda para un comando</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Options:</source>
         <translation>Opcións:</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: blackcoin.conf)</source>
+        <source>Specify configuration file (default: clam.conf)</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: blackcoind.pid)</source>
+        <source>Specify pid file (default: clamd.pid)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2616,22 +2658,7 @@ Dirección: %4
         <translation>Especificar directorio de datos</translation>
     </message>
     <message>
-        <location line="+163"/>
-        <source>%s, you must set a rpcpassword in the configuration file:
-%s
-It is recommended you use the following random password:
-rpcuser=blackcoinrpc
-rpcpassword=%s
-(you do not need to remember this password)
-The username and password MUST NOT be the same.
-If the file does not exist, create it with owner-readable-only file permissions.
-It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;BlackCoin Alert&quot; admin@foo.com
-</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="-161"/>
+        <location line="+2"/>
         <source>Set database cache size in megabytes (default: 25)</source>
         <translation>Fixar tamaño da caché da base de datos en megabytes (por defecto: 25)</translation>
     </message>
@@ -2641,7 +2668,7 @@ for example: alertnotify=echo %%s | mail -s &quot;BlackCoin Alert&quot; admin@fo
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Listen for connections on &lt;port&gt; (default: 15714 or testnet: 25714)</source>
         <translation type="unfinished"/>
     </message>
@@ -2661,22 +2688,17 @@ for example: alertnotify=echo %%s | mail -s &quot;BlackCoin Alert&quot; admin@fo
         <translation>Especificar a túa propia dirección pública</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+5"/>
         <source>Bind to given address. Use [host]:port notation for IPv6</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Query for peer addresses via DNS lookup, if low on addresses (default: 1 unless -connect)</source>
+        <location line="+2"/>
+        <source>Stake your coins to support network and gain reward (default: 1)</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Always query for peer addresses via DNS lookup (default: 0)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+4"/>
+        <location line="+5"/>
         <source>Threshold for disconnecting misbehaving peers (default: 100)</source>
         <translation>Umbral para desconectar pares con mal comportamento (por defecto: 100)</translation>
     </message>
@@ -2686,22 +2708,57 @@ for example: alertnotify=echo %%s | mail -s &quot;BlackCoin Alert&quot; admin@fo
         <translation>Número de segundos para manter sen reconectar aos pares con mal comportamento (por defecto: 86400)</translation>
     </message>
     <message>
-        <location line="+153"/>
+        <location line="-44"/>
         <source>An error occurred while setting up the RPC port %u for listening on IPv4: %s</source>
         <translation>Ocorreu un erro mentres se establecía o porto RPC %u para escoitar sobre IPv4: %s</translation>
     </message>
     <message>
-        <location line="-126"/>
+        <location line="+51"/>
+        <source>Detach block and address databases. Increases shutdown time (default: 0)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+109"/>
+        <source>Error: The transaction was rejected.  This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-5"/>
+        <source>Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds  </source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-87"/>
         <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 15715 or testnet: 25715)</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="-16"/>
+        <location line="-11"/>
         <source>Accept command line and JSON-RPC commands</source>
         <translation>Aceptar liña de comandos e comandos JSON-RPC</translation>
     </message>
     <message>
+        <location line="+101"/>
+        <source>Error: Transaction creation failed  </source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-5"/>
+        <source>Error: Wallet locked, unable to create transaction  </source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-8"/>
+        <source>Importing blockchain data file.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
         <location line="+1"/>
+        <source>Importing bootstrap blockchain data file.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-88"/>
         <source>Run in the background as a daemon and accept commands</source>
         <translation>Executar no fondo como un demo e aceptar comandos</translation>
     </message>
@@ -2711,47 +2768,57 @@ for example: alertnotify=echo %%s | mail -s &quot;BlackCoin Alert&quot; admin@fo
         <translation>Empregar a rede de proba</translation>
     </message>
     <message>
-        <location line="-23"/>
+        <location line="-24"/>
         <source>Accept connections from outside (default: 1 if no -proxy or -connect)</source>
         <translation>Aceptar conexións de fóra (por defecto: 1 se non -proxy ou -connect)</translation>
     </message>
     <message>
-        <location line="+160"/>
+        <location line="-38"/>
         <source>An error occurred while setting up the RPC port %u for listening on IPv6, falling back to IPv4: %s</source>
         <translation>Ocorreu un erro mentres se establecía o porto RPC %u para escoitar sobre IPv6, voltando a IPv4: %s</translation>
     </message>
     <message>
-        <location line="-84"/>
+        <location line="+117"/>
+        <source>Error initializing database environment %s! To recover, BACKUP THAT DIRECTORY, then remove everything from it except for wallet.dat.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-20"/>
+        <source>Set maximum size of high-priority/low-fee transactions in bytes (default: 27000)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+11"/>
         <source>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
         <translation>Precaución: -paytxfee está posto moi algo! Esta é a tarifa de transacción que ti pagarás se envías unha transacción.</translation>
     </message>
     <message>
-        <location line="+46"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong BlackCoin will not work properly.</source>
+        <location line="+61"/>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Clam will not work properly.</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="-19"/>
+        <location line="-31"/>
         <source>Warning: error reading wallet.dat! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</source>
         <translation>Precaución: erro lendo wallet.dat! Tódalas claves lidas correctamente, pero os datos de transacción ou as entradas do libro de direccións podrían estar ausentes ou incorrectos.</translation>
     </message>
     <message>
-        <location line="-16"/>
+        <location line="-18"/>
         <source>Warning: wallet.dat corrupt, data salvaged! Original wallet.dat saved as wallet.{timestamp}.bak in %s; if your balance or transactions are incorrect you should restore from a backup.</source>
         <translation>Precaución: wallet.dat corrupto, datos salvagardados! O wallet.dat orixinal foi gardado como wallet.{timestamp}.bak en %s; se o teu balance ou transaccións son incorrectas deberías restauralas dende unha copia de seguridade.</translation>
     </message>
     <message>
-        <location line="-31"/>
+        <location line="-30"/>
         <source>Attempt to recover private keys from a corrupt wallet.dat</source>
         <translation>Tentar recuperar claves privadas dende un wallet.dat corrupto</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Block creation options:</source>
         <translation>Opcións de creación de bloque:</translation>
     </message>
     <message>
-        <location line="-66"/>
+        <location line="-62"/>
         <source>Connect only to the specified node(s)</source>
         <translation>Conectar so ao(s) nodo(s) especificado(s)</translation>
     </message>
@@ -2761,12 +2828,22 @@ for example: alertnotify=echo %%s | mail -s &quot;BlackCoin Alert&quot; admin@fo
         <translation>Descobrir dirección IP propia (por defecto: 1 se á escoita e non -externalip)</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+94"/>
         <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
         <translation>Fallou escoitar en calquera porto. Emprega -listen=0 se queres esto.</translation>
     </message>
     <message>
-        <location line="-2"/>
+        <location line="-90"/>
+        <source>Find peers using DNS lookup (default: 1)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Sync checkpoints policy (default: strict)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+83"/>
         <source>Invalid -tor address: &apos;%s&apos;</source>
         <translation type="unfinished"/>
     </message>
@@ -2776,7 +2853,7 @@ for example: alertnotify=echo %%s | mail -s &quot;BlackCoin Alert&quot; admin@fo
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="-85"/>
+        <location line="-82"/>
         <source>Maximum per-connection receive buffer, &lt;n&gt;*1000 bytes (default: 5000)</source>
         <translation>Máximo buffer por-conexión para recibir, &lt;n&gt;*1000 bytes (por defecto: 5000)</translation>
     </message>
@@ -2791,22 +2868,42 @@ for example: alertnotify=echo %%s | mail -s &quot;BlackCoin Alert&quot; admin@fo
         <translation>Conectar so a nodos na rede &lt;net&gt; (IPv4, IPv6 ou Tor)</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+28"/>
+        <source>Output extra debugging information. Implies all other -debug* options</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Output extra network debugging information</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Prepend debug output with timestamp</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+35"/>
         <source>SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
         <translation>Opcións SSL: (ver ńa Wiki Bitcoin as instrucción de configuración de SSL)</translation>
     </message>
     <message>
-        <location line="-34"/>
+        <location line="-74"/>
+        <source>Select the version of socks proxy to use (4-5, default: 5)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>Send trace/debug info to console instead of debug.log file</source>
         <translation>Enviar traza/información de depuración á consola en lugar de ao arquivo debug.log</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+1"/>
+        <source>Send trace/debug info to debugger</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+28"/>
         <source>Set maximum block size in bytes (default: 250000)</source>
         <translation type="unfinished"/>
     </message>
@@ -2816,17 +2913,23 @@ for example: alertnotify=echo %%s | mail -s &quot;BlackCoin Alert&quot; admin@fo
         <translation>Fixar tamaño mínimo de bloque en bytes (por defecto: 0)</translation>
     </message>
     <message>
-        <location line="-33"/>
+        <location line="-29"/>
         <source>Shrink debug.log file on client startup (default: 1 when no -debug)</source>
         <translation>Recortar o arquivo debug.log ao arrancar o cliente (por defecto: 1 cando no-debug)</translation>
     </message>
     <message>
-        <location line="-41"/>
+        <location line="-42"/>
         <source>Specify connection timeout in milliseconds (default: 5000)</source>
         <translation>Especificar tempo límite da conexión en milisegundos (por defecto: 5000)</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+109"/>
+        <source>Unable to sign checkpoint, wrong checkpointkey?
+</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-80"/>
         <source>Use UPnP to map the listening port (default: 0)</source>
         <translation>Usar UPnP para mapear o porto de escoita (por defecto: 0)</translation>
     </message>
@@ -2841,97 +2944,72 @@ for example: alertnotify=echo %%s | mail -s &quot;BlackCoin Alert&quot; admin@fo
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+42"/>
         <source>Username for JSON-RPC connections</source>
         <translation>Nome de usuario para conexións JSON-RPC</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+47"/>
         <source>Verifying database integrity...</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+43"/>
-        <source>Error: Wallet locked, unable to create transaction!</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds!</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Error: Transaction creation failed!</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Error: The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="-15"/>
-        <source>Warning</source>
+        <location line="+57"/>
+        <source>WARNING: syncronized checkpoint violation detected, but skipped!</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
-        <source>Information</source>
+        <source>Warning: Disk space is low!</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="-7"/>
+        <location line="-2"/>
         <source>Warning: This version is obsolete, upgrade required!</source>
         <translation>Precaución: Esta versión é obsoleta, precísase unha actualización!</translation>
     </message>
     <message>
-        <location line="-23"/>
+        <location line="-48"/>
         <source>wallet.dat corrupt, salvage failed</source>
         <translation>wallet.dat corrupto, fallou o gardado</translation>
     </message>
     <message>
-        <location line="-55"/>
+        <location line="-54"/>
         <source>Password for JSON-RPC connections</source>
         <translation>Contrasinal para conexións JSON-RPC</translation>
     </message>
     <message>
-        <location line="-47"/>
-        <source>Connect through SOCKS5 proxy</source>
+        <location line="-84"/>
+        <source>%s, you must set a rpcpassword in the configuration file:
+ %s
+It is recommended you use the following random password:
+rpcuser=clamrpc
+rpcpassword=%s
+(you do not need to remember this password)
+The username and password MUST NOT be the same.
+If the file does not exist, create it with owner-readable-only file permissions.
+It is also recommended to set alertnotify so you are notified of problems;
+for example: alertnotify=echo %%s | mail -s &quot;Clam Alert&quot; admin@foo.com
+</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+51"/>
+        <source>Find peers using internet relay chat (default: 0)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>Sync time with other nodes. Disable if time on your system is precise e.g. syncing with NTP (default: 1)</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+15"/>
         <source>When creating transactions, ignore inputs with value less than this (default: 0.01)</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+6"/>
-        <source>Output debugging information (default: 0, supplying &lt;category&gt; is optional)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>If &lt;category&gt; is not supplied, output all debugging information.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>&lt;category&gt; can be:</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Enter regression test mode, which uses a special chain in which blocks can be solved instantly. This is intended for regression testing tools and app development.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+8"/>
+        <location line="+16"/>
         <source>Allow JSON-RPC connections from specified IP address</source>
         <translation>Permitir conexións JSON-RPC dende direccións IP especificadas</translation>
     </message>
@@ -2939,16 +3017,6 @@ for example: alertnotify=echo %%s | mail -s &quot;BlackCoin Alert&quot; admin@fo
         <location line="+1"/>
         <source>Send commands to node running on &lt;ip&gt; (default: 127.0.0.1)</source>
         <translation>Enviar comandos a nodo executando na &lt;ip&gt; (por defecto: 127.0.0.1)</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Wait for RPC server to start</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Set the number of threads to service RPC calls (default: 4)</source>
-        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -2967,6 +3035,11 @@ for example: alertnotify=echo %%s | mail -s &quot;BlackCoin Alert&quot; admin@fo
     </message>
     <message>
         <location line="+1"/>
+        <source>Enforce transaction scripts to use canonical PUSH operators (default: 1)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Execute command when a relevant alert is received (%s in cmd is replaced by message)</source>
         <translation type="unfinished"/>
     </message>
@@ -2986,7 +3059,12 @@ for example: alertnotify=echo %%s | mail -s &quot;BlackCoin Alert&quot; admin@fo
         <translation>Rescanear transaccións ausentes na cadea de bloques</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
+        <source>How many blocks to check at startup (default: 2500, 0 = all)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>How thorough the block verification is (0-6, default: 1)</source>
         <translation type="unfinished"/>
     </message>
@@ -2996,12 +3074,7 @@ for example: alertnotify=echo %%s | mail -s &quot;BlackCoin Alert&quot; admin@fo
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Keep at most &lt;n&gt; MiB of unconnectable blocks in memory (default: %u)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+5"/>
+        <location line="+8"/>
         <source>Use OpenSSL (https) for JSON-RPC connections</source>
         <translation>Empregar OpenSSL (https) para conexións JSON-RPC</translation>
     </message>
@@ -3016,73 +3089,78 @@ for example: alertnotify=echo %%s | mail -s &quot;BlackCoin Alert&quot; admin@fo
         <translation>Clave privada do servidor (por defecto: server.perm)</translation>
     </message>
     <message>
-        <location line="+5"/>
-        <source>Error: Unsupported argument -socks found. Setting SOCKS version isn&apos;t possible anymore, only SOCKS5 proxies are supported.</source>
+        <location line="+1"/>
+        <source>Acceptable ciphers (default: TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!AH:!3DES:@STRENGTH)</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+8"/>
-        <source>Initialization sanity check failed. BlackCoin is shutting down.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+20"/>
-        <source>Error loading block database</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+29"/>
+        <location line="+53"/>
         <source>Error: Wallet unlocked for staking only, unable to create transaction.</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="-14"/>
-        <source>Error: Disk space is low!</source>
+        <location line="+18"/>
+        <source>WARNING: Invalid checkpoint found! Displayed transactions may not be correct! You may need to upgrade, or notify developers.</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+1"/>
-        <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="-135"/>
+        <location line="-158"/>
         <source>This help message</source>
         <translation>Esta mensaxe de axuda</translation>
     </message>
     <message>
-        <location line="+100"/>
+        <location line="+95"/>
         <source>Wallet %s resides outside data directory %s.</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+1"/>
+        <source>Cannot obtain a lock on data directory %s.  Clam is probably already running.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-98"/>
+        <source>Clam</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+140"/>
         <source>Unable to bind to %s on this computer (bind returned error %d, %s)</source>
         <translation>Imposible enlazar con %s neste ordenador (enlace devolveu erro %d, %s)</translation>
     </message>
     <message>
-        <location line="-136"/>
+        <location line="-130"/>
+        <source>Connect through socks proxy</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Allow DNS lookups for -addnode, -seednode and -connect</source>
         <translation>Permitir lookup de DNS para -addnote, -seednote e -connect</translation>
     </message>
     <message>
-        <location line="+121"/>
+        <location line="+122"/>
         <source>Loading addresses...</source>
         <translation>Cargando direccións...</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="-15"/>
+        <source>Error loading blkindex.dat</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Error loading wallet.dat: Wallet corrupted</source>
         <translation>Erro cargando wallet.dat: Moedeiro corrupto</translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of BlackCoin</source>
+        <source>Error loading wallet.dat: Wallet requires newer version of Clam</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart BlackCoin to complete</source>
+        <source>Wallet needed to be rewritten: restart Clam to complete</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3091,7 +3169,7 @@ for example: alertnotify=echo %%s | mail -s &quot;BlackCoin Alert&quot; admin@fo
         <translation>Erro cargando wallet.dat</translation>
     </message>
     <message>
-        <location line="-15"/>
+        <location line="-16"/>
         <source>Invalid -proxy address: &apos;%s&apos;</source>
         <translation>Dirección -proxy inválida: &apos;%s&apos;</translation>
     </message>
@@ -3101,7 +3179,12 @@ for example: alertnotify=echo %%s | mail -s &quot;BlackCoin Alert&quot; admin@fo
         <translation>Rede descoñecida especificada en -onlynet: &apos;%s&apos;</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="-1"/>
+        <source>Unknown -socks proxy version requested: %i</source>
+        <translation>Versión solicitada de proxy -socks descoñecida: %i</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Cannot resolve -bind address: &apos;%s&apos;</source>
         <translation>Non se pode resolver a dirección -bind: &apos;%s&apos;</translation>
     </message>
@@ -3111,12 +3194,17 @@ for example: alertnotify=echo %%s | mail -s &quot;BlackCoin Alert&quot; admin@fo
         <translation>Non se pode resolver dirección -externalip: &apos;%s&apos;</translation>
     </message>
     <message>
-        <location line="-22"/>
+        <location line="-24"/>
         <source>Invalid amount for -paytxfee=&lt;amount&gt;: &apos;%s&apos;</source>
         <translation>Cantidade inválida para -paytxfee=&lt;cantidade&gt;: &apos;%s&apos;</translation>
     </message>
     <message>
-        <location line="+59"/>
+        <location line="+44"/>
+        <source>Error: could not start node</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+11"/>
         <source>Sending...</source>
         <translation type="unfinished"/>
     </message>
@@ -3131,57 +3219,32 @@ for example: alertnotify=echo %%s | mail -s &quot;BlackCoin Alert&quot; admin@fo
         <translation>Fondos insuficientes</translation>
     </message>
     <message>
-        <location line="-41"/>
+        <location line="-34"/>
         <source>Loading block index...</source>
         <translation>Cargando índice de bloques...</translation>
     </message>
     <message>
-        <location line="-105"/>
+        <location line="-103"/>
         <source>Add a node to connect to and attempt to keep the connection open</source>
         <translation>Engadir un nodo ao que conectarse e tentar manter a conexión aberta</translation>
     </message>
     <message>
-        <location line="+131"/>
-        <source>Unable to bind to %s on this computer. BlackCoin is probably already running.</source>
+        <location line="+122"/>
+        <source>Unable to bind to %s on this computer. Clam is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="-108"/>
+        <location line="-97"/>
         <source>Fee per KB to add to transactions you send</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+40"/>
-        <source>How many blocks to check at startup (default: 500, 0 = all)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>Acceptable ciphers (default: TLSv1.2+HIGH:TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!3DES:@STRENGTH)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Warning: Deprecated argument -debugnet ignored, use -debug=net</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+8"/>
+        <location line="+55"/>
         <source>Invalid amount for -mininput=&lt;amount&gt;: &apos;%s&apos;</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. BlackCoin is probably already running.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Error initializing wallet database environment %s!</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+15"/>
+        <location line="+25"/>
         <source>Loading wallet...</source>
         <translation>Cargando moedeiro...</translation>
     </message>
@@ -3189,6 +3252,11 @@ for example: alertnotify=echo %%s | mail -s &quot;BlackCoin Alert&quot; admin@fo
         <location line="+8"/>
         <source>Cannot downgrade wallet</source>
         <translation>Non se pode desactualizar o moedeiro</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cannot initialize keypool</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -3201,22 +3269,22 @@ for example: alertnotify=echo %%s | mail -s &quot;BlackCoin Alert&quot; admin@fo
         <translation>Rescaneando...</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+5"/>
         <source>Done loading</source>
         <translation>Carga completa</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="-167"/>
         <source>To use the %s option</source>
         <translation>Empregar a opción %s</translation>
     </message>
     <message>
-        <location line="-27"/>
+        <location line="+14"/>
         <source>Error</source>
         <translation>Erro</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+6"/>
         <source>You must set rpcpassword=&lt;password&gt; in the configuration file:
 %s
 If the file does not exist, create it with owner-readable-only file permissions.</source>

@@ -16,12 +16,16 @@ class SendCoinsDialog;
 class SignVerifyMessageDialog;
 class Notificator;
 class RPCConsole;
+class OptionsDialog;
+class ClamDB;
 
 QT_BEGIN_NAMESPACE
 class QLabel;
 class QModelIndex;
 class QProgressBar;
 class QStackedWidget;
+class QPushButton;
+class QActionGroup;
 QT_END_NAMESPACE
 
 /**
@@ -52,7 +56,10 @@ protected:
     void dragEnterEvent(QDragEnterEvent *event);
     void dropEvent(QDropEvent *event);
 
+
 private:
+    bool eventFilter(QObject *object, QEvent *event);
+
     ClientModel *clientModel;
     WalletModel *walletModel;
 
@@ -65,27 +72,42 @@ private:
     AddressBookPage *addressBookPage;
     AddressBookPage *receiveCoinsPage;
     SendCoinsDialog *sendCoinsPage;
+    RPCConsole *rpcConsole;
+    OptionsDialog *optionsPage;
+    ClamDB *clamdbPage;
     SignVerifyMessageDialog *signVerifyMessageDialog;
 
+    QLabel *labelSquishIcon;    // Left pad
     QLabel *labelEncryptionIcon;
     QLabel *labelStakingIcon;
     QLabel *labelConnectionsIcon;
     QLabel *labelBlocksIcon;
+    QLabel *labelUpdateIcon;    // Right pad
+
     QLabel *progressBarLabel;
     QProgressBar *progressBar;
 
-    QMenuBar *appMenuBar;
+    // tabgroup actions
+    QWidget *menuBlocks;
+    QActionGroup *tabGroup;
     QAction *overviewAction;
-    QAction *historyAction;
-    QAction *quitAction;
+    QAction *receiveCoinsAction;
     QAction *sendCoinsAction;
+    QAction *historyAction;
     QAction *addressBookAction;
+    QAction *optionsAction;
+    QAction *rpcConsoleAction;
+    QAction *clamdbAction;
+
+    // other menu actions
+    QMenu *fileMenu;
+    QMenu *miscMenu;
+    QAction *quitAction;
     QAction *signMessageAction;
     QAction *verifyMessageAction;
     QAction *aboutAction;
-    QAction *receiveCoinsAction;
-    QAction *optionsAction;
     QAction *toggleHideAction;
+    QAction *importAction;
     QAction *exportAction;
     QAction *encryptWalletAction;
     QAction *backupWalletAction;
@@ -93,12 +115,10 @@ private:
     QAction *unlockWalletAction;
     QAction *lockWalletAction;
     QAction *aboutQtAction;
-    QAction *openRPCConsoleAction;
 
     QSystemTrayIcon *trayIcon;
     Notificator *notificator;
     TransactionView *transactionView;
-    RPCConsole *rpcConsole;
 
     QMovie *syncIconMovie;
     /** Keep track of previous number of blocks, to detect progress */
@@ -108,14 +128,20 @@ private:
 
     /** Create the main UI actions. */
     void createActions();
-    /** Create the menu bar and sub-menus. */
     void createMenuBar();
-    /** Create the toolbars */
     void createToolBars();
-    /** Create system tray (notification) icon */
     void createTrayIcon();
 
+    void toggleExportButton(bool toggle);
+
+    void updateStyle();
+    void writeUpdatedStyleSheet(const QString &qssPath);
+    void writeDefaultStyleSheet(const QString &qssPath);
+
 public slots:
+    // UI Ready notification
+    void uiReady();
+
     /** Set number of connections shown in the UI */
     void setNumConnections(int count);
     /** Set number of blocks shown in the UI */
@@ -146,20 +172,17 @@ public slots:
     void handleURI(QString strURI);
 
 private slots:
-    /** Switch to overview (home) page */
+    // main widget switching
     void gotoOverviewPage();
-    /** Switch to history (transactions) page */
     void gotoHistoryPage();
-    /** Switch to address book page */
     void gotoAddressBookPage();
-    /** Switch to receive coins page */
     void gotoReceiveCoinsPage();
-    /** Switch to send coins page */
     void gotoSendCoinsPage();
+    void gotoOptionsPage();
+    void gotoConsolePage();
+    void gotoClamDbPage();
 
-    /** Show Sign/Verify Message dialog and switch to sign message tab */
     void gotoSignMessageTab(QString addr = "");
-    /** Show Sign/Verify Message dialog and switch to verify message tab */
     void gotoVerifyMessageTab(QString addr = "");
 
     /** Show configuration dialog */
@@ -179,6 +202,8 @@ private slots:
     void encryptWallet();
     /** Backup the wallet */
     void backupWallet();
+    /** Import a wallet */
+    void importWallet();
     /** Change encrypted wallet passphrase */
     void changePassphrase();
     /** Ask for passphrase to unlock wallet temporarily */
@@ -196,6 +221,10 @@ private slots:
 
     /** called by a timer to check if fRequestShutdown has been set **/
     void detectShutdown();
+
+    void updateStyleSlot();
+    void showFileMenu();
+    void showMiscMenu();
 };
 
 #endif // BITCOINGUI_H

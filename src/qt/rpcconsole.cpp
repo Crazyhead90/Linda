@@ -8,17 +8,21 @@
 #include "rpcclient.h"
 
 #include <QTime>
+#include <QTimer>
 #include <QThread>
+#include <QTextEdit>
 #include <QKeyEvent>
 #include <QUrl>
 #include <QScrollBar>
 
 #include <openssl/crypto.h>
 
-// TODO: add a scrollback limit, as there is currently none
+#include <univalue.h>
+
 // TODO: make it possible to filter out categories (esp debug messages when implemented)
 // TODO: receive errors and debug messages through ClientModel
 
+//const int CONSOLE_SCROLLBACK = 50;
 const int CONSOLE_HISTORY = 50;
 const QSize ICON_SIZE(24, 24);
 
@@ -140,6 +144,12 @@ bool parseCommandLine(std::vector<std::string> &args, const std::string &strComm
     }
 }
 
+/** In Qt4, calling a threaded far emit causes issues. Fixed in Qt5 */
+void RPCConsole::cmdRequestFar(const QString &command)
+{
+    emit cmdRequest(command);
+}
+
 void RPCExecutor::request(const QString &command)
 {
     std::vector<std::string> args;
@@ -155,21 +165,21 @@ void RPCExecutor::request(const QString &command)
         std::string strPrint;
         // Convert argument list to JSON objects in method-dependent way,
         // and pass it along with the method name to the dispatcher.
-        json_spirit::Value result = tableRPC.execute(
+        UniValue result = tableRPC.execute(
             args[0],
             RPCConvertValues(args[0], std::vector<std::string>(args.begin() + 1, args.end())));
 
         // Format result reply
-        if (result.type() == json_spirit::null_type)
+        if (result.isNull())
             strPrint = "";
-        else if (result.type() == json_spirit::str_type)
+        else if (result.isStr())
             strPrint = result.get_str();
         else
-            strPrint = write_string(result, true);
+            strPrint = result.write(2);
 
         emit reply(RPCConsole::CMD_REPLY, QString::fromStdString(strPrint));
     }
-    catch (json_spirit::Object& objError)
+    catch (UniValue& objError)
     {
         try // Nice formatting for standard-format error
         {
@@ -179,7 +189,7 @@ void RPCExecutor::request(const QString &command)
         }
         catch(std::runtime_error &) // raised when converting to invalid type, i.e. missing code or message
         {   // Show raw JSON object
-            emit reply(RPCConsole::CMD_ERROR, QString::fromStdString(write_string(json_spirit::Value(objError), false)));
+            emit reply(RPCConsole::CMD_ERROR, QString::fromStdString(objError.write()));
         }
     }
     catch (std::exception& e)
@@ -322,7 +332,7 @@ void RPCConsole::clear()
                 "b { color: #00C0C0; } "
                 );
 
-    message(CMD_REPLY, (tr("Welcome to the BlackCoin RPC console.") + "<br>" +
+    message(CMD_REPLY, (tr("Welcome to the Clam RPC console.") + "<br>" +
                         tr("Use up and down arrows to navigate history, and <b>Ctrl-L</b> to clear screen.") + "<br>" +
                         tr("Type <b>help</b> for an overview of available commands.")), true);
 }
@@ -345,14 +355,7 @@ void RPCConsole::message(int category, const QString &message, bool html)
 
 void RPCConsole::setNumConnections(int count)
 {
-    if (!clientModel)
-        return;
-
-    QString connections = QString::number(count) + " (";
-    connections += tr("In:") + " " + QString::number(clientModel->getNumConnections(CONNECTIONS_IN)) + " / ";
-    connections += tr("Out:") + " " + QString::number(clientModel->getNumConnections(CONNECTIONS_OUT)) + ")";
-
-    ui->numberOfConnections->setText(connections);
+    ui->numberOfConnections->setText(QString::number(count));
 }
 
 void RPCConsole::setNumBlocks(int count)
