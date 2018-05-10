@@ -1,7 +1,3 @@
-#if defined(HAVE_CONFIG_H)
-#include "bitcoin-config.h"
-#endif
-
 #include "optionsdialog.h"
 #include "ui_optionsdialog.h"
 
@@ -9,16 +5,11 @@
 #include "monitoreddatamapper.h"
 #include "netbase.h"
 #include "optionsmodel.h"
-#include "clamspeech.h"
-#include "guiutil.h"
-#include "util.h"
 
-#include <QDebug>
 #include <QDir>
 #include <QIntValidator>
 #include <QLocale>
 #include <QMessageBox>
-#include <QPlainTextEdit>
 
 OptionsDialog::OptionsDialog(QWidget *parent) :
     QDialog(parent),
@@ -40,14 +31,8 @@ OptionsDialog::OptionsDialog(QWidget *parent) :
     ui->proxyPort->setEnabled(false);
     ui->proxyPort->setValidator(new QIntValidator(1, 65535, this));
 
-    ui->socksVersion->setEnabled(false);
-    ui->socksVersion->addItem("5", 5);
-    ui->socksVersion->addItem("4", 4);
-    ui->socksVersion->setCurrentIndex(0);
-
     connect(ui->connectSocks, SIGNAL(toggled(bool)), ui->proxyIp, SLOT(setEnabled(bool)));
     connect(ui->connectSocks, SIGNAL(toggled(bool)), ui->proxyPort, SLOT(setEnabled(bool)));
-    connect(ui->connectSocks, SIGNAL(toggled(bool)), ui->socksVersion, SLOT(setEnabled(bool)));
     connect(ui->connectSocks, SIGNAL(clicked(bool)), this, SLOT(showRestartWarning_Proxy()));
 
     ui->proxyIp->installEventFilter(this);
@@ -94,8 +79,6 @@ OptionsDialog::OptionsDialog(QWidget *parent) :
     mapper->setSubmitPolicy(QDataWidgetMapper::ManualSubmit);
     mapper->setOrientation(Qt::Vertical);
 
-    /* map quote editor to enable apply button */
-    connect( ui->clamSpeechEditbox, SIGNAL(textChanged()), this, SLOT(enableApplyButton()) );
     /* enable apply button when data modified */
     connect(mapper, SIGNAL(viewModified()), this, SLOT(enableApplyButton()));
     /* disable apply button when new data loaded */
@@ -122,8 +105,6 @@ void OptionsDialog::setModel(OptionsModel *model)
         mapper->toFirst();
     }
 
-    loadClamQuotes();
-
     /* update the display unit, to not use the default ("BTC") */
     updateDisplayUnit();
 
@@ -147,7 +128,6 @@ void OptionsDialog::setMapper()
     mapper->addMapping(ui->connectSocks, OptionsModel::ProxyUse);
     mapper->addMapping(ui->proxyIp, OptionsModel::ProxyIP);
     mapper->addMapping(ui->proxyPort, OptionsModel::ProxyPort);
-    mapper->addMapping(ui->socksVersion, OptionsModel::ProxySocksVersion);
 
     /* Window */
 #ifndef Q_OS_MAC
@@ -160,40 +140,7 @@ void OptionsDialog::setMapper()
     mapper->addMapping(ui->unit, OptionsModel::DisplayUnit);
     mapper->addMapping(ui->coinControlFeatures, OptionsModel::CoinControlFeatures);
     mapper->addMapping(ui->minimizeCoinAge, OptionsModel::MinimizeCoinAge);
-    mapper->addMapping(ui->useClamTheme, OptionsModel::UseClamTheme);
-    mapper->addMapping(ui->clamSpeechGroupbox, OptionsModel::UseClamSpeech);
-    mapper->addMapping(ui->clamSpeechRandomCheckbox, OptionsModel::UseClamSpeechRandom);
-}
-
-void OptionsDialog::loadClamQuotes()
-{
-    if ( !fUseClamSpeech )
-        return;
-
-    ui->clamSpeechEditbox->clear();
-    for ( ulong i = 0; i < clamSpeech.size(); i++ )
-        ui->clamSpeechEditbox->appendPlainText( QString::fromStdString( clamSpeech.at(i) ) );
-}
-
-void OptionsDialog::saveClamQuotes()
-{
-    if ( !fUseClamSpeech )
-        return;
-
-    clamSpeech.clear();
-    QStringList list = ui->clamSpeechEditbox->toPlainText().split( '\n' );
-
-    foreach ( const QString &strLine, list )
-        if ( !strLine.isEmpty() )
-            clamSpeech.push_back( strLine.trimmed().toStdString() );
-
-    // save clam quotes
-    qDebug() << "saving clamspeech";
-    if ( !SaveClamSpeech() )
-        qDebug() << "CLAMSpeech FAILED to save!";
-
-    // send signal to BitcoinGUI->SendCoinsDialog
-    emit onClamSpeechUpdated();
+    mapper->addMapping(ui->useBlackTheme, OptionsModel::UseBlackTheme);
 }
 
 void OptionsDialog::enableApplyButton()
@@ -221,6 +168,13 @@ void OptionsDialog::disableSaveButtons()
 void OptionsDialog::setSaveButtonState(bool fState)
 {
     ui->applyButton->setEnabled(fState);
+    ui->okButton->setEnabled(fState);
+}
+
+void OptionsDialog::on_okButton_clicked()
+{
+    mapper->submit();
+    accept();
 }
 
 void OptionsDialog::on_cancelButton_clicked()
@@ -231,7 +185,6 @@ void OptionsDialog::on_cancelButton_clicked()
 void OptionsDialog::on_applyButton_clicked()
 {
     mapper->submit();
-    saveClamQuotes();
     disableApplyButton();
 }
 
@@ -239,7 +192,7 @@ void OptionsDialog::showRestartWarning_Proxy()
 {
     if(!fRestartWarningDisplayed_Proxy)
     {
-        QMessageBox::warning(this, tr("Warning"), tr("This setting will take effect after restarting Clam."), QMessageBox::Ok);
+        QMessageBox::warning(this, tr("Warning"), tr("This setting will take effect after restarting Linda."), QMessageBox::Ok);
         fRestartWarningDisplayed_Proxy = true;
     }
 }
@@ -248,7 +201,7 @@ void OptionsDialog::showRestartWarning_Lang()
 {
     if(!fRestartWarningDisplayed_Lang)
     {
-        QMessageBox::warning(this, tr("Warning"), tr("This setting will take effect after restarting Clam."), QMessageBox::Ok);
+        QMessageBox::warning(this, tr("Warning"), tr("This setting will take effect after restarting Linda."), QMessageBox::Ok);
         fRestartWarningDisplayed_Lang = true;
     }
 }

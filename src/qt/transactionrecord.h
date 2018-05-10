@@ -71,32 +71,28 @@ public:
         SendToOther,
         RecvWithAddress,
         RecvFromOther,
-        SendToSelf,
-        Notary,
-        NotarySendToAddress,
-        NotarySendToOther,
-        CreateClamour
+        SendToSelf
     };
 
     /** Number of confirmation recommended for accepting a transaction */
     static const int RecommendedNumConfirmations = 10;
 
     TransactionRecord():
-            hash(), time(0), type(Other), address(""), debit(0), credit(0), clamspeech(""), idx(0)
+            hash(), time(0), type(Other), address(""), debit(0), credit(0), idx(0)
     {
     }
 
     TransactionRecord(uint256 hash, int64_t time):
             hash(hash), time(time), type(Other), address(""), debit(0),
-            credit(0), clamspeech(""), idx(0)
+            credit(0), idx(0)
     {
     }
 
     TransactionRecord(uint256 hash, int64_t time,
                 Type type, const std::string &address,
-                int64_t debit, int64_t credit, std::string clamspeech):
+                int64_t debit, int64_t credit):
             hash(hash), time(time), type(type), address(address), debit(debit), credit(credit),
-            clamspeech(clamspeech), idx(0)
+            idx(0)
     {
     }
 
@@ -113,7 +109,6 @@ public:
     std::string address;
     qint64 debit;
     qint64 credit;
-    std::string clamspeech;
     /**@}*/
 
     /** Subtransaction index, for sort key */

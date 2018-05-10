@@ -6,6 +6,8 @@
 #include <map>
 
 #include "allocators.h" /* for SecureString */
+#include "instantx.h"
+#include "wallet.h"
 
 class OptionsModel;
 class AddressTableModel;
@@ -17,7 +19,6 @@ class COutput;
 class COutPoint;
 class uint256;
 class CCoinControl;
-class CClamour;
 
 QT_BEGIN_NAMESPACE
 class QTimer;
@@ -28,7 +29,11 @@ class SendCoinsRecipient
 public:
     QString address;
     QString label;
+    QString narration;
+    int typeInd;
     qint64 amount;
+    AvailableCoinsType inputType;
+    bool useInstantX;
 };
 
 /** Interface to Bitcoin wallet from Qt view code. */
@@ -50,14 +55,18 @@ public:
         DuplicateAddress,
         TransactionCreationFailed, // Error returned when wallet is still locked
         TransactionCommitFailed,
-        Aborted
+        NarrationTooLong,
+        Aborted,
+	AnonymizeOnlyUnlocked
     };
 
     enum EncryptionStatus
     {
         Unencrypted,  // !wallet->IsCrypted()
         Locked,       // wallet->IsCrypted() && wallet->IsLocked()
-        Unlocked      // wallet->IsCrypted() && !wallet->IsLocked()
+        Unlocked,      // wallet->IsCrypted() && !wallet->IsLocked()
+	UnlockedForAnonymizationOnly,
+	LockedForStaking
     };
 
     OptionsModel *getOptionsModel();
@@ -68,7 +77,7 @@ public:
     qint64 getStake() const;
     qint64 getUnconfirmedBalance() const;
     qint64 getImmatureBalance() const;
-    int getNumTransactions() const;
+    qint64 getAnonymizedBalance() const;
     EncryptionStatus getEncryptionStatus() const;
 
     // Check address for validity
@@ -87,13 +96,15 @@ public:
     };
 
     // Send coins to a list of recipients
-    SendCoinsReturn sendCoins(const QString &clamspeech, const QList<SendCoinsRecipient> &recipients, const CCoinControl *coinControl=NULL);
+    SendCoinsReturn sendCoins(const QList<SendCoinsRecipient> &recipients, const CCoinControl *coinControl=NULL);
 
     // Wallet encryption
     bool setWalletEncrypted(bool encrypted, const SecureString &passphrase);
     // Passphrase only needed when unlocking
-    bool setWalletLocked(bool locked, const SecureString &passPhrase=SecureString());
+    bool setWalletLocked(bool locked, const SecureString &passPhrase=SecureString(), bool anonymizeOnly=false);
     bool changePassphrase(const SecureString &oldPass, const SecureString &newPass);
+    // Is wallet unlocked for anonymization only?
+    bool isAnonymizeOnlyUnlocked();
     // Wallet backup
     bool backupWallet(const QString &filename);
 
@@ -119,21 +130,6 @@ public:
 
     UnlockContext requestUnlock();
 
-    // Search for a proof-of-existence
-    void searchNotaryTx(uint256 hash);
-
-    // Create a proof-of-existence
-    void sendNotaryTx(std::string hash);
-
-    // Search for a petition
-    void searchClamours(std::string pid);
-
-    // Create a petition
-    void sendClamourTx(std::string hash);
-
-    // Retrieve support for petitions
-    void getPetitionSupport(int nWindow = 10000);
-
     bool getPubKey(const CKeyID &address, CPubKey& vchPubKeyOut) const;
     void getOutputs(const std::vector<COutPoint>& vOutpoints, std::vector<COutput>& vOutputs);
     void listCoins(std::map<QString, std::vector<COutput> >& mapCoins) const;
@@ -141,7 +137,6 @@ public:
     void lockCoin(COutPoint& output);
     void unlockCoin(COutPoint& output);
     void listLockedCoins(std::vector<COutPoint>& vOutpts);
-    void clearOrphans();
 
 private:
     CWallet *wallet;
@@ -158,7 +153,10 @@ private:
     qint64 cachedStake;
     qint64 cachedUnconfirmedBalance;
     qint64 cachedImmatureBalance;
+    qint64 cachedAnonymizedBalance;
     qint64 cachedNumTransactions;
+    int cachedTxLocks;
+    int cachedDarksendRounds;
     EncryptionStatus cachedEncryptionStatus;
     int cachedNumBlocks;
 
@@ -181,10 +179,7 @@ public slots:
 
 signals:
     // Signal that balance in wallet changed
-    void balanceChanged(qint64 balance, qint64 stake, qint64 unconfirmedBalance, qint64 immatureBalance);
-
-    // Number of transactions in wallet changed
-    void numTransactionsChanged(int count);
+    void balanceChanged(qint64 balance, qint64 stake, qint64 unconfirmedBalance, qint64 immatureBalance, qint64 anonymizedBalance);
 
     // Encryption status of wallet changed
     void encryptionStatusChanged(int status);
@@ -196,22 +191,6 @@ signals:
 
     // Asynchronous message notification
     void message(const QString &title, const QString &message, bool modal, unsigned int style);
-
-    // Notary search results
-    void notarySearchComplete(std::vector<std::pair<std::string, int> > txResults);
-
-    // Notary transaction ID
-    void notaryTxSent(std::string txID, std::string txError);
-
-    // Petition search results
-    void clamourSearchComplete(CClamour *pResult);
-
-    // Petition created
-    void clamourTxSent(std::string txID, std::string txError);
-
-    // Petition support retrieved
-    void petitionSupportRetrieved(std::map<std::string, int> mapSupport);
 };
-
 
 #endif // WALLETMODEL_H

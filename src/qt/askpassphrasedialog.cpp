@@ -116,7 +116,7 @@ void AskPassphraseDialog::accept()
                 {
                     QMessageBox::warning(this, tr("Wallet encrypted"),
                                          "<qt>" + 
-                                         tr("Clam will close now to finish the encryption process. "
+                                         tr("Linda will close now to finish the encryption process. "
                                          "Remember that encrypting your wallet cannot fully protect "
                                          "your coins from being stolen by malware infecting your computer.") + 
                                          "<br><br><b>" + 
@@ -154,7 +154,20 @@ void AskPassphraseDialog::accept()
         }
         else
         {
-            fWalletUnlockStakingOnly = ui->stakingCheckBox->isChecked();
+        	fWalletUnlockStakingOnly = ui->stakingCheckBox->isChecked();
+        	if(fWalletUnlockStakingOnly)
+        	{
+        		QMessageBox::information(this, tr("Wallet Unlocked"),
+        	        	                                     tr("You have successfully unlocked your wallet for staking only."));
+
+        	}
+        	else
+        	{
+        		QMessageBox::information(this, tr("Wallet Unlocked"),
+        	        	                                     tr("You have successfully unlocked your wallet"));
+
+        	}
+
             QDialog::accept(); // Success
         }
         break;

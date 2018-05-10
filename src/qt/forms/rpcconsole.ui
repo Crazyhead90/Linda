@@ -7,17 +7,17 @@
     <x>0</x>
     <y>0</y>
     <width>740</width>
-    <height>487</height>
+    <height>450</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Clam - Debug window</string>
+   <string>Linda - Debug window</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
     <widget class="QTabWidget" name="tabWidget">
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="tab_info">
       <attribute name="title">
@@ -36,7 +36,7 @@
           </font>
          </property>
          <property name="text">
-          <string>Clam Core</string>
+          <string>Linda Core</string>
          </property>
         </widget>
        </item>
@@ -299,7 +299,7 @@
        <item row="14" column="0">
         <widget class="QPushButton" name="openDebugLogfileButton">
          <property name="toolTip">
-          <string>Open the Clam debug log file from the current data directory. This can take a few seconds for large log files.</string>
+          <string>Open the Linda debug log file from the current data directory. This can take a few seconds for large log files.</string>
          </property>
          <property name="text">
           <string>&amp;Open</string>
@@ -325,7 +325,7 @@
        <item row="16" column="0">
         <widget class="QPushButton" name="showCLOptionsButton">
          <property name="toolTip">
-          <string>Show the Clam-Qt help message to get a list with possible Clam command-line options.</string>
+          <string>Show the Linda-Qt help message to get a list with possible Linda command-line options.</string>
          </property>
          <property name="text">
           <string>&amp;Show</string>
