@@ -18,7 +18,9 @@ static const int64_t nClientStartupTime = GetTime();
 
 ClientModel::ClientModel(OptionsModel *optionsModel, QObject *parent) :
     QObject(parent), optionsModel(optionsModel),
-    cachedNumBlocks(0), numBlocksAtStartup(-1), pollTimer(0)
+    cachedNumBlocks(0), cachedNumBlocksOfPeers(0),
+    cachedReindexing(0), cachedImporting(0),
+    numBlocksAtStartup(-1), pollTimer(0)
 {
     pollTimer = new QTimer(this);
     pollTimer->setInterval(MODEL_UPDATE_DELAY);
@@ -69,7 +71,6 @@ QDateTime ClientModel::getLastBlockDate() const
         return QDateTime::fromTime_t(Params().GenesisBlock().nTime); // Genesis block's time of current network
 }
 
-
 void ClientModel::updateTimer()
 {
     // Get required lock upfront. This avoids the GUI from getting stuck on
@@ -82,9 +83,14 @@ void ClientModel::updateTimer()
     // Periodically check and update with a timer.
     int newNumBlocks = getNumBlocks();
 
-    if(cachedNumBlocks != newNumBlocks)
+    // check for changed number of blocks we have, number of blocks peers claim to have, reindexing state and importing state
+    if (cachedNumBlocks != newNumBlocks || /* // TRYPHE FIXME cachedNumBlocksOfPeers != newNumBlocksOfPeers ||*/
+        cachedReindexing != fReindex || cachedImporting != fImporting)
     {
         cachedNumBlocks = newNumBlocks;
+        // TRYPHE FIXME cachedNumBlocksOfPeers = newNumBlocksOfPeers;
+        cachedReindexing = fReindex;
+        cachedImporting = fImporting;
 
         emit numBlocksChanged(newNumBlocks);
     }
