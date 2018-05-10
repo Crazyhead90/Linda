@@ -52,11 +52,10 @@ public:
         bool confirmed = index.data(TransactionTableModel::ConfirmedRole).toBool();
         QVariant value = index.data(Qt::ForegroundRole);
         QColor foreground = option.palette.color(QPalette::Text);
-        if(value.canConvert<QBrush>())
+        if(qVariantCanConvert<QColor>(value))
         {
-            QBrush brush = qvariant_cast<QBrush>(value);
-            foreground = brush.color();
-}
+            foreground = qvariant_cast<QColor>(value);
+        }
 
         painter->setPen(fUseBlackTheme ? QColor(255, 255, 255) : foreground);
         painter->drawText(addressRect, Qt::AlignLeft|Qt::AlignVCenter, address);

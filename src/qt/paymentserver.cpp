@@ -18,12 +18,7 @@
 #include <QLocalServer>
 #include <QLocalSocket>
 #include <QStringList>
-
-#if QT_VERSION < 0x050000
 #include <QUrl>
-#else
-#include <QUrlQuery>
-#endif
 
 using namespace boost;
 
