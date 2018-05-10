@@ -18,7 +18,12 @@
 #include <QLocalServer>
 #include <QLocalSocket>
 #include <QStringList>
+
+#if QT_VERSION < 0x050000
 #include <QUrl>
+#else
+#include <QUrlQuery>
+#endif
 
 using namespace boost;
 
@@ -49,6 +54,14 @@ static QString ipcServerName()
 // to send payment.
 //
 static QStringList savedPaymentRequests;
+
+{
+#if QT_VERSION < 0x050000
+    qDebug() << QString("%1: Payment server found an invalid certificate: ").arg(__func__) << cert.serialNumber() << cert.subjectInfo(QSslCertificate::CommonName) << cert.subjectInfo(QSslCertificate::OrganizationalUnitName);
+#else
+    qDebug() << QString("%1: Payment server found an invalid certificate: ").arg(__func__) << cert.serialNumber() << cert.subjectInfo(QSslCertificate::CommonName) << cert.subjectInfo(QSslCertificate::DistinguishedNameQualifier) << cert.subjectInfo(QSslCertificate::OrganizationalUnitName);
+#endif
+}
 
 //
 // Sending to the server is done synchronously, at startup.

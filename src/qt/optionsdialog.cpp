@@ -71,6 +71,9 @@ OptionsDialog::OptionsDialog(QWidget *parent) :
 #endif
         }
     }
+#if QT_VERSION >= 0x040700
+    ui->thirdPartyTxUrls->setPlaceholderText("https://example.com/tx/%s");
+#endif
 
     ui->unit->setModel(new BitcoinUnits(this));
 

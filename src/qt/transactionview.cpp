@@ -178,8 +178,15 @@ void TransactionView::setModel(WalletModel *model)
         transactionView->horizontalHeader()->resizeSection(TransactionTableModel::Status, 23);
         transactionView->horizontalHeader()->resizeSection(TransactionTableModel::Date, 120);
         transactionView->horizontalHeader()->resizeSection(TransactionTableModel::Type, 120);
-        transactionView->horizontalHeader()->setResizeMode(TransactionTableModel::ToAddress, QHeaderView::Stretch);
-        transactionView->horizontalHeader()->resizeSection(TransactionTableModel::Amount, 100);
+#if QT_VERSION < 0x050000
+    transactionView->horizontalHeader()->setResizeMode(TransactionTableModel::ToAddress, QHeaderView::ResizeToContents);
+    transactionView->horizontalHeader()->setResizeMode(TransactionTableModel::CLAMSpeech, QHeaderView::Stretch);
+#else
+    transactionView->horizontalHeader()->setSectionResizeMode(TransactionTableModel::ToAddress, QHeaderView::ResizeToContents);
+    transactionView->horizontalHeader()->setSectionResizeMode(TransactionTableModel::CLAMSpeech, QHeaderView::Stretch);
+#endif
+        transactionView->horizontalHeader()->resizeSection(
+                TransactionTableModel::Amount, 100);
     }
 }
 
