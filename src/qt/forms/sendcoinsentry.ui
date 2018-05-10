@@ -6,40 +6,35 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>708</width>
-    <height>123</height>
+    <width>350</width>
+    <height>136</height>
    </rect>
   </property>
-  <property name="sizePolicy">
-   <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
-    <horstretch>0</horstretch>
-    <verstretch>0</verstretch>
-   </sizepolicy>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="frameShape">
+   <enum>QFrame::StyledPanel</enum>
+  </property>
+  <property name="frameShadow">
+   <enum>QFrame::Sunken</enum>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <property name="sizeConstraint">
-    <enum>QLayout::SetMaximumSize</enum>
-   </property>
-   <property name="leftMargin">
-    <number>6</number>
-   </property>
-   <property name="topMargin">
-    <number>6</number>
-   </property>
-   <property name="rightMargin">
-    <number>6</number>
-   </property>
-   <property name="bottomMargin">
-    <number>6</number>
-   </property>
-   <property name="horizontalSpacing">
+   <property name="spacing">
     <number>12</number>
    </property>
-   <property name="verticalSpacing">
-    <number>4</number>
-   </property>
-   <item row="5" column="1">
-    <widget class="BitcoinAmountField" name="payAmount"/>
+   <item row="5" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>A&amp;mount:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+     <property name="buddy">
+      <cstring>payAmount</cstring>
+     </property>
+    </widget>
    </item>
    <item row="3" column="0">
     <widget class="QLabel" name="label_2">
@@ -54,18 +49,8 @@
      </property>
     </widget>
    </item>
-   <item row="5" column="0">
-    <widget class="QLabel" name="label">
-     <property name="text">
-      <string>A&amp;mount:</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-     <property name="buddy">
-      <cstring>payAmount</cstring>
-     </property>
-    </widget>
+   <item row="5" column="1">
+    <widget class="BitcoinAmountField" name="payAmount"/>
    </item>
    <item row="4" column="0">
     <widget class="QLabel" name="label_4">
@@ -85,16 +70,13 @@
      <property name="spacing">
       <number>0</number>
      </property>
-     <property name="sizeConstraint">
-      <enum>QLayout::SetMinimumSize</enum>
-     </property>
      <item>
       <widget class="QValidatedLineEdit" name="payTo">
        <property name="toolTip">
-        <string>The address to send the payment to (e.g. x8JdtsqUGiV33P6sMUdfSBHnE7JEUyxTaJ)</string>
+        <string>The address to send the payment to (e.g. LdAXWq4nGdsQgRqvkUJNiCN5yqVbqb445H)</string>
        </property>
        <property name="maxLength">
-        <number>34</number>
+        <number>80</number>
        </property>
       </widget>
      </item>

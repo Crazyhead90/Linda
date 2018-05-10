@@ -32,13 +32,6 @@ QList<TransactionRecord> TransactionRecord::decomposeTransaction(const CWallet *
     uint256 hash = wtx.GetHash(), hashPrev = 0;
     std::map<std::string, std::string> mapValue = wtx.mapValue;
 
-    std::string clamspeech = "";
-    if (!wtx.strCLAMSpeech.empty())
-    {
-        clamspeech = wtx.strCLAMSpeech;
-    }
-
-
     if (nNet > 0 || wtx.IsCoinBase() || wtx.IsCoinStake())
     {
         //
@@ -50,7 +43,6 @@ QList<TransactionRecord> TransactionRecord::decomposeTransaction(const CWallet *
             {
                 TransactionRecord sub(hash, nTime);
                 CTxDestination address;
-                sub.clamspeech = clamspeech;
                 sub.idx = parts.size(); // sequence number
                 sub.credit = txout.nValue;
                 if (ExtractDestination(txout.scriptPubKey, address) && IsMine(*wallet, address))
@@ -76,9 +68,16 @@ QList<TransactionRecord> TransactionRecord::decomposeTransaction(const CWallet *
 
                     if (hashPrev == hash)
                         continue; // last coinstake output
-
+                    int64_t nValueOut = 0;
+                    BOOST_FOREACH(const CTxOut& txout, wtx.vout)
+                    {
+                        if (IsMine(*wallet,txout.scriptPubKey))
+                        nValueOut += txout.nValue;
+                        if (!MoneyRange(txout.nValue) || !MoneyRange(nValueOut))
+                            throw std::runtime_error("CTransaction::GetValueOut() : value out of range");
+                    }
                     sub.type = TransactionRecord::Generated;
-                    sub.credit = nNet > 0 ? nNet : wtx.GetValueOut() - nDebit;
+                    sub.credit = nNet > 0 ? nNet : nValueOut - nDebit;
                     hashPrev = hash;
                 }
 
@@ -101,14 +100,8 @@ QList<TransactionRecord> TransactionRecord::decomposeTransaction(const CWallet *
             // Payment to self
             int64_t nChange = wtx.GetChange();
 
-            TransactionRecord sub(hash, nTime, TransactionRecord::SendToSelf, "",
-                             -(nDebit - nChange), nCredit - nChange, clamspeech);
-            if (clamspeech.length() == 71 && clamspeech.compare(0, 7, "notary ") == 0) {
-                sub.type = TransactionRecord::Notary;
-            } else if (clamspeech.length() >= 79 && clamspeech.compare(0, 15, "create clamour ") == 0) {
-                sub.type = TransactionRecord::CreateClamour;
-            }
-            parts.append(sub);
+            parts.append(TransactionRecord(hash, nTime, TransactionRecord::SendToSelf, "",
+                            -(nDebit - nChange), nCredit - nChange));
         }
         else if (fAllFromMe)
         {
@@ -122,7 +115,6 @@ QList<TransactionRecord> TransactionRecord::decomposeTransaction(const CWallet *
                 const CTxOut& txout = wtx.vout[nOut];
                 TransactionRecord sub(hash, nTime);
                 sub.idx = parts.size();
-                sub.clamspeech = clamspeech;
 
                 if(wallet->IsMine(txout))
                 {
@@ -137,16 +129,12 @@ QList<TransactionRecord> TransactionRecord::decomposeTransaction(const CWallet *
                     // Sent to Bitcoin Address
                     sub.type = TransactionRecord::SendToAddress;
                     sub.address = CBitcoinAddress(address).ToString();
-                    if (clamspeech.length() == 71 && clamspeech.compare(0, 7, "notary ") == 0)
-                        sub.type = TransactionRecord::NotarySendToAddress;
                 }
                 else
                 {
                     // Sent to IP, or other non-address transaction like OP_EVAL
                     sub.type = TransactionRecord::SendToOther;
                     sub.address = mapValue["to"];
-                    if (clamspeech.length() == 71 && clamspeech.compare(0, 7, "notary ") == 0)
-                        sub.type = TransactionRecord::NotarySendToOther;
                 }
 
                 int64_t nValue = txout.nValue;
@@ -166,10 +154,7 @@ QList<TransactionRecord> TransactionRecord::decomposeTransaction(const CWallet *
             //
             // Mixed debit transaction, can't break down payees
             //
-            TransactionRecord sub(hash, nTime, TransactionRecord::Other, "", nNet, 0, clamspeech);
-            if (clamspeech.length() == 71 && clamspeech.compare(0, 7, "notary ") == 0)
-                sub.type = TransactionRecord::Notary;
-            parts.append(sub);
+            parts.append(TransactionRecord(hash, nTime, TransactionRecord::Other, "", nNet, 0));
         }
     }
 
