@@ -49,26 +49,19 @@ public:
         // The characters are rarely used upper ASCII, not valid as UTF-8, and produce
         // a large 4-byte int at any alignment.
         //add 1 to the start message for Linda 1.0.1 so we dont talk to old wallets, and change the default port's
-        pchMessageStart[0] = 0x9c;
-        pchMessageStart[1] = 0xd3;
-        pchMessageStart[2] = 0x17;
-        pchMessageStart[3] = 0x01;
+        pchMessageStart[0] = 0x3b;
+        pchMessageStart[1] = 0x60;
+        pchMessageStart[2] = 0x40;
+        pchMessageStart[3] = 0x3e;
         vAlertPubKey = ParseHex("04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f");
-        nDefaultPort = 33820;
-        nRPCPort = 33821;
+        nDefaultPort = 27540;
+        nRPCPort = 27541;
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 20);
 
-        // Build the genesis block. Note that the output of the genesis coinbase cannot
-        // be spent as it did not originally exist in the database.
-        //
-        //CBlock(hash=000001faef25dec4fbcf906e6242621df2c183bf232f263d0ba5b101911e4563, ver=1, hashPrevBlock=0000000000000000000000000000000000000000000000000000000000000000, hashMerkleRoot=12630d16a97f24b287c8c2594dda5fb98c9e6c70fc61d44191931ea2aa08dc90, nTime=1393221600, nBits=1e0fffff, nNonce=164482, vtx=1, vchBlockSig=)
-        //  Coinbase(hash=12630d16a9, nTime=1393221600, ver=1, vin.size=1, vout.size=1, nLockTime=0)
-        //    CTxIn(COutPoint(0000000000, 4294967295), coinbase 00012a24323020466562203230313420426974636f696e2041544d7320636f6d6520746f20555341)
-        //    CTxOut(empty)
-        //  vMerkleTree: 12630d16a9
-        const char* pszTimestamp = "Laptop ban on Etihad flights from Abu Dhabi lifted";
+
+        const char* pszTimestamp = "CNN - April 27 2018 - North and South Korean leaders hold historic summit";
         CTransaction txNew;
-        txNew.nTime = 1499037408;
+        txNew.nTime = 1524821199;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 0 << CBigNum(42) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
@@ -77,14 +70,27 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime    = 1499037408;
+        genesis.nTime    = 1524821199;
         genesis.nBits    = bnProofOfWorkLimit.GetCompact();
-        genesis.nNonce   = 7483051;
+        genesis.nNonce   = 1989540;
+
+       //  printf("calc new genesis block\n");
+       //    printf("hashMerkleRoot %s\n", genesis.hashMerkleRoot.ToString().c_str());
+       //     printf("bnProofOfWorkLimit 0x%x\n", bnProofOfWorkLimit.GetCompact());
+       //     printf("genesis.nBits 0x%x\n", genesis.nBits);
+//
+//            for (genesis.nNonce = 0; ; genesis.nNonce++) {
+//                hashGenesisBlock = genesis.GetHash();
+//                if (hashGenesisBlock <= bnProofOfWorkLimit.getuint256()) break;
+//            }
+//
+//            printf("hashGenesisBlock %s\n", hashGenesisBlock.ToString().c_str());
+// 	printf("genesis.nNonce %d\n", genesis.nNonce);
 
         hashGenesisBlock = genesis.GetHash();
 
-        assert(hashGenesisBlock == uint256("0x000000fa793257f502f94a3531aebdaf91b070324a8f5041324b80f4b0f74c51"));
-        assert(genesis.hashMerkleRoot == uint256("0x4080031d1fd26d68fa953d7a5c1dac3b2618b56d8a3fa35dd4678bdeb0946671"));
+        assert(hashGenesisBlock == uint256("0x00000a8bba13ca4859bb523b0bf9cf8a39e83822fdbe36d677af7c73b7711d1a"));
+        assert(genesis.hashMerkleRoot == uint256("0x08dfafdd36758ce537279e75197a7bfa591c04696e12d127afbf6c83497fe156"));
 
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,48);
@@ -126,18 +132,31 @@ public:
         pchMessageStart[2] = 0xc0;
         pchMessageStart[3] = 0xef;
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 16);
-        vAlertPubKey = ParseHex("0471dc165db490094d35cde15b1f5d755fa6ad6f2b5ed0f340e3f17f57389c3c2af113a8cbcc885bde73305a553b5640c83021128008ddf882e856336269080496");
+        vAlertPubKey = ParseHex("040f02342fd2fd9d30bc1d036f0b5f096cb93f46391061760db32a365cd1cda77dc4858b0532f8d96ba1ffd612f190706a2d41d8bb59620fc35c9c015d652c6227");
         nDefaultPort = 28888;
         nRPCPort = 28889;
         strDataDir = "testnet";
 
         // Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nBits  = bnProofOfWorkLimit.GetCompact();
-        genesis.nNonce = 566666;
-        
+        genesis.nNonce = 38540;
+        	
+//		printf("calc new genesis block\n");
+//        	printf("hashMerkleRoot %s\n", genesis.hashMerkleRoot.ToString().c_str());
+//         	printf("bnProofOfWorkLimit 0x%x\n", bnProofOfWorkLimit.GetCompact());
+//         	printf("genesis.nBits 0x%x\n", genesis.nBits);
+//
+//        	for (genesis.nNonce = 0; ; genesis.nNonce++) {
+//                hashGenesisBlock = genesis.GetHash();
+//                if (hashGenesisBlock <= bnProofOfWorkLimit.getuint256()) break;
+//            }
+//
+//	        printf("hashGenesisBlock %s\n", hashGenesisBlock.ToString().c_str());
+//	 	printf("genesis.nNonce %d\n", genesis.nNonce);
+
         hashGenesisBlock = genesis.GetHash();
 
-        assert(hashGenesisBlock == uint256("0x00005862693a9c2692d3abb4d071f261c1c64db9824d89ae28d533e435f6d87c"));
+        assert(hashGenesisBlock == uint256("0x000006d2446a534e7a0068a69dc83dba4555ed657ed328b5c4f63af5b9239fbc"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -188,3 +207,4 @@ bool SelectParamsFromCommandLine() {
     }
     return true;
 }
+

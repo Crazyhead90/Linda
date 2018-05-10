@@ -25,16 +25,14 @@ namespace Checkpoints
     //    timestamp before)
     // + Contains no strange transactions
     //
-    static MapCheckpoints mapCheckpoints =
-        boost::assign::map_list_of
-        ( 0, Params().HashGenesisBlock() )
-        (10,   uint256("0xe653e137fcf430648f4e02172be2926fa60cf2d2b408c5c127fb0d3c8a384051") )
-        (20,   uint256("0x22f69c926e860df361f25857beef751b90b8cb8811757ca804467d449b67c313") )
-        (35425,   uint256("0xe417f9c423b3f37171e3f5597bbe8b05183d22b62d302b660c934e701e2380b7") )
-    ;
+    static MapCheckpoints mapCheckpoints;
 
     // TestNet has no checkpoints
-    static MapCheckpoints mapCheckpointsTestnet;
+    static MapCheckpoints mapCheckpointsTestnet =
+        boost::assign::map_list_of
+	( 0, Params().HashGenesisBlock() )
+ (10, uint256("0x0000037d9d3332f037153dd2a36d356f34ecbf329f7ca01fe8cfdb29128f5e23") )
+;
 
     bool CheckHardened(int nHeight, const uint256& hash)
     {
@@ -344,7 +342,7 @@ namespace Checkpoints
 }
 
 // ppcoin: sync-checkpoint master key
-const std::string CSyncCheckpoint::strMasterPubKey = "04d25c0c9944b494cb9a09de6e75b8c20b7ee577701cdd9bff20d4ebd54c35cde823249ae463cf1514c29791fbaf30d1bbb81631c3b965d696f98e327e0699705f";
+const std::string CSyncCheckpoint::strMasterPubKey = "04b9645b65847a2199d4e28f37b6464e344d96effae309e92c02c916e786694e4c8a3f0c1dc8b83d5cdcc5f6f2a6819e599087aac4f07c832814edbf294b08b003";
 
 std::string CSyncCheckpoint::strMasterPrivKey = "";
 
@@ -426,3 +424,4 @@ bool CSyncCheckpoint::ProcessSyncCheckpoint(CNode* pfrom)
     LogPrintf("ProcessSyncCheckpoint: sync-checkpoint at %s\n", hashCheckpoint.ToString());
     return true;
 }
+

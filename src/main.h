@@ -23,7 +23,7 @@ class CValidationState;
 // MBK: Global wallet version. (Switch to V2 changes where appropriate)
 static const int CURRENT_WALLET_VERSION = 2;
 
-static const int64_t DARKSEND_COLLATERAL_V1 = (30000000*COIN);
+static const int64_t DARKSEND_COLLATERAL_V1 = (5000000*COIN);
 static const int64_t DARKSEND_FEE_V1        = (0.0001*COIN);
 static const int64_t DARKSEND_POOL_MAX_V1   = (1111.99*COIN);
 
@@ -33,7 +33,7 @@ static const int PREMINE_BLOCK     = 10;
 static const int FAIR_LAUNCH_BLOCK = 50;
 
 // MBK: Added globals to simplify future potential changes
-static const int64_t MASTERNODE_COLLATERAL_V1 = (30000000*COIN);
+static const int64_t MASTERNODE_COLLATERAL_V1 = (5000000*COIN);
 static const int64_t MASTERNODE_COLLATERAL_V2 = (2000000*COIN);
 static const int64_t COIN_YEAR_REWARD_V2      = (99*CENT);
 static const int64_t MIN_TX_FEE_V2            = 100000; 
@@ -50,8 +50,8 @@ static const int MASTERNODE_V2_STOP_BLOCK     = 1575000; // ~07012020 (July 1, 2
 static const int DARKSEND_V2_START_BLOCK      = 378230;  // ~04052018 (April 5, 2018)
 static const int V2_EMISSION_CAP_START_BLOCK  = 1575000; // ~07012020 (July 1, 2020)
 // MBK: Following define PoW/PoS reward parameters
-static const int POW_REWARD_V1_FULL         = 14150;
-static const int POW_REWARD_V2_FULL         = 13726; // ~3% reduction from V1 block reward
+static const int POW_REWARD_V1_FULL         = 5660;
+static const int POW_REWARD_V2_FULL         = 5490; // ~3% reduction from V1 block reward
 static const int POW_REWARD_V1_HALF         = POW_REWARD_V1_FULL/2;
 static const int POW_REWARD_V2_HALF         = POW_REWARD_V2_FULL/2;
 static const double POS_REWARD_V2_BURN_RATE = 0.02f; // ~2% reduction from V1 stake reward
@@ -115,7 +115,7 @@ static const int64_t MIN_TX_FEE_V1 = 10000;
 /** Fees smaller than this (in satoshi) are considered zero fee (for relaying) */
 static const int64_t MIN_RELAY_TX_FEE_V1 = MIN_TX_FEE_V1;
 /** No amount larger than this (in satoshi) is valid */
-static const int64_t MAX_MONEY = 50000000000 * COIN; // 50B coins
+static const int64_t MAX_MONEY = 200000000000 * COIN; // 20B coins
 inline bool MoneyRange(int64_t nValue) { return (nValue >= 0 && nValue <= MAX_MONEY); }
 /** Threshold for nLockTime: below this value it is interpreted as block number, otherwise as UNIX timestamp. */
 static const unsigned int LOCKTIME_THRESHOLD = 500000000; // Tue Nov  5 00:53:20 1985 UTC
@@ -670,7 +670,7 @@ class CBlock
 {
 public:
     // header
-    static const int CURRENT_VERSION = 7;
+    static const int CURRENT_VERSION = 1;
     int nVersion;
     uint256 hashPrevBlock;
     uint256 hashMerkleRoot;

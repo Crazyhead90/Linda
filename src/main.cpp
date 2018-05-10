@@ -1149,41 +1149,19 @@ static CBigNum GetProofOfStakeLimit(int nHeight)
 }
 
 // miner's coin base reward
-int64_t GetProofOfWorkReward(int64_t nFees, unsigned int nHeight)
-{
-    int64_t nSubsidy = 0;
-
-    if(pindexBest->nHeight < PREMINE_BLOCK)
-    {
-        nSubsidy = 500000000 * COIN; //  PREMINE 10 BLOCKS
-    }
-        else if(pindexBest->nHeight < FAIR_LAUNCH_BLOCK)
-    {
-        nSubsidy = 0 * COIN; // No reward block to prevent an instamine
-    }
-    else if(pindexBest->nHeight >= REWARD_START)
-    {
-        nSubsidy = 14150 * COIN;
-    }
-    else if(pindexBest->nHeight >= REWARD_HALVE)
-    {
-        nSubsidy = 7075 * COIN;
-    }
-
-    LogPrint("creation", "GetProofOfWorkReward() : create=%s nSubsidy=%d\n", FormatMoney(nSubsidy), nSubsidy);
-    // MBK: Added some additional debugging information
-    if (MBK_EXTRA_DEBUG) LogPrintf("creation -> GetProofOfWorkReward() : create=%s nSubsidy=%d\n", FormatMoney(nSubsidy), nSubsidy);
-
-    return nSubsidy + nFees;
-}
-
-// miner's coin base reward
 // MBK: Update PoW reward structure to reflect reduction to help combat inflation
 int64_t GetProofOfWorkRewardV2(int64_t nFees, unsigned int nHeight)
 {
     int64_t nSubsidy = 0;
 
-    if(pindexBest->nHeight < POW_REWARD_V2_START_BLOCK)
+    if(pindexBest->nHeight < PREMINE_BLOCK)
+    {nSubsidy = 100000000 * COIN; // Premine blocks * 10
+    }
+    else if(pindexBest->nHeight < FAIR_LAUNCH_BLOCK)
+    {
+        nSubsidy = 0 * COIN; // No reward block to prevent an instamine
+    }
+    else if(pindexBest->nHeight < POW_REWARD_V2_START_BLOCK)
     {
         // MBK: PoW reward change starts after wallet release so until then return current V1 reward
         nSubsidy = POW_REWARD_V1_FULL * COIN;
@@ -2620,7 +2598,7 @@ bool CBlock::AcceptBlock()
     CBlockIndex* pindexPrev = (*mi).second;
     int nHeight = pindexPrev->nHeight+1;
 
-    if (IsProtocolV2(nHeight) && nVersion < 7)
+    if (IsProtocolV2(nHeight) && nVersion < 1)
         return DoS(100, error("AcceptBlock() : reject too old nVersion = %d", nVersion));
     else if (!IsProtocolV2(nHeight) && nVersion > 6)
         return DoS(100, error("AcceptBlock() : reject too new nVersion = %d", nVersion));
