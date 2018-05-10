@@ -152,13 +152,13 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     signVerifyMessageDialog = new SignVerifyMessageDialog(this);
 
     centralStackedWidget = new QStackedWidget(this);
-    centralStackedWidget->setContentsMargins(0, 0, 0, 0);
+    //centralStackedWidget->setContentsMargins(0, 0, 0, 0);
     centralStackedWidget->addWidget(overviewPage);
     //centralStackedWidget->addWidget(overviewWidget);
-    //centralStackedWidget->addWidget(transactionsPage);
-    //centralStackedWidget->addWidget(addressBookPage);
-    //centralStackedWidget->addWidget(receiveCoinsPage);
-    //centralStackedWidget->addWidget(sendCoinsPage);
+    centralStackedWidget->addWidget(transactionsPage);
+    centralStackedWidget->addWidget(addressBookPage);
+    centralStackedWidget->addWidget(receiveCoinsPage);
+    centralStackedWidget->addWidget(sendCoinsPage);
 
     QWidget *centralWidget = new QWidget();
     QVBoxLayout *centralLayout = new QVBoxLayout(centralWidget);
@@ -182,7 +182,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     QHBoxLayout *frameBlocksLayout = new QHBoxLayout(frameBlocks);
     frameBlocksLayout->setContentsMargins(3,0,3,0);
     frameBlocksLayout->setSpacing(3);
-    frameBlocksLayout->setAlignment(Qt::AlignHCenter);
+    //frameBlocksLayout->setAlignment(Qt::AlignHCenter);
     labelEncryptionIcon = new QLabel();
     labelStakingIcon = new QLabel();
     labelConnectionsIcon = new QLabel();
