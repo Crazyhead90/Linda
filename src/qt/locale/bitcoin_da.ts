@@ -3,32 +3,37 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Linda</source>
-        <translation>Om Linda</translation>
+        <source>About Clam</source>
+        <translation>Om Clam</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Linda&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;Linda&lt;/b&gt; version</translation>
+        <source>&lt;b&gt;Clam&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;Clam&lt;/b&gt; version</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The Linda developers</source>
+Copyright © 2014 The Clam developers</source>
         <translation>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The Linda developers</translation>
+Copyright © 2014 The Clam developers</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>
 This is experimental software.
 
-Distributed under the MIT/X11 software license, see the accompanying file COPYING or &lt;a href=&quot;http://www.opensource.org/licenses/mit-license.php&quot;&gt;http://www.opensource.org/licenses/mit-license.php&lt;/a&gt;.
+Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (&lt;a href=&quot;https://www.openssl.org/&quot;&gt;https://www.openssl.org/&lt;/a&gt;) and cryptographic software written by Eric Young (&lt;a href=&quot;mailto:eay@cryptsoft.com&quot;&gt;eay@cryptsoft.com&lt;/a&gt;) and UPnP software written by Thomas Bernard.</source>
-        <translation type="unfinished"/>
+This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (http://www.openssl.org/) and cryptographic software written by Eric Young (eay@cryptsoft.com) and UPnP software written by Thomas Bernard.</source>
+        <translation>
+Dette program er eksperimentelt.
+
+Det er gjort tilgængeligt under MIT/X11-softwarelicensen. Se den medfølgende fil &quot;COPYING&quot; eller http://www.opensource.org/licenses/mit-license.php.
+
+Produktet indeholder software, som er udviklet af OpenSSL Project til brug i OpenSSL Toolkit (http://www.openssl.org/). Kryptografisk software er skrevet af Eric Young (eay@cryptsoft.com), og UPnP-software er skrevet af Thomas Bernard.</translation>
     </message>
 </context>
 <context>
@@ -44,39 +49,39 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Dobbeltklik for at redigere adresse eller mærkat</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+27"/>
         <source>Create a new address</source>
         <translation>Opret en ny adresse</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+14"/>
         <source>Copy the currently selected address to the system clipboard</source>
         <translation>Kopier den valgte adresse til udklipsholder</translation>
     </message>
     <message>
-        <location line="-7"/>
+        <location line="-11"/>
         <source>&amp;New Address</source>
         <translation>&amp;Ny adresse</translation>
     </message>
     <message>
-        <location line="-43"/>
-        <source>These are your Linda addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Dette er dine Linda adresser til at modtage betalinger. Du ønsker måske at give en anden en til af hver afsender, så du kan holde styr på hvem der betaler dig.</translation>
+        <location line="-46"/>
+        <source>These are your Clam addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Dette er dine Clam adresser til at modtage betalinger. Du ønsker måske at give en anden en til af hver afsender, så du kan holde styr på hvem der betaler dig.</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+60"/>
         <source>&amp;Copy Address</source>
         <translation>&amp;Kopier adresse</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+11"/>
         <source>Show &amp;QR Code</source>
         <translation>Vis &amp;QR kode</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Sign a message to prove you own a Linda address</source>
-        <translation>Signerer en meddelelse for at bevise du ejer en Linda adresse</translation>
+        <location line="+11"/>
+        <source>Sign a message to prove you own a Clam address</source>
+        <translation>Signerer en meddelelse for at bevise du ejer en Clam adresse</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -84,14 +89,14 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Signere &amp; Besked</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+25"/>
         <source>Delete the currently selected address from the list</source>
         <translation>Slet den markerede adresse fra listen</translation>
     </message>
     <message>
-        <location line="-10"/>
-        <source>Verify a message to ensure it was signed with a specified Linda address</source>
-        <translation>Bekræft en meddelelse for at sikre, den blev underskrevet med en specificeret Linda adresse</translation>
+        <location line="-14"/>
+        <source>Verify a message to ensure it was signed with a specified Clam address</source>
+        <translation>Bekræft en meddelelse for at sikre, den blev underskrevet med en specificeret Clam adresse</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -99,7 +104,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Bekræft Meddelse</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+14"/>
         <source>&amp;Delete</source>
         <translation>&amp;Slet</translation>
     </message>
@@ -137,7 +142,7 @@ This product includes software developed by the OpenSSL Project for use in the O
 <context>
     <name>AddressTableModel</name>
     <message>
-        <location filename="../addresstablemodel.cpp" line="+145"/>
+        <location filename="../addresstablemodel.cpp" line="+144"/>
         <source>Label</source>
         <translation>Mærkat</translation>
     </message>
@@ -185,7 +190,12 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Kun til renteberegning</translation>
     </message>
     <message>
-        <location filename="../askpassphrasedialog.cpp" line="+38"/>
+        <location filename="../askpassphrasedialog.cpp" line="+35"/>
+        <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;10 or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
+        <translation>Indtast den nye adgangskode til tegnebogen.&lt;br/&gt;Brug venligst en adgangskode på &lt;b&gt;10 eller flere tilfældige tegn&lt;/b&gt; eller &lt;b&gt;otte eller flere ord&lt;/b&gt;.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Encrypt wallet</source>
         <translation>Krypter tegnebog</translation>
     </message>
@@ -220,7 +230,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Indtast den gamle og den nye adgangskode til tegnebogen.</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+46"/>
         <source>Confirm wallet encryption</source>
         <translation>Bekræft tegnebogskryptering</translation>
     </message>
@@ -252,14 +262,9 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Tegnebog krypteret</translation>
     </message>
     <message>
-        <location line="-140"/>
-        <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;ten or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+82"/>
-        <source>Linda will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation>Linda lukker nu for at afslutte krypteringen. Husk at en krypteret  tegnebog ikke fuldt ud beskytter dine mønter mod at blive stjålet af malware som har inficeret din computer.</translation>
+        <location line="-58"/>
+        <source>Clam will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation>Clam lukker nu for at afslutte krypteringen. Husk at en krypteret  tegnebog ikke fuldt ud beskytter dine mønter mod at blive stjålet af malware som har inficeret din computer.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -306,19 +311,29 @@ This product includes software developed by the OpenSSL Project for use in the O
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+297"/>
+        <location filename="../bitcoingui.cpp" line="+282"/>
         <source>Sign &amp;message...</source>
         <translation>Underskriv besked...</translation>
     </message>
     <message>
-        <location line="-64"/>
+        <location line="+251"/>
+        <source>Synchronizing with network...</source>
+        <translation>Synkroniserer med netværk...</translation>
+    </message>
+    <message>
+        <location line="-319"/>
+        <source>&amp;Overview</source>
+        <translation>Oversigt</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Show general overview of wallet</source>
         <translation>Vis generel oversigt over tegnebog</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>&amp;Transactions</source>
-        <translation>&amp;Transaktioner</translation>
+        <translation>Transaktioner</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -328,7 +343,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+5"/>
         <source>&amp;Address Book</source>
-        <translation>&amp;Adressebog</translation>
+        <translation>&amp;Adresse Bog</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -336,12 +351,22 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Redigere listen over gemte adresser og etiketter</translation>
     </message>
     <message>
-        <location line="-18"/>
+        <location line="-13"/>
+        <source>&amp;Receive coins</source>
+        <translation>&amp;Modtag mønter</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Show the list of addresses for receiving payments</source>
         <translation>Vis listen over adresser for modtagne betalinger</translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="-7"/>
+        <source>&amp;Send coins</source>
+        <translation>&amp;Send mønter</translation>
+    </message>
+    <message>
+        <location line="+35"/>
         <source>E&amp;xit</source>
         <translation>Luk</translation>
     </message>
@@ -351,9 +376,9 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Afslut program</translation>
     </message>
     <message>
-        <location line="+4"/>
-        <source>Show information about Linda</source>
-        <translation>Vis oplysninger om Linda</translation>
+        <location line="+6"/>
+        <source>Show information about Clam</source>
+        <translation>Vis oplysninger om Clam</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -368,7 +393,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+2"/>
         <source>&amp;Options...</source>
-        <translation>&amp;Indstillinger...</translation>
+        <translation>Indstillinger...</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -376,7 +401,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Krypter tegnebog...</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+3"/>
         <source>&amp;Backup Wallet...</source>
         <translation>Sikkerhedskopier tegnebog...</translation>
     </message>
@@ -385,33 +410,43 @@ This product includes software developed by the OpenSSL Project for use in the O
         <source>&amp;Change Passphrase...</source>
         <translation>Skift adgangskode...</translation>
     </message>
+    <message numerus="yes">
+        <location line="+259"/>
+        <source>~%n block(s) remaining</source>
+        <translation><numerusform>~%n blok resterer</numerusform><numerusform>~%n blokke resterende</numerusform></translation>
+    </message>
     <message>
-        <location line="+9"/>
+        <location line="+6"/>
+        <source>Downloaded %1 of %2 blocks of transaction history (%3% done).</source>
+        <translation>Downloadet% 1 af% 2 blokke af transaktions historie (% 3% færdig).</translation>
+    </message>
+    <message>
+        <location line="-256"/>
         <source>&amp;Export...</source>
-        <translation>&amp;Eksporter...</translation>
+        <translation>&amp;Eksporter ...</translation>
     </message>
     <message>
-        <location line="-55"/>
-        <source>Send coins to a Linda address</source>
-        <translation>Send mønter til en Linda adresse</translation>
+        <location line="-64"/>
+        <source>Send coins to a Clam address</source>
+        <translation>Send mønter til en Clam adresse</translation>
     </message>
     <message>
-        <location line="+39"/>
-        <source>Modify configuration options for Linda</source>
-        <translation>Ændre indstillingsmuligheder for Linda</translation>
+        <location line="+47"/>
+        <source>Modify configuration options for Clam</source>
+        <translation>Ændre indstillingsmuligheder for Clam</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>Export the data in the current tab to a file</source>
         <translation>Eksportere data i den aktuelle fane til en fil</translation>
     </message>
     <message>
-        <location line="-13"/>
+        <location line="-14"/>
         <source>Encrypt or decrypt wallet</source>
         <translation>Kryptere eller dekryptere tegnebog</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+3"/>
         <source>Backup wallet to another location</source>
         <translation>Lav sikkerhedskopi af tegnebogen til et andet sted</translation>
     </message>
@@ -436,20 +471,19 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Verificér besked...</translation>
     </message>
     <message>
-        <location line="-214"/>
-        <location line="+551"/>
-        <source>Linda</source>
-        <translation>Linda</translation>
+        <location line="-202"/>
+        <source>Clam</source>
+        <translation>Clam</translation>
     </message>
     <message>
-        <location line="-551"/>
+        <location line="+0"/>
         <source>Wallet</source>
         <translation>Tegnebog</translation>
     </message>
     <message>
-        <location line="+193"/>
-        <source>&amp;About Linda</source>
-        <translation>&amp;Om Linda</translation>
+        <location line="+180"/>
+        <source>&amp;About Clam</source>
+        <translation>&amp;Om Clam</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -457,7 +491,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Vis / skjul</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+9"/>
         <source>Unlock wallet</source>
         <translation>Lås tegnebog</translation>
     </message>
@@ -472,7 +506,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Lås tegnebog</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+35"/>
         <source>&amp;File</source>
         <translation>Fil</translation>
     </message>
@@ -487,29 +521,39 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Hjælp</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+12"/>
         <source>Tabs toolbar</source>
         <translation>Faneværktøjslinje</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+8"/>
+        <source>Actions toolbar</source>
+        <translation>Fanværktøjslinje</translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <location line="+9"/>
         <source>[testnet]</source>
         <translation>[testnetværk]</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+58"/>
-        <source>Linda client</source>
-        <translation>Linda klient</translation>
+        <location line="+60"/>
+        <source>Clam client</source>
+        <translation>Clam Klient</translation>
     </message>
     <message numerus="yes">
-        <location line="+70"/>
-        <source>%n active connection(s) to Linda network</source>
-        <translation><numerusform>%n aktiv forbindelse til Linda netværk</numerusform><numerusform>%n aktive forbindelser til Linda netværk</numerusform></translation>
+        <location line="+75"/>
+        <source>%n active connection(s) to Clam network</source>
+        <translation><numerusform>%n aktiv forbindelse til Clam netværk</numerusform><numerusform>%n aktive forbindelser til Clam netværk</numerusform></translation>
     </message>
     <message>
-        <location line="+488"/>
+        <location line="+40"/>
+        <source>Downloaded %1 blocks of transaction history.</source>
+        <translation>Downloadet %1 blokke af transaktions historie.</translation>
+    </message>
+    <message>
+        <location line="+413"/>
         <source>Staking.&lt;br&gt;Your weight is %1&lt;br&gt;Network weight is %2&lt;br&gt;Expected time to earn reward is %3</source>
         <translation>Renter.&lt;br&gt; Din andel er% 1 &lt;br&gt; Netværkets andel er% 2 &lt;br&gt; Forventet tid til at modtage rente %3</translation>
     </message>
@@ -533,38 +577,63 @@ This product includes software developed by the OpenSSL Project for use in the O
         <source>Not staking because you don&apos;t have mature coins</source>
         <translation>Ingen rente fordi der ingen modne mønter eksistere </translation>
     </message>
-    <message>
-        <location line="-808"/>
-        <source>&amp;Dashboard</source>
-        <translation type="unfinished"/>
+    <message numerus="yes">
+        <location line="-403"/>
+        <source>%n second(s) ago</source>
+        <translation><numerusform>%n sekund siden</numerusform><numerusform>%n sekunder siden</numerusform></translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>&amp;Receive</source>
-        <translation type="unfinished"/>
+        <location line="-312"/>
+        <source>About Clam card</source>
+        <translation>Om Clam kort</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>&amp;Send</source>
-        <translation type="unfinished"/>
+        <location line="+1"/>
+        <source>Show information about Clam card</source>
+        <translation>Vis oplysninger om Clam kort</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="+18"/>
         <source>&amp;Unlock Wallet...</source>
         <translation>Lås tegnebog op</translation>
     </message>
+    <message numerus="yes">
+        <location line="+297"/>
+        <source>%n minute(s) ago</source>
+        <translation><numerusform>%n minut siden</numerusform><numerusform>%n minutter siden</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <location line="+4"/>
+        <source>%n hour(s) ago</source>
+        <translation><numerusform>%n time siden</numerusform><numerusform>%n timer siden</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <location line="+4"/>
+        <source>%n day(s) ago</source>
+        <translation><numerusform>%n dag siden</numerusform><numerusform>%n dage siden</numerusform></translation>
+    </message>
     <message>
-        <location line="+273"/>
+        <location line="+6"/>
         <source>Up to date</source>
         <translation>Opdateret</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+7"/>
         <source>Catching up...</source>
         <translation>Indhenter...</translation>
     </message>
     <message>
-        <location line="+113"/>
+        <location line="+10"/>
+        <source>Last received block was generated %1.</source>
+        <translation>Sidst modtagne blok blev genereret %1.</translation>
+    </message>
+    <message>
+        <location line="+59"/>
+        <source>This transaction is over the size limit.  You can still send it for a fee of %1, which goes to the nodes that process your transaction and helps to support the network.  Do you want to pay the fee?</source>
+        <translation>Denne transaktion er over grænsen størrelse. Du kan stadig sende det for et gebyr på %1, der går til de noder, der behandler din transaktion og hjælper med at støtte netværket. Ønsker du at betale gebyret?</translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>Confirm transaction fee</source>
         <translation>Bekræft transaktionsgebyr</translation>
     </message>
@@ -600,33 +669,28 @@ Adresse: %4
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid Linda address or malformed URI parameters.</source>
-        <translation>URI kan ikke tolkes! Dette kan skyldes en ugyldig Linda adresse eller misdannede URI parametre.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid Clam address or malformed URI parameters.</source>
+        <translation>URI kan ikke tolkes! Dette kan skyldes en ugyldig Clam adresse eller misdannede URI parametre.</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>Wallet is &lt;b&gt;not encrypted&lt;/b&gt;</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+8"/>
+        <location line="+18"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
         <translation>Tegnebog er &lt;b&gt;krypteret&lt;/b&gt; og i øjeblikket &lt;b&gt;ulåst&lt;/b&gt;</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+10"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
         <translation>Tegnebog er &lt;b&gt;krypteret&lt;/b&gt; og i øjeblikket &lt;b&gt;låst&lt;/b&gt;</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+25"/>
         <source>Backup Wallet</source>
         <translation>Sikkerhedskopier Tegnebog</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Wallet Data (*.dat)</source>
-        <translation>Tegnebogsdata (*.dat)</translation>
+        <translation>Wallet Data (*.dat)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -639,7 +703,7 @@ Adresse: %4
         <translation>Der opstod en fejl under forsøg på at gemme data i tegnebogen til den nye placering.</translation>
     </message>
     <message numerus="yes">
-        <location line="+91"/>
+        <location line="+76"/>
         <source>%n second(s)</source>
         <translation><numerusform>%n sekund</numerusform><numerusform>%n sekunder</numerusform></translation>
     </message>
@@ -649,88 +713,30 @@ Adresse: %4
         <translation><numerusform>%n minut</numerusform><numerusform>%n minutter</numerusform></translation>
     </message>
     <message numerus="yes">
-        <location line="-429"/>
-        <location line="+433"/>
+        <location line="+4"/>
         <source>%n hour(s)</source>
         <translation><numerusform>%n time(r)</numerusform><numerusform>%n time(r)</numerusform></translation>
     </message>
-    <message>
-        <location line="-456"/>
-        <source>Processed %1 blocks of transaction history.</source>
-        <translation type="unfinished"/>
-    </message>
     <message numerus="yes">
-        <location line="+27"/>
-        <location line="+433"/>
+        <location line="+4"/>
         <source>%n day(s)</source>
         <translation><numerusform>%n dag(e)</numerusform><numerusform>%n dag(e)</numerusform></translation>
     </message>
-    <message numerus="yes">
-        <location line="-429"/>
-        <location line="+6"/>
-        <source>%n week(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
-    </message>
     <message>
-        <location line="+0"/>
-        <source>%1 and %2</source>
-        <translation type="unfinished"/>
-    </message>
-    <message numerus="yes">
-        <location line="+0"/>
-        <source>%n year(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>%1 behind</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+15"/>
-        <source>Last received block was generated %1 ago.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Transactions after this will not yet be visible.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>Error</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Warning</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Information</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+69"/>
-        <source>This transaction is over the size limit. You can still send it for a fee of %1, which goes to the nodes that process your transaction and helps to support the network. Do you want to pay the fee?</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+324"/>
+        <location line="+18"/>
         <source>Not staking</source>
         <translation>Ingen rente</translation>
     </message>
     <message>
-        <location filename="../bitcoin.cpp" line="+104"/>
-        <source>A fatal error occurred. Linda can no longer continue safely and will quit.</source>
+        <location filename="../bitcoin.cpp" line="+109"/>
+        <source>A fatal error occurred. Clam can no longer continue safely and will quit.</source>
         <translation>Der opstod en fejl under forsøg på at gemme dataene i tegnebogen til den nye placering.</translation>
     </message>
 </context>
 <context>
     <name>ClientModel</name>
     <message>
-        <location filename="../clientmodel.cpp" line="+110"/>
+        <location filename="../clientmodel.cpp" line="+90"/>
         <source>Network Alert</source>
         <translation>Netværksadvarsel</translation>
     </message>
@@ -773,7 +779,7 @@ Adresse: %4
         <translation>Lav Udgangseffekt:</translation>
     </message>
     <message>
-        <location filename="../coincontroldialog.cpp" line="+552"/>
+        <location filename="../coincontroldialog.cpp" line="+551"/>
         <source>no</source>
         <translation>nej</translation>
     </message>
@@ -987,7 +993,7 @@ Beløb under 0,546 gange det minimale gebyr er vist som DUST.</translation>
 Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+37"/>
         <location line="+66"/>
         <source>(no label)</source>
         <translation>(ingen mærkat)</translation>
@@ -1031,7 +1037,7 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
         <translation>Adressen er forbundet med denne post i adressekartoteket. Dette kan kun ændres til sende adresser.</translation>
     </message>
     <message>
-        <location filename="../editaddressdialog.cpp" line="+21"/>
+        <location filename="../editaddressdialog.cpp" line="+20"/>
         <source>New receiving address</source>
         <translation>Ny modtagelsesadresse</translation>
     </message>
@@ -1057,8 +1063,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Linda address.</source>
-        <translation>Den indtastede adresse &quot;%1&quot; er ikke en gyldig Linda adresse.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Clam address.</source>
+        <translation>Den indtastede adresse &quot;%1&quot; er ikke en gyldig Clam adresse.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1074,10 +1080,10 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
 <context>
     <name>GUIUtil::HelpMessageBox</name>
     <message>
-        <location filename="../guiutil.cpp" line="+426"/>
+        <location filename="../guiutil.cpp" line="+420"/>
         <location line="+12"/>
-        <source>Linda-Qt</source>
-        <translation>Linda-Qt</translation>
+        <source>Clam-Qt</source>
+        <translation>Clam-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -1149,13 +1155,23 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Linda after logging in to the system.</source>
-        <translation>Automatisk start Linda efter at have logget ind på systemet.</translation>
+        <source>Automatically start Clam after logging in to the system.</source>
+        <translation>Automatisk start Clam efter at have logget ind på systemet.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Linda on system login</source>
-        <translation>&amp;Start Linda ved systems login</translation>
+        <source>&amp;Start Clam on system login</source>
+        <translation>&amp;Start Clam ved systems login</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Detach block and address databases at shutdown. This means they can be moved to another data directory, but it slows down shutdown. The wallet is always detached.</source>
+        <translation>Frigør blok og adressedatabaser ved lukning. Det betyder, at de kan flyttes til et anden data-bibliotek, men det sinker lukning. Tegnebogen er altid frigjort.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&amp;Detach databases at shutdown</source>
+        <translation>&amp;Frigør databaser ved lukning</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -1164,8 +1180,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Linda client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatisk åbne Linda klient-port på routeren. Dette virker kun, når din router understøtter UPnP og er det er aktiveret.</translation>
+        <source>Automatically open the Clam client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatisk åbne Clam klient-port på routeren. Dette virker kun, når din router understøtter UPnP og er det er aktiveret.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1174,8 +1190,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Linda network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Opret forbindelse til Linda netværk via en SOCKS proxy (fx ved tilslutning gennem Tor).</translation>
+        <source>Connect to the Clam network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Opret forbindelse til Clam netværk via en SOCKS proxy (fx ved tilslutning gennem Tor).</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1249,8 +1265,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Linda.</source>
-        <translation>Sproget i brugergrænsefladen kan indstilles her. Denne indstilling vil træde i kraft efter genstart af Linda tegnebog.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Clam.</source>
+        <translation>Sproget i brugergrænsefladen kan indstilles her. Denne indstilling vil træde i kraft efter genstart af Clam tegnebog.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1264,6 +1280,16 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+9"/>
+        <source>Whether to show Clam addresses in the transaction list or not.</source>
+        <translation>Få vist Clam adresser på listen over transaktioner eller ej.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&amp;Display addresses in transaction list</source>
+        <translation>Vis adresser i transaktionsliste</translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Whether to show coin control features or not.</source>
         <translation> Vis mønt kontrol funktioner eller ej.</translation>
     </message>
@@ -1271,21 +1297,6 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
         <location line="+3"/>
         <source>Display coin &amp;control features (experts only!)</source>
         <translation>Vis mønt &amp; kontrol funktioner (kun for eksperter!)</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Whether to select the coin outputs randomly or with minimal coin age.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Minimize weight consumption (experimental)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Use black visual theme (requires restart)</source>
-        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+71"/>
@@ -1303,7 +1314,7 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
         <translation>&amp;Anvend</translation>
     </message>
     <message>
-        <location filename="../optionsdialog.cpp" line="+53"/>
+        <location filename="../optionsdialog.cpp" line="+55"/>
         <source>default</source>
         <translation>standard</translation>
     </message>
@@ -1316,8 +1327,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting Linda.</source>
-        <translation>Denne indstilling vil træde i kraft efter genstart af Linda.</translation>
+        <source>This setting will take effect after restarting Clam.</source>
+        <translation>Denne indstilling vil træde i kraft efter genstart af Clam.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1333,23 +1344,23 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
         <translation>Formular</translation>
     </message>
     <message>
-        <location line="+46"/>
-        <location line="+247"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Linda network after a connection is established, but this process has not completed yet.</source>
-        <translation>De viste oplysninger kan være forældet. Din tegnebog synkroniserer automatisk med Linda netværket efter en forbindelse er etableret, men denne proces er ikke afsluttet endnu.</translation>
+        <location line="+33"/>
+        <location line="+231"/>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Clam network after a connection is established, but this process has not completed yet.</source>
+        <translation>De viste oplysninger kan være forældet. Din tegnebog synkroniserer automatisk med Clam netværket efter en forbindelse er etableret, men denne proces er ikke afsluttet endnu.</translation>
     </message>
     <message>
-        <location line="-173"/>
+        <location line="-160"/>
         <source>Stake:</source>
         <translation>Rente:</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+29"/>
         <source>Unconfirmed:</source>
         <translation>Ubekræftede:</translation>
     </message>
     <message>
-        <location line="-113"/>
+        <location line="-107"/>
         <source>Wallet</source>
         <translation>Tegnebog</translation>
     </message>
@@ -1364,7 +1375,7 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
         <translation>Din nuværende tilgængelige saldo</translation>
     </message>
     <message>
-        <location line="+80"/>
+        <location line="+71"/>
         <source>Immature:</source>
         <translation>Umodne:</translation>
     </message>
@@ -1374,7 +1385,7 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
         <translation>Udvunden saldo, som endnu ikke er modnet</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+20"/>
         <source>Total:</source>
         <translation>Total:</translation>
     </message>
@@ -1384,33 +1395,25 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
         <translation>Din nuværende totale saldo</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+46"/>
         <source>&lt;b&gt;Recent transactions&lt;/b&gt;</source>
         <translation>&lt;b&gt;Nyeste transaktioner&lt;/b&gt;</translation>
     </message>
     <message>
-        <location line="-118"/>
+        <location line="-108"/>
         <source>Total of transactions that have yet to be confirmed, and do not yet count toward the current balance</source>
         <translation>Summen af ​​transaktioner, der endnu mangler at blive bekræftet, og ikke tæller mod den nuværende balance</translation>
     </message>
     <message>
-        <location line="-32"/>
+        <location line="-29"/>
         <source>Total of coins that was staked, and do not yet count toward the current balance</source>
         <translation>I alt mønter, der bliver berentet, og endnu ikke tæller mod den nuværende balance</translation>
     </message>
     <message>
-        <location filename="../overviewpage.cpp" line="+116"/>
+        <location filename="../overviewpage.cpp" line="+113"/>
         <location line="+1"/>
         <source>out of sync</source>
         <translation>ikke synkroniseret</translation>
-    </message>
-</context>
-<context>
-    <name>PaymentServer</name>
-    <message>
-        <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start Linda: click-to-pay handler</source>
-        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -1487,11 +1490,13 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
         <location line="+36"/>
         <location line="+53"/>
         <location line="+23"/>
+        <location line="+23"/>
+        <location filename="../rpcconsole.cpp" line="+348"/>
         <source>N/A</source>
         <translation>N/A</translation>
     </message>
     <message>
-        <location line="-194"/>
+        <location line="-217"/>
         <source>Client version</source>
         <translation>Klientversion</translation>
     </message>
@@ -1536,32 +1541,12 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
         <translation>Nuværende antal blokke</translation>
     </message>
     <message>
-        <location line="+197"/>
-        <source>&amp;Network Traffic</source>
-        <translation type="unfinished"/>
+        <location line="+23"/>
+        <source>Estimated total blocks</source>
+        <translation>Estimeret antal blokke</translation>
     </message>
     <message>
-        <location line="+52"/>
-        <source>&amp;Clear</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>Totals</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+64"/>
-        <source>In:</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+80"/>
-        <source>Out:</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="-383"/>
+        <location line="+23"/>
         <source>Last block time</source>
         <translation>Tidsstempel for seneste blok</translation>
     </message>
@@ -1577,8 +1562,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the Linda-Qt help message to get a list with possible Linda command-line options.</source>
-        <translation>Vis Linda-Qt hjælpe besked for at få en liste med mulige Linda kommandolinjeparametre.</translation>
+        <source>Show the Clam-Qt help message to get a list with possible Clam command-line options.</source>
+        <translation>Vis Clam-Qt hjælpe besked for at få en liste med mulige Clam kommandolinjeparametre.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1591,29 +1576,29 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
         <translation>Konsol</translation>
     </message>
     <message>
-        <location line="-237"/>
+        <location line="-260"/>
         <source>Build date</source>
         <translation>Byggedato</translation>
     </message>
     <message>
         <location line="-104"/>
-        <source>Linda - Debug window</source>
-        <translation>Linda - Debug vindue</translation>
+        <source>Clam - Debug window</source>
+        <translation>Clam - Debug vindue</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>Linda Core</source>
-        <translation>Linda Kerne</translation>
+        <source>Clam Core</source>
+        <translation>Clam Kerne</translation>
     </message>
     <message>
-        <location line="+256"/>
+        <location line="+279"/>
         <source>Debug log file</source>
         <translation>Fejlsøgningslogfil</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Linda debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Åbn Linda debug logfilen fra den nuværende data mappe. Dette kan tage et par sekunder for store logfiler.</translation>
+        <source>Open the Clam debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Åbn Clam debug logfilen fra den nuværende data mappe. Dette kan tage et par sekunder for store logfiler.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1621,9 +1606,9 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
         <translation>Ryd konsol</translation>
     </message>
     <message>
-        <location filename="../rpcconsole.cpp" line="+325"/>
-        <source>Welcome to the Linda RPC console.</source>
-        <translation>Velkommen til Linda RPC-konsol.</translation>
+        <location filename="../rpcconsole.cpp" line="-33"/>
+        <source>Welcome to the Clam RPC console.</source>
+        <translation>Velkommen til Clam RPC-konsol.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1635,47 +1620,12 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
         <source>Type &lt;b&gt;help&lt;/b&gt; for an overview of available commands.</source>
         <translation>Tast &lt;b&gt;help&lt;/b&gt; for en oversigt over de tilgængelige kommandoer.</translation>
     </message>
-    <message>
-        <location line="+127"/>
-        <source>%1 B</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>%1 KB</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>%1 MB</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>%1 GB</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>%1 m</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>%1 h</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>%1 h %2 m</source>
-        <translation type="unfinished"/>
-    </message>
 </context>
 <context>
     <name>SendCoinsDialog</name>
     <message>
         <location filename="../forms/sendcoinsdialog.ui" line="+14"/>
-        <location filename="../sendcoinsdialog.cpp" line="+181"/>
+        <location filename="../sendcoinsdialog.cpp" line="+182"/>
         <location line="+5"/>
         <location line="+5"/>
         <location line="+5"/>
@@ -1731,8 +1681,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
         <location line="+86"/>
         <location line="+86"/>
         <location line="+32"/>
-        <source>0.00 BC</source>
-        <translation>123.456 BC {0.00 ?}</translation>
+        <source>0.00 CLAM</source>
+        <translation>123.456 CLAM {0.00 ?}</translation>
     </message>
     <message>
         <location line="-191"/>
@@ -1785,7 +1735,7 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
         <translation>Tilføj modtager</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Remove all transaction fields</source>
         <translation>Fjern alle transaktions omkostnings felter </translation>
     </message>
@@ -1795,14 +1745,14 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
         <translation>Ryd alle</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+28"/>
         <source>Balance:</source>
         <translation>Saldo:</translation>
     </message>
     <message>
         <location line="+16"/>
-        <source>123.456 BC</source>
-        <translation>123.456 BC</translation>
+        <source>123.456 CLAM</source>
+        <translation>123.456 CLAM</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -1816,8 +1766,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-173"/>
-        <source>Enter a Linda address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Indtast en Linda-adresse (f.eks B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a Clam address (e.g. x8JdtsqUGiV33P6sMUdfSBHnE7JEUyxTaJ)</source>
+        <translation>Indtast en Clam-adresse (f.eks x8JdtsqUGiV33P6sMUdfSBHnE7JEUyxTaJ)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1906,8 +1856,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+5"/>
-        <source>Error: Transaction creation failed!</source>
-        <translation type="unfinished"/>
+        <source>Error: Transaction creation failed.</source>
+        <translation>Fejl: Transaktion oprettelse mislykkedes.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -1915,9 +1865,9 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
         <translation>Fejl: Transaktionen blev afvist. Dette kan ske, hvis nogle af mønterne i din tegnebog allerede er blevet brugt, som hvis du brugte en kopi af wallet.dat og mønterne blev brugt i kopien, men ikke markeret som brugt her.</translation>
     </message>
     <message>
-        <location line="+247"/>
-        <source>WARNING: Invalid Linda address</source>
-        <translation>ADVARSEL: Ugyldig Linda adresse</translation>
+        <location line="+251"/>
+        <source>WARNING: Invalid Clam address</source>
+        <translation>ADVARSEL: Ugyldig Clam adresse</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -1948,23 +1898,23 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
         <translation>Betal til:</translation>
     </message>
     <message>
-        <location line="+34"/>
-        <source>The address to send the payment to (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+60"/>
-        <location filename="../sendcoinsentry.cpp" line="+26"/>
+        <location line="+24"/>
+        <location filename="../sendcoinsentry.cpp" line="+25"/>
         <source>Enter a label for this address to add it to your address book</source>
         <translation>Indtast en mærkat for denne adresse for at føje den til din adressebog</translation>
     </message>
     <message>
-        <location line="-78"/>
+        <location line="+9"/>
         <source>&amp;Label:</source>
         <translation>Mærkat:</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+18"/>
+        <source>The address to send the payment to  (e.g. x8JdtsqUGiV33P6sMUdfSBHnE7JEUyxTaJ)</source>
+        <translation>Adressen til at sende betalingen til (f.eks x8JdtsqUGiV33P6sMUdfSBHnE7JEUyxTaJ)</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Choose address from address book</source>
         <translation>Vælg adresse fra adressebogen</translation>
     </message>
@@ -1990,8 +1940,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Linda address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Indtast en Linda-adresse (f.eks B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a Clam address (e.g. x8JdtsqUGiV33P6sMUdfSBHnE7JEUyxTaJ)</source>
+        <translation>Indtast en Clam-adresse (f.eks x8JdtsqUGiV33P6sMUdfSBHnE7JEUyxTaJ)</translation>
     </message>
 </context>
 <context>
@@ -2014,8 +1964,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+18"/>
-        <source>The address to sign the message with (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Adresse til at underskrive meddelelsen med (f.eks B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>The address to sign the message with (e.g. x8JdtsqUGiV33P6sMUdfSBHnE7JEUyxTaJ)</source>
+        <translation>Adresse til at underskrive meddelelsen med (f.eks x8JdtsqUGiV33P6sMUdfSBHnE7JEUyxTaJ)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -2051,8 +2001,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Linda address</source>
-        <translation>Underskriv brevet for at bevise du ejer denne Linda adresse</translation>
+        <source>Sign the message to prove you own this Clam address</source>
+        <translation>Underskriv brevet for at bevise du ejer denne Clam adresse</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2078,13 +2028,13 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>The address the message was signed with (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Adressen meddelelse blev underskrevet med (f.eks B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>The address the message was signed with (e.g. x8JdtsqUGiV33P6sMUdfSBHnE7JEUyxTaJ)</source>
+        <translation>Adressen meddelelse blev underskrevet med (f.eks x8JdtsqUGiV33P6sMUdfSBHnE7JEUyxTaJ)</translation>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified Linda address</source>
-        <translation>Kontroller meddelelsen for at sikre, at den blev indgået med den angivne Linda adresse</translation>
+        <source>Verify the message to ensure it was signed with the specified Clam address</source>
+        <translation>Kontroller meddelelsen for at sikre, at den blev indgået med den angivne Clam adresse</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2094,8 +2044,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Linda address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Indtast en Linda-adresse (f.eks B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a Clam address (e.g. x8JdtsqUGiV33P6sMUdfSBHnE7JEUyxTaJ)</source>
+        <translation>Indtast en Clam-adresse (f.eks x8JdtsqUGiV33P6sMUdfSBHnE7JEUyxTaJ)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2104,8 +2054,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Linda signature</source>
-        <translation>Indtast Linda underskrift</translation>
+        <source>Enter Clam signature</source>
+        <translation>Indtast Clam underskrift</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -2175,22 +2125,19 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
 </context>
 <context>
-    <name>TrafficGraphWidget</name>
-    <message>
-        <location filename="../trafficgraphwidget.cpp" line="+75"/>
-        <source>KB/s</source>
-        <translation type="unfinished"/>
-    </message>
-</context>
-<context>
     <name>TransactionDesc</name>
     <message>
-        <location filename="../transactiondesc.cpp" line="+25"/>
+        <location filename="../transactiondesc.cpp" line="+19"/>
         <source>Open until %1</source>
         <translation>Åben indtil %1</translation>
     </message>
+    <message numerus="yes">
+        <location line="-2"/>
+        <source>Open for %n block(s)</source>
+        <translation><numerusform>Åben for %n blok</numerusform><numerusform>Åben for %n blok(ke)</numerusform></translation>
+    </message>
     <message>
-        <location line="+6"/>
+        <location line="+8"/>
         <source>conflicted</source>
         <translation>konflikt</translation>
     </message>
@@ -2210,7 +2157,7 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
         <translation>%1 bekræftelser</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>Status</source>
         <translation>Status</translation>
     </message>
@@ -2312,7 +2259,7 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Generated coins must mature 10 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
+        <source>Generated coins must mature 510 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
         <translation>Generet mønter skal modne 510 blokke, før de kan blive brugt. Når du genererede denne blok blev det transmitteret til netværket, der tilføjes til blokkæden. Hvis det mislykkes at komme ind i kæden, vil dens tilstand ændres til &quot;ikke godkendt&quot;, og det vil ikke være brugbar. Dette kan lejlighedsvis ske, hvis en anden node genererer en blok et par sekunder efter din.</translation>
     </message>
     <message>
@@ -2331,7 +2278,7 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
         <translation>Input</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+23"/>
         <source>Amount</source>
         <translation>Beløb</translation>
     </message>
@@ -2346,17 +2293,12 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
         <translation>falsk</translation>
     </message>
     <message>
-        <location line="-209"/>
+        <location line="-211"/>
         <source>, has not been successfully broadcast yet</source>
         <translation>, er ikke blevet transmitteret endnu</translation>
     </message>
-    <message numerus="yes">
-        <location line="-36"/>
-        <source>Open for %n more block(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
-    </message>
     <message>
-        <location line="+71"/>
+        <location line="+35"/>
         <source>unknown</source>
         <translation>ukendt</translation>
     </message>
@@ -2377,7 +2319,7 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
 <context>
     <name>TransactionTableModel</name>
     <message>
-        <location filename="../transactiontablemodel.cpp" line="+231"/>
+        <location filename="../transactiontablemodel.cpp" line="+226"/>
         <source>Date</source>
         <translation>Dato</translation>
     </message>
@@ -2397,7 +2339,7 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
         <translation>Beløb</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+60"/>
         <source>Open until %1</source>
         <translation>Åben indtil %1</translation>
     </message>
@@ -2477,7 +2419,7 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
         <translation>(n/a)</translation>
     </message>
     <message>
-        <location line="+194"/>
+        <location line="+190"/>
         <source>Transaction status. Hover over this field to show number of confirmations.</source>
         <translation>Transaktionsstatus. Hold musen over dette felt for at vise antallet af bekræftelser.</translation>
     </message>
@@ -2505,13 +2447,13 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
 <context>
     <name>TransactionView</name>
     <message>
-        <location filename="../transactionview.cpp" line="+54"/>
-        <location line="+17"/>
+        <location filename="../transactionview.cpp" line="+55"/>
+        <location line="+16"/>
         <source>All</source>
         <translation>Alle</translation>
     </message>
     <message>
-        <location line="-16"/>
+        <location line="-15"/>
         <source>Today</source>
         <translation>I dag</translation>
     </message>
@@ -2541,7 +2483,7 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
         <translation>Interval...</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+11"/>
         <source>Received with</source>
         <translation>Modtaget med</translation>
     </message>
@@ -2606,7 +2548,7 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
         <translation>Vis transaktionsdetaljer</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+144"/>
         <source>Export Transaction Data</source>
         <translation>Exportere transaktionsdata</translation>
     </message>
@@ -2674,7 +2616,7 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
 <context>
     <name>WalletModel</name>
     <message>
-        <location filename="../walletmodel.cpp" line="+208"/>
+        <location filename="../walletmodel.cpp" line="+206"/>
         <source>Sending...</source>
         <translation>Sender...</translation>
     </message>
@@ -2682,9 +2624,9 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
 <context>
     <name>bitcoin-core</name>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="+173"/>
-        <source>Linda version</source>
-        <translation>Linda version</translation>
+        <location filename="../bitcoinstrings.cpp" line="+33"/>
+        <source>Clam version</source>
+        <translation>Clam version</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2693,8 +2635,8 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or Lindad</source>
-        <translation>Send kommando til-server eller Lindad</translation>
+        <source>Send command to -server or clamd</source>
+        <translation>Send kommando til-server eller clamd</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2707,19 +2649,19 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
         <translation>Få hjælp til en kommando</translation>
     </message>
     <message>
-        <location line="-147"/>
+        <location line="+2"/>
         <source>Options:</source>
         <translation>Indstillinger:</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: Linda.conf)</source>
-        <translation>Angiv konfigurationsfil (default: Linda.conf)</translation>
+        <source>Specify configuration file (default: clam.conf)</source>
+        <translation>Angiv konfigurationsfil (default: clam.conf)</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: Lindad.pid)</source>
-        <translation>Angiv pid fil (standard: Lindad.pid)</translation>
+        <source>Specify pid file (default: clamd.pid)</source>
+        <translation>Angiv pid fil (standard: clamd.pid)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2732,22 +2674,7 @@ Det betyder, at et gebyr på mindst %2 er påkrævet.</translation>
         <translation>Angiv datakatalog</translation>
     </message>
     <message>
-        <location line="-25"/>
-        <source>%s, you must set a rpcpassword in the configuration file:
-%s
-It is recommended you use the following random password:
-rpcuser=Lindarpc
-rpcpassword=%s
-(you do not need to remember this password)
-The username and password MUST NOT be the same.
-If the file does not exist, create it with owner-readable-only file permissions.
-It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Linda Alert&quot; admin@foo.com
-</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+2"/>
         <source>Set database cache size in megabytes (default: 25)</source>
         <translation>Angiv databasecachestørrelse i megabytes (standard: 25)</translation>
     </message>
@@ -2777,19 +2704,14 @@ for example: alertnotify=echo %%s | mail -s &quot;Linda Alert&quot; admin@foo.co
         <translation>Angiv din egen offentlige adresse</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+5"/>
         <source>Bind to given address. Use [host]:port notation for IPv6</source>
         <translation>Binder til en given adresse. Brug [host]: port notation for IPv6</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Query for peer addresses via DNS lookup, if low on addresses (default: 1 unless -connect)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Always query for peer addresses via DNS lookup (default: 0)</source>
-        <translation type="unfinished"/>
+        <location line="+2"/>
+        <source>Stake your coins to support network and gain reward (default: 1)</source>
+        <translation>Opbevar dine mønter for at støtte netværket og få belønning (default: 1)</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -2802,22 +2724,57 @@ for example: alertnotify=echo %%s | mail -s &quot;Linda Alert&quot; admin@foo.co
         <translation>Antal sekunder dårlige forbindelser skal vente før reetablering (standard: 86400)</translation>
     </message>
     <message>
-        <location line="-37"/>
+        <location line="-44"/>
         <source>An error occurred while setting up the RPC port %u for listening on IPv4: %s</source>
         <translation>Der opstod en fejl ved angivelse af RPC-porten %u til at lytte på IPv4: %s</translation>
     </message>
     <message>
-        <location line="+65"/>
+        <location line="+51"/>
+        <source>Detach block and address databases. Increases shutdown time (default: 0)</source>
+        <translation>Frigør blok og adresse databaser. Øg shutdown tid (default: 0)</translation>
+    </message>
+    <message>
+        <location line="+109"/>
+        <source>Error: The transaction was rejected.  This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
+        <translation>Fejl: Transaktionen blev afvist. Dette kan ske, hvis nogle af mønterne i din pung allerede er blevet brugt, som hvis du brugte en kopi af wallet.dat og mønterne blev brugt i kopien, men ikke markeret her.</translation>
+    </message>
+    <message>
+        <location line="-5"/>
+        <source>Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds  </source>
+        <translation>Fejl: Denne transaktion kræver et transaktionsgebyr på mindst% s på grund af dens størrelse, kompleksitet, eller anvendelse af nylig modtaget midler</translation>
+    </message>
+    <message>
+        <location line="-87"/>
         <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 15715 or testnet: 25715)</source>
         <translation>Spor efter JSON-RPC-forbindelser på &lt;port&gt; (default: 15715 eller Testnet: 25715)</translation>
     </message>
     <message>
-        <location line="-17"/>
+        <location line="-11"/>
         <source>Accept command line and JSON-RPC commands</source>
         <translation>Accepter kommandolinje- og JSON-RPC-kommandoer</translation>
     </message>
     <message>
+        <location line="+101"/>
+        <source>Error: Transaction creation failed  </source>
+        <translation>Fejl: Transaktion oprettelse mislykkedes</translation>
+    </message>
+    <message>
+        <location line="-5"/>
+        <source>Error: Wallet locked, unable to create transaction  </source>
+        <translation>Fejl: Wallet låst, ude af stand til at skabe transaktion</translation>
+    </message>
+    <message>
+        <location line="-8"/>
+        <source>Importing blockchain data file.</source>
+        <translation>Importerer blockchain datafil.</translation>
+    </message>
+    <message>
         <location line="+1"/>
+        <source>Importing bootstrap blockchain data file.</source>
+        <translation>Import af bootstrap blockchain datafil.</translation>
+    </message>
+    <message>
+        <location line="-88"/>
         <source>Run in the background as a daemon and accept commands</source>
         <translation>Kør i baggrunden som en service, og accepter kommandoer</translation>
     </message>
@@ -2832,27 +2789,32 @@ for example: alertnotify=echo %%s | mail -s &quot;Linda Alert&quot; admin@foo.co
         <translation>Accepter forbindelser udefra (standard: 1 hvis hverken -proxy eller -connect)</translation>
     </message>
     <message>
-        <location line="-29"/>
+        <location line="-38"/>
         <source>An error occurred while setting up the RPC port %u for listening on IPv6, falling back to IPv4: %s</source>
         <translation>Der opstod en fejl ved angivelse af RPC-porten %u til at lytte på IPv6, falder tilbage til IPv4: %s</translation>
     </message>
     <message>
-        <location line="+96"/>
+        <location line="+117"/>
+        <source>Error initializing database environment %s! To recover, BACKUP THAT DIRECTORY, then remove everything from it except for wallet.dat.</source>
+        <translation>Fejl initialisering database miljø% s! For at gendanne, BACKUP denne mappe, og derefter fjern alt bortset fra wallet.dat.</translation>
+    </message>
+    <message>
+        <location line="-20"/>
         <source>Set maximum size of high-priority/low-fee transactions in bytes (default: 27000)</source>
         <translation>Angiv maksimal størrelse på high-priority/low-fee transaktioner i bytes (standard: 27000)</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+11"/>
         <source>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
         <translation>Advarsel: -paytxfee er sat meget højt! Dette er det gebyr du vil betale, hvis du sender en transaktion.</translation>
     </message>
     <message>
-        <location line="-103"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Linda will not work properly.</source>
-        <translation>Advarsel: Kontroller venligst, at computerens dato og klokkeslæt er korrekt! Hvis dit ur er forkert vil Linda ikke fungere korrekt.</translation>
+        <location line="+61"/>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Clam will not work properly.</source>
+        <translation>Advarsel: Kontroller venligst, at computerens dato og klokkeslæt er korrekt! Hvis dit ur er forkert vil Clam ikke fungere korrekt.</translation>
     </message>
     <message>
-        <location line="+132"/>
+        <location line="-31"/>
         <source>Warning: error reading wallet.dat! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</source>
         <translation>Advarsel: fejl under læsning af wallet.dat! Alle nøgler blev læst korrekt, men transaktionsdata eller adressebogsposter kan mangle eller være forkerte.</translation>
     </message>
@@ -2862,17 +2824,17 @@ for example: alertnotify=echo %%s | mail -s &quot;Linda Alert&quot; admin@foo.co
         <translation>Advarsel: wallet.dat ødelagt, data reddet! Oprindelig wallet.net gemt som wallet.{timestamp}.bak i %s; hvis din saldo eller dine transaktioner er forkert, bør du genskabe fra en sikkerhedskopi.</translation>
     </message>
     <message>
-        <location line="-31"/>
+        <location line="-30"/>
         <source>Attempt to recover private keys from a corrupt wallet.dat</source>
         <translation>Forsøg at genskabe private nøgler fra ødelagt wallet.dat</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Block creation options:</source>
         <translation>Blokoprettelsestilvalg:</translation>
     </message>
     <message>
-        <location line="-69"/>
+        <location line="-62"/>
         <source>Connect only to the specified node(s)</source>
         <translation>Tilslut kun til de(n) angivne knude(r)</translation>
     </message>
@@ -2882,17 +2844,22 @@ for example: alertnotify=echo %%s | mail -s &quot;Linda Alert&quot; admin@foo.co
         <translation>Find egen IP-adresse (standard: 1 når lytter og ingen -externalip)</translation>
     </message>
     <message>
-        <location line="+101"/>
+        <location line="+94"/>
         <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
         <translation>Lytning på enhver port mislykkedes. Brug -listen=0, hvis du ønsker dette.</translation>
     </message>
     <message>
-        <location line="-91"/>
+        <location line="-90"/>
+        <source>Find peers using DNS lookup (default: 1)</source>
+        <translation>Find peer bruges DNS-opslag (default: 1)</translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>Sync checkpoints policy (default: strict)</source>
         <translation>Synkroniser checkpoints politik (default: streng)</translation>
     </message>
     <message>
-        <location line="+89"/>
+        <location line="+83"/>
         <source>Invalid -tor address: &apos;%s&apos;</source>
         <translation>Ugyldig-tor-adresse: &apos;% s&apos;</translation>
     </message>
@@ -2902,7 +2869,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Linda Alert&quot; admin@foo.co
         <translation>Ugyldigt beløb for-reservebalance = &lt;beløb&gt;</translation>
     </message>
     <message>
-        <location line="-88"/>
+        <location line="-82"/>
         <source>Maximum per-connection receive buffer, &lt;n&gt;*1000 bytes (default: 5000)</source>
         <translation>Maksimum for modtagelsesbuffer pr. forbindelse, &lt;n&gt;*1000 bytes (standard: 5000)</translation>
     </message>
@@ -2912,37 +2879,47 @@ for example: alertnotify=echo %%s | mail -s &quot;Linda Alert&quot; admin@foo.co
         <translation>Maksimum for afsendelsesbuffer pr. forbindelse, &lt;n&gt;*1000 bytes (standard: 1000)</translation>
     </message>
     <message>
-        <location line="-17"/>
+        <location line="-16"/>
         <source>Only connect to nodes in network &lt;net&gt; (IPv4, IPv6 or Tor)</source>
         <translation>Tilslut kun til knuder i netværk &lt;net&gt; (IPv4, IPv6 eller Tor)</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+28"/>
+        <source>Output extra debugging information. Implies all other -debug* options</source>
+        <translation>Output ekstra debugging information. Indebærer alle andre-debug * muligheder</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Output extra network debugging information</source>
+        <translation>Output ekstra netværk debugging information</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Prepend debug output with timestamp</source>
         <translation>Prepend debug output med tidsstempel</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+35"/>
         <source>SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
         <translation>SSL-indstillinger: (se Bitcoin Wiki for SSL-opsætningsinstruktioner)</translation>
     </message>
     <message>
-        <location line="-81"/>
+        <location line="-74"/>
         <source>Select the version of socks proxy to use (4-5, default: 5)</source>
         <translation>Vælg den version af socks proxy du vil bruge (4-5, standard: 5)</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+41"/>
         <source>Send trace/debug info to console instead of debug.log file</source>
         <translation>Send sporings-/fejlsøgningsinformation til konsollen i stedet for debug.log filen</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+1"/>
         <source>Send trace/debug info to debugger</source>
         <translation>Send trace / debug info til debugger</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+28"/>
         <source>Set maximum block size in bytes (default: 250000)</source>
         <translation>Indstil maks. blok størrelse i bytes (standard: 250000)</translation>
     </message>
@@ -2952,24 +2929,24 @@ for example: alertnotify=echo %%s | mail -s &quot;Linda Alert&quot; admin@foo.co
         <translation>Angiv minimumsblokstørrelse i bytes (standard: 0)</translation>
     </message>
     <message>
-        <location line="-35"/>
+        <location line="-29"/>
         <source>Shrink debug.log file on client startup (default: 1 when no -debug)</source>
         <translation>Formindsk debug.log filen ved klientopstart (standard: 1 hvis ikke -debug)</translation>
     </message>
     <message>
-        <location line="-43"/>
+        <location line="-42"/>
         <source>Specify connection timeout in milliseconds (default: 5000)</source>
         <translation>Angiv tilslutningstimeout i millisekunder (standard: 5000)</translation>
     </message>
     <message>
-        <location line="+116"/>
+        <location line="+109"/>
         <source>Unable to sign checkpoint, wrong checkpointkey?
 </source>
         <translation>Kan ikke logge checkpoint, forkert checkpointkey?
 </translation>
     </message>
     <message>
-        <location line="-86"/>
+        <location line="-80"/>
         <source>Use UPnP to map the listening port (default: 0)</source>
         <translation>Forsøg at bruge UPnP til at konfigurere den lyttende port (standard: 0)</translation>
     </message>
@@ -2979,102 +2956,87 @@ for example: alertnotify=echo %%s | mail -s &quot;Linda Alert&quot; admin@foo.co
         <translation>Forsøg at bruge UPnP til at konfigurere den lyttende port (standard: 1 når lytter)</translation>
     </message>
     <message>
-        <location line="-26"/>
+        <location line="-25"/>
         <source>Use proxy to reach tor hidden services (default: same as -proxy)</source>
         <translation>Brug proxy til at nå tor skjulte services (Standard: samme som-proxy)</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+42"/>
         <source>Username for JSON-RPC connections</source>
         <translation>Brugernavn til JSON-RPC-forbindelser</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+47"/>
         <source>Verifying database integrity...</source>
         <translation>Bekræfter database integritet ...</translation>
     </message>
     <message>
-        <location line="+44"/>
-        <source>Error: Wallet locked, unable to create transaction!</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds!</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Error: Transaction creation failed!</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Error: The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Warning</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Information</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+2"/>
+        <location line="+57"/>
         <source>WARNING: syncronized checkpoint violation detected, but skipped!</source>
         <translation>ADVARSEL: synkroniseret checkpoint overtrædelse opdaget, men skibbet!</translation>
     </message>
     <message>
-        <location line="-1"/>
+        <location line="+1"/>
+        <source>Warning: Disk space is low!</source>
+        <translation>Advarsel: Diskplads lav!</translation>
+    </message>
+    <message>
+        <location line="-2"/>
         <source>Warning: This version is obsolete, upgrade required!</source>
         <translation>Advarsel: Denne version er forældet, opgradering påkrævet!</translation>
     </message>
     <message>
-        <location line="-54"/>
+        <location line="-48"/>
         <source>wallet.dat corrupt, salvage failed</source>
         <translation>wallet.dat ødelagt, redning af data mislykkedes</translation>
     </message>
     <message>
-        <location line="-56"/>
+        <location line="-54"/>
         <source>Password for JSON-RPC connections</source>
         <translation>Adgangskode til JSON-RPC-forbindelser</translation>
     </message>
     <message>
-        <location line="-32"/>
+        <location line="-84"/>
+        <source>%s, you must set a rpcpassword in the configuration file:
+ %s
+It is recommended you use the following random password:
+rpcuser=clamrpc
+rpcpassword=%s
+(you do not need to remember this password)
+The username and password MUST NOT be the same.
+If the file does not exist, create it with owner-readable-only file permissions.
+It is also recommended to set alertnotify so you are notified of problems;
+for example: alertnotify=echo %%s | mail -s &quot;Clam Alert&quot; admin@foo.com
+</source>
+        <translation>% s, skal du indstille et rpcpassword i konfigurationsfilen: 
+% s 
+Det anbefales at bruge følgende tilfældig adgangskode: 
+rpcuser = clamrpc  
+rpcpassword =% s  
+(du behøver ikke at huske denne adgangskode)  
+Brugernavn og adgangskode må ikke være den samme.  
+Hvis filen ikke findes, skal du oprette den med filtilladelser ejer-læsbar-kun. 
+Det kan også anbefales at sætte alertnotify så du får besked om problemer; 
+for eksempel: alertnotify = echo%% s | mail-s &quot;Clam Alert&quot; admin@foo.com 
+</translation>
+    </message>
+    <message>
+        <location line="+51"/>
+        <source>Find peers using internet relay chat (default: 0)</source>
+        <translation>Find peers der bruger internet relay chat (default: 1) {? 0)}</translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>Sync time with other nodes. Disable if time on your system is precise e.g. syncing with NTP (default: 1)</source>
         <translation>Synkroniser tid med andre noder. Deaktiver, hvis tiden på dit system er præcis eksempelvis synkroniseret med NTP (default: 1)</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+15"/>
         <source>When creating transactions, ignore inputs with value less than this (default: 0.01)</source>
         <translation>Når du opretter transaktioner ignoreres input med værdi mindre end dette (standard: 0,01)</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>Output debugging information (default: 0, supplying &lt;category&gt; is optional)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>If &lt;category&gt; is not supplied, output all debugging information.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>&lt;category&gt; can be:</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Enter regression test mode, which uses a special chain in which blocks can be solved instantly. This is intended for regression testing tools and app development.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+9"/>
+        <location line="+16"/>
         <source>Allow JSON-RPC connections from specified IP address</source>
         <translation>Tillad JSON-RPC-forbindelser fra bestemt IP-adresse</translation>
     </message>
@@ -3082,16 +3044,6 @@ for example: alertnotify=echo %%s | mail -s &quot;Linda Alert&quot; admin@foo.co
         <location line="+1"/>
         <source>Send commands to node running on &lt;ip&gt; (default: 127.0.0.1)</source>
         <translation>Send kommandoer til knude, der kører på &lt;ip&gt; (standard: 127.0.0.1)</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Wait for RPC server to start</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Set the number of threads to service RPC calls (default: 4)</source>
-        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -3107,6 +3059,11 @@ for example: alertnotify=echo %%s | mail -s &quot;Linda Alert&quot; admin@foo.co
         <location line="+3"/>
         <source>Require a confirmations for change (default: 0)</source>
         <translation>Kræver en bekræftelser for forandring (default: 0)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Enforce transaction scripts to use canonical PUSH operators (default: 1)</source>
+        <translation>Gennemtving transaktions omkostninger scripts til at bruge canoniske PUSH operatører (default: 1)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -3129,7 +3086,12 @@ for example: alertnotify=echo %%s | mail -s &quot;Linda Alert&quot; admin@foo.co
         <translation>Gennemsøg blokkæden for manglende tegnebogstransaktioner</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
+        <source>How many blocks to check at startup (default: 2500, 0 = all)</source>
+        <translation>Hvor mange blokke til at kontrollere ved opstart (standard: 2500, 0 = alle)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>How thorough the block verification is (0-6, default: 1)</source>
         <translation>Hvor grundig blok verifikation er (0-6, default: 1)</translation>
     </message>
@@ -3139,7 +3101,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Linda Alert&quot; admin@foo.co
         <translation>Importere blokke fra ekstern blk000?. Dat fil</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+8"/>
         <source>Use OpenSSL (https) for JSON-RPC connections</source>
         <translation>Brug OpenSSL (https) for JSON-RPC-forbindelser</translation>
     </message>
@@ -3154,47 +3116,47 @@ for example: alertnotify=echo %%s | mail -s &quot;Linda Alert&quot; admin@foo.co
         <translation>Serverens private nøgle (standard: server.pem)</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>Initialization sanity check failed. Linda is shutting down.</source>
-        <translation type="unfinished"/>
+        <location line="+1"/>
+        <source>Acceptable ciphers (default: TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!AH:!3DES:@STRENGTH)</source>
+        <translation>Acceptable ciphers (default: TLSv1 + HØJ:! SSLv2: aNULL: eNULL: AH: 3DES: @ styrke)</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+53"/>
         <source>Error: Wallet unlocked for staking only, unable to create transaction.</source>
         <translation>Fejl: Pung låst for at udregne rente, ude af stand til at skabe transaktion.</translation>
     </message>
     <message>
-        <location line="+17"/>
-        <source>Error: Disk space is low!</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+3"/>
+        <location line="+18"/>
         <source>WARNING: Invalid checkpoint found! Displayed transactions may not be correct! You may need to upgrade, or notify developers.</source>
         <translation>ADVARSEL: Ugyldig checkpoint fundet! Viste transaktioner er måske ikke korrekte! Du kan være nødt til at opgradere, eller underrette udviklerne.</translation>
     </message>
     <message>
-        <location line="-174"/>
+        <location line="-158"/>
         <source>This help message</source>
         <translation>Denne hjælpebesked</translation>
     </message>
     <message>
-        <location line="+104"/>
+        <location line="+95"/>
         <source>Wallet %s resides outside data directory %s.</source>
         <translation>Wallet% s placeret udenfor data mappe% s.</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+1"/>
+        <source>Cannot obtain a lock on data directory %s.  Clam is probably already running.</source>
+        <translation>Kan ikke få en lås på data mappe% s. Clam kører sikkert allerede.</translation>
+    </message>
+    <message>
+        <location line="-98"/>
+        <source>Clam</source>
+        <translation>Clam</translation>
+    </message>
+    <message>
+        <location line="+140"/>
         <source>Unable to bind to %s on this computer (bind returned error %d, %s)</source>
         <translation>Kunne ikke tildele %s på denne computer (bind returnerede fejl %d, %s)</translation>
     </message>
     <message>
-        <location line="-133"/>
+        <location line="-130"/>
         <source>Connect through socks proxy</source>
         <translation>Tilslut gennem socks proxy</translation>
     </message>
@@ -3204,12 +3166,12 @@ for example: alertnotify=echo %%s | mail -s &quot;Linda Alert&quot; admin@foo.co
         <translation>Tillad DNS-opslag for -addnode, -seednode og -connect</translation>
     </message>
     <message>
-        <location line="+126"/>
+        <location line="+122"/>
         <source>Loading addresses...</source>
         <translation>Indlæser adresser...</translation>
     </message>
     <message>
-        <location line="-12"/>
+        <location line="-15"/>
         <source>Error loading blkindex.dat</source>
         <translation>Fejl ved indlæsning af blkindex.dat</translation>
     </message>
@@ -3220,13 +3182,13 @@ for example: alertnotify=echo %%s | mail -s &quot;Linda Alert&quot; admin@foo.co
     </message>
     <message>
         <location line="+4"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Linda</source>
-        <translation>Fejl ved indlæsning af wallet.dat: Wallet kræver en nyere version af Linda</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Clam</source>
+        <translation>Fejl ved indlæsning af wallet.dat: Wallet kræver en nyere version af Clam</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart Linda to complete</source>
-        <translation>Det er nødvendig for wallet at blive omskrevet: Genstart Linda for fuldføre</translation>
+        <source>Wallet needed to be rewritten: restart Clam to complete</source>
+        <translation>Det er nødvendig for wallet at blive omskrevet: Genstart Clam for fuldføre</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3259,12 +3221,17 @@ for example: alertnotify=echo %%s | mail -s &quot;Linda Alert&quot; admin@foo.co
         <translation>Kan ikke finde -externalip adressen: &apos;%s&apos;</translation>
     </message>
     <message>
-        <location line="-23"/>
+        <location line="-24"/>
         <source>Invalid amount for -paytxfee=&lt;amount&gt;: &apos;%s&apos;</source>
         <translation>Ugyldigt beløb for -paytxfee=&lt;amount&gt;: &apos;%s&apos;</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+44"/>
+        <source>Error: could not start node</source>
+        <translation>Fejl: kunne ikke starte node</translation>
+    </message>
+    <message>
+        <location line="+11"/>
         <source>Sending...</source>
         <translation>Sender...</translation>
     </message>
@@ -3279,67 +3246,32 @@ for example: alertnotify=echo %%s | mail -s &quot;Linda Alert&quot; admin@foo.co
         <translation>Manglende dækning</translation>
     </message>
     <message>
-        <location line="-40"/>
+        <location line="-34"/>
         <source>Loading block index...</source>
         <translation>Indlæser blokindeks...</translation>
     </message>
     <message>
-        <location line="-110"/>
+        <location line="-103"/>
         <source>Add a node to connect to and attempt to keep the connection open</source>
         <translation>Tilføj en knude til at forbinde til og forsøg at holde forbindelsen åben</translation>
     </message>
     <message>
-        <location line="+125"/>
-        <source>Unable to bind to %s on this computer. Linda is probably already running.</source>
-        <translation>Kunne ikke binde sig til% s på denne computer. Linda kører sikkert allerede.</translation>
+        <location line="+122"/>
+        <source>Unable to bind to %s on this computer. Clam is probably already running.</source>
+        <translation>Kunne ikke binde sig til% s på denne computer. Clam kører sikkert allerede.</translation>
     </message>
     <message>
-        <location line="-101"/>
+        <location line="-97"/>
         <source>Fee per KB to add to transactions you send</source>
         <translation>Gebyr pr KB som tilføjes til transaktioner, du sender</translation>
     </message>
     <message>
-        <location line="+34"/>
-        <source>Minimize weight consumption (experimental) (default: 0)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>How many blocks to check at startup (default: 500, 0 = all)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Keep at most &lt;n&gt; unconnectable blocks in memory (default: %u)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>Acceptable ciphers (default: TLSv1.2+HIGH:TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!3DES:@STRENGTH)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Warning: Deprecated argument -debugnet ignored, use -debug=net</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+5"/>
+        <location line="+55"/>
         <source>Invalid amount for -mininput=&lt;amount&gt;: &apos;%s&apos;</source>
         <translation>Ugyldigt beløb for-mininput = &lt;beløb&gt;: &apos;% s&apos;</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Linda is probably already running.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Error initializing wallet database environment %s!</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+17"/>
+        <location line="+25"/>
         <source>Loading wallet...</source>
         <translation>Indlæser tegnebog...</translation>
     </message>
@@ -3347,6 +3279,11 @@ for example: alertnotify=echo %%s | mail -s &quot;Linda Alert&quot; admin@foo.co
         <location line="+8"/>
         <source>Cannot downgrade wallet</source>
         <translation>Kan ikke nedgradere tegnebog</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cannot initialize keypool</source>
+        <translation>Kan ikke initialisere keypool</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3359,22 +3296,22 @@ for example: alertnotify=echo %%s | mail -s &quot;Linda Alert&quot; admin@foo.co
         <translation>Genindlæser...</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+5"/>
         <source>Done loading</source>
         <translation>Indlæsning gennemført</translation>
     </message>
     <message>
-        <location line="-161"/>
+        <location line="-167"/>
         <source>To use the %s option</source>
         <translation>For at bruge %s mulighed</translation>
     </message>
     <message>
-        <location line="+188"/>
+        <location line="+14"/>
         <source>Error</source>
         <translation>Fejl</translation>
     </message>
     <message>
-        <location line="-18"/>
+        <location line="+6"/>
         <source>You must set rpcpassword=&lt;password&gt; in the configuration file:
 %s
 If the file does not exist, create it with owner-readable-only file permissions.</source>

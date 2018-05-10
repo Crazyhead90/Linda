@@ -3,37 +3,35 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Linda</source>
-        <translation>Linda Hakkında</translation>
+        <source>About Clam</source>
+        <translation>Clam Hakkında</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Linda&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;Linda&lt;/b&gt; versiyonu</translation>
+        <source>&lt;b&gt;Clam&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;Clam&lt;/b&gt; versiyonu</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The Linda developers</source>
-        <translation>Telif Hakkı © 2009-2014 Bitcoin geliştiricileri
-Telif Hakkı © 2012-2014 NovaCoin geliştiricileri
-Telif Hakkı © 2014 Linda geliştiricileri</translation>
+Copyright © 2014 The Clam developers</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+15"/>
         <source>
 This is experimental software.
 
-Distributed under the MIT/X11 software license, see the accompanying file COPYING or &lt;a href=&quot;http://www.opensource.org/licenses/mit-license.php&quot;&gt;http://www.opensource.org/licenses/mit-license.php&lt;/a&gt;.
+Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (&lt;a href=&quot;https://www.openssl.org/&quot;&gt;https://www.openssl.org/&lt;/a&gt;) and cryptographic software written by Eric Young (&lt;a href=&quot;mailto:eay@cryptsoft.com&quot;&gt;eay@cryptsoft.com&lt;/a&gt;) and UPnP software written by Thomas Bernard.</source>
+This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (http://www.openssl.org/) and cryptographic software written by Eric Young (eay@cryptsoft.com) and UPnP software written by Thomas Bernard.</source>
         <translation>
-Bu, deneysel bir yazılımdır.
+ Bu, deneysel bir yazılımdır.
 
-MIT/X11 yazılım lisansı kapsamında yayınlanmıştır, beraberindeki COPYING dosyasına veya &lt;a href=&quot;http://www.opensource.org/licenses/mit-license.php&quot;&gt;http://www.opensource.org/licenses/mit-license.php&lt;/a&gt; sayfasına bakınız.
+ MIT/X11 yazılım lisansı kapsamında yayınlanmıştır, beraberindeki COPYING dosyasına ya da http://www.opensource.org/licenses/mit-license.php sayfasına bakınız.
 
-Bu ürün, OpenSSL projesi tarafından OpenSSL araç takımıThis product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (&lt;a href=&quot;https://www.openssl.org/&quot;&gt;https://www.openssl.org/&lt;/a&gt;) için geliştirilmiş yazılımı, Eric Young (&lt;a href=&quot;mailto:eay@cryptsoft.com&quot;&gt;eay@cryptsoft.com&lt;/a&gt;) tarafından hazırlanmış şifreleme yazılımı ve Thomas Bernard tarafından yazılmış UPnP yazılımı içerir.</translation>
+ Bu ürün, OpenSSL Araç Takımı&apos;nda (http://www.openssl.org/) kullanılmak üzere OpenSSL projesi tarafından geliştirilen yazılımı, Eric Young (eay@cryptsoft.com) tarafından hazırlanmış kriptografik yazılımı ve Thomas Bernard tarafından yazılmış UPnP yazılımı içerir.</translation>
     </message>
 </context>
 <context>
@@ -49,39 +47,39 @@ Bu ürün, OpenSSL projesi tarafından OpenSSL araç takımıThis product includ
         <translation>Adresi ya da etiketi düzenlemek için çift tıklayınız</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+27"/>
         <source>Create a new address</source>
         <translation>Yeni bir adres oluştur</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+14"/>
         <source>Copy the currently selected address to the system clipboard</source>
         <translation>Seçili adresi sistem panosuna kopyala</translation>
     </message>
     <message>
-        <location line="-7"/>
+        <location line="-11"/>
         <source>&amp;New Address</source>
         <translation>&amp;Yeni Adres</translation>
     </message>
     <message>
-        <location line="-43"/>
-        <source>These are your Linda addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Bunlar, ödeme almak için Linda adreslerinizdir. Her bir göndericiye farklı birini verebilir, böylece size kimin ödeme yaptığını takip edebilirsiniz.</translation>
+        <location line="-46"/>
+        <source>These are your Clam addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Bunlar, ödeme almak için Clam adreslerinizdir. Her bir göndericiye farklı birini verebilir, böylece size kimin ödeme yaptığını takip edebilirsiniz.</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+60"/>
         <source>&amp;Copy Address</source>
         <translation>Adresi &amp;Kopyala</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+11"/>
         <source>Show &amp;QR Code</source>
         <translation>&amp;QR Kodunu Göster</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Sign a message to prove you own a Linda address</source>
-        <translation>Bir Linda adresine sahip olduğunu ispatlamak için bir mesaj imzala</translation>
+        <location line="+11"/>
+        <source>Sign a message to prove you own a Clam address</source>
+        <translation>Bir Clam adresine sahip olduğunu ispatlamak için bir mesaj imzala</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -89,14 +87,14 @@ Bu ürün, OpenSSL projesi tarafından OpenSSL araç takımıThis product includ
         <translation>&amp;Mesaj İmzala</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+25"/>
         <source>Delete the currently selected address from the list</source>
         <translation>Seçili adresi listeden sil</translation>
     </message>
     <message>
-        <location line="-10"/>
-        <source>Verify a message to ensure it was signed with a specified Linda address</source>
-        <translation>Mesajın, belirli bir Linda adresiyle imzalandığından emin olmak için onu doğrula</translation>
+        <location line="-14"/>
+        <source>Verify a message to ensure it was signed with a specified Clam address</source>
+        <translation>Mesajın, belirli bir Clam adresiyle imzalandığından emin olmak için onu doğrula</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -104,7 +102,7 @@ Bu ürün, OpenSSL projesi tarafından OpenSSL araç takımıThis product includ
         <translation>Mesajı &amp;Doğrula</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+14"/>
         <source>&amp;Delete</source>
         <translation>&amp;Sil</translation>
     </message>
@@ -142,7 +140,7 @@ Bu ürün, OpenSSL projesi tarafından OpenSSL araç takımıThis product includ
 <context>
     <name>AddressTableModel</name>
     <message>
-        <location filename="../addresstablemodel.cpp" line="+145"/>
+        <location filename="../addresstablemodel.cpp" line="+144"/>
         <source>Label</source>
         <translation>Etiket</translation>
     </message>
@@ -190,7 +188,12 @@ Bu ürün, OpenSSL projesi tarafından OpenSSL araç takımıThis product includ
         <translation>Sadece pay almak için</translation>
     </message>
     <message>
-        <location filename="../askpassphrasedialog.cpp" line="+38"/>
+        <location filename="../askpassphrasedialog.cpp" line="+35"/>
+        <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;10 or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
+        <translation>Cüzdanınız için yeni parolayı giriniz.&lt;br/&gt;Lütfen &lt;b&gt;10 ya da daha fazla rastgele karakter&lt;/b&gt; veya &lt;b&gt;sekiz ya da daha fazla kelime&lt;/b&gt; içeren bir parola seçiniz.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Encrypt wallet</source>
         <translation>Cüzdanı şifrele</translation>
     </message>
@@ -225,7 +228,7 @@ Bu ürün, OpenSSL projesi tarafından OpenSSL araç takımıThis product includ
         <translation>Cüzdan için eski ve yeni parolaları giriniz.</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+46"/>
         <source>Confirm wallet encryption</source>
         <translation>Cüzdan şifrelenmesini teyit eder</translation>
     </message>
@@ -257,14 +260,9 @@ Bu ürün, OpenSSL projesi tarafından OpenSSL araç takımıThis product includ
         <translation>Cüzdan şifrelendi</translation>
     </message>
     <message>
-        <location line="-140"/>
-        <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;ten or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
-        <translation>Cüzdanınız için yeni parolayı giriniz.&lt;br/&gt;Lütfen &lt;b&gt;on veya daha fazla rastgele karakter&lt;/b&gt; ya da &lt;b&gt;sekiz veya daha fazla kelime&lt;/b&gt; içeren bir parola seçiniz.</translation>
-    </message>
-    <message>
-        <location line="+82"/>
-        <source>Linda will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation>Linda, şifreleme işlemini tamamlamak için şimdi kapatılacak. Cüzdanınızı şifrelemenin; coinlerinizin, bilgisayarınızı etkileyen zararlı yazılımlar tarafından çalınmasını bütünüyle engelleyemeyebileceğini unutmayınız.</translation>
+        <location line="-58"/>
+        <source>Clam will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation>Clam, şifreleme işlemini tamamlamak için şimdi kapatılacak. Cüzdanınızı şifrelemenin; coinlerinizin, bilgisayarınızı etkileyen zararlı yazılımlar tarafından çalınmasını bütünüyle engelleyemeyebileceğini unutmayınız.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -311,12 +309,22 @@ Bu ürün, OpenSSL projesi tarafından OpenSSL araç takımıThis product includ
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+297"/>
+        <location filename="../bitcoingui.cpp" line="+282"/>
         <source>Sign &amp;message...</source>
         <translation>&amp;Mesaj imzala...</translation>
     </message>
     <message>
-        <location line="-64"/>
+        <location line="+251"/>
+        <source>Synchronizing with network...</source>
+        <translation>Ağ ile senkronizasyon...</translation>
+    </message>
+    <message>
+        <location line="-319"/>
+        <source>&amp;Overview</source>
+        <translation>&amp;Genel bakış</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Show general overview of wallet</source>
         <translation>Cüzdana genel bakışı göster</translation>
     </message>
@@ -341,12 +349,22 @@ Bu ürün, OpenSSL projesi tarafından OpenSSL araç takımıThis product includ
         <translation>Kayıtlı adresler ve etiketler listesini düzenle</translation>
     </message>
     <message>
-        <location line="-18"/>
+        <location line="-13"/>
+        <source>&amp;Receive coins</source>
+        <translation>Coin &amp;al</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Show the list of addresses for receiving payments</source>
         <translation>Ödeme almak için kullanılan adres listesini göster</translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="-7"/>
+        <source>&amp;Send coins</source>
+        <translation>Coin &amp;gönder</translation>
+    </message>
+    <message>
+        <location line="+35"/>
         <source>E&amp;xit</source>
         <translation>&amp;Çık</translation>
     </message>
@@ -356,9 +374,9 @@ Bu ürün, OpenSSL projesi tarafından OpenSSL araç takımıThis product includ
         <translation>Uygulamadan çık</translation>
     </message>
     <message>
-        <location line="+4"/>
-        <source>Show information about Linda</source>
-        <translation>Linda hakkındaki bilgiyi göster</translation>
+        <location line="+6"/>
+        <source>Show information about Clam</source>
+        <translation>Clam hakkındaki bilgiyi göster</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -381,7 +399,7 @@ Bu ürün, OpenSSL projesi tarafından OpenSSL araç takımıThis product includ
         <translation>Cüzdanı &amp;Şifrele...</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+3"/>
         <source>&amp;Backup Wallet...</source>
         <translation>Cüzdanı &amp;Yedekle...</translation>
     </message>
@@ -390,33 +408,43 @@ Bu ürün, OpenSSL projesi tarafından OpenSSL araç takımıThis product includ
         <source>&amp;Change Passphrase...</source>
         <translation>Parolayı &amp;Değiştir...</translation>
     </message>
+    <message numerus="yes">
+        <location line="+259"/>
+        <source>~%n block(s) remaining</source>
+        <translation><numerusform>~%n blok kaldı</numerusform><numerusform>~%n blok kaldı</numerusform></translation>
+    </message>
     <message>
-        <location line="+9"/>
+        <location line="+6"/>
+        <source>Downloaded %1 of %2 blocks of transaction history (%3% done).</source>
+        <translation>İşlem geçmişindeki %2 bloğun %1&apos;i indirildi (%3% tamamlandı).</translation>
+    </message>
+    <message>
+        <location line="-256"/>
         <source>&amp;Export...</source>
         <translation>&amp;Dışarı aktar...</translation>
     </message>
     <message>
-        <location line="-55"/>
-        <source>Send coins to a Linda address</source>
-        <translation>Bir Linda adresine coin gönder</translation>
+        <location line="-64"/>
+        <source>Send coins to a Clam address</source>
+        <translation>Bir Clam adresine coin gönder</translation>
     </message>
     <message>
-        <location line="+39"/>
-        <source>Modify configuration options for Linda</source>
-        <translation>Linda yapılandırma seçeneklerini değiştir</translation>
+        <location line="+47"/>
+        <source>Modify configuration options for Clam</source>
+        <translation>Clam yapılandırma seçeneklerini değiştir</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>Export the data in the current tab to a file</source>
         <translation>Mevcut sekmedeki veriyi bir dosyaya aktar</translation>
     </message>
     <message>
-        <location line="-13"/>
+        <location line="-14"/>
         <source>Encrypt or decrypt wallet</source>
         <translation>Cüzdanı şifrele veya cüzdanın şifresini aç</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+3"/>
         <source>Backup wallet to another location</source>
         <translation>Cüzdanı başka bir konuma yedekle</translation>
     </message>
@@ -441,20 +469,19 @@ Bu ürün, OpenSSL projesi tarafından OpenSSL araç takımıThis product includ
         <translation>Mesajı &amp;doğrula...</translation>
     </message>
     <message>
-        <location line="-214"/>
-        <location line="+551"/>
-        <source>Linda</source>
-        <translation>Linda</translation>
+        <location line="-202"/>
+        <source>Clam</source>
+        <translation>Clam</translation>
     </message>
     <message>
-        <location line="-551"/>
+        <location line="+0"/>
         <source>Wallet</source>
         <translation>Cüzdan</translation>
     </message>
     <message>
-        <location line="+193"/>
-        <source>&amp;About Linda</source>
-        <translation>Linda &amp;Hakkında</translation>
+        <location line="+180"/>
+        <source>&amp;About Clam</source>
+        <translation>Clam &amp;Hakkında</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -462,7 +489,7 @@ Bu ürün, OpenSSL projesi tarafından OpenSSL araç takımıThis product includ
         <translation>&amp;Göster / Gizle</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+9"/>
         <source>Unlock wallet</source>
         <translation>Cüzdanın kilidini aç</translation>
     </message>
@@ -477,7 +504,7 @@ Bu ürün, OpenSSL projesi tarafından OpenSSL araç takımıThis product includ
         <translation>Cüzdanı kilitle</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+35"/>
         <source>&amp;File</source>
         <translation>&amp;Dosya</translation>
     </message>
@@ -492,29 +519,39 @@ Bu ürün, OpenSSL projesi tarafından OpenSSL araç takımıThis product includ
         <translation>&amp;Yardım</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+12"/>
         <source>Tabs toolbar</source>
         <translation>Sekme araç çubuğu</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+8"/>
+        <source>Actions toolbar</source>
+        <translation>Eylem araç çubuğu</translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <location line="+9"/>
         <source>[testnet]</source>
         <translation>[testnet]</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+58"/>
-        <source>Linda client</source>
-        <translation>Linda istemcisi</translation>
+        <location line="+60"/>
+        <source>Clam client</source>
+        <translation>Clam istemcisi</translation>
     </message>
     <message numerus="yes">
-        <location line="+70"/>
-        <source>%n active connection(s) to Linda network</source>
-        <translation><numerusform>Linda ağına %n etkin bağlantı</numerusform><numerusform>Linda ağına %n etkin bağlantı</numerusform></translation>
+        <location line="+75"/>
+        <source>%n active connection(s) to Clam network</source>
+        <translation><numerusform>Clam ağına %n etkin bağlantı</numerusform><numerusform>Clam ağına %n etkin bağlantı</numerusform></translation>
     </message>
     <message>
-        <location line="+488"/>
+        <location line="+40"/>
+        <source>Downloaded %1 blocks of transaction history.</source>
+        <translation>İşlem geçmişinin %1 bloğu indirildi.</translation>
+    </message>
+    <message>
+        <location line="+413"/>
         <source>Staking.&lt;br&gt;Your weight is %1&lt;br&gt;Network weight is %2&lt;br&gt;Expected time to earn reward is %3</source>
         <translation>Pay alınıyor.&lt;br&gt;Sizin ağırlığınız %1&lt;br&gt;Ağın ağırlığı %2&lt;br&gt;Ödül almak için tahmini süre %3</translation>
     </message>
@@ -538,38 +575,63 @@ Bu ürün, OpenSSL projesi tarafından OpenSSL araç takımıThis product includ
         <source>Not staking because you don&apos;t have mature coins</source>
         <translation>Pay alınmıyor çünkü olgunlaşmış coininiz yoktur</translation>
     </message>
+    <message numerus="yes">
+        <location line="-403"/>
+        <source>%n second(s) ago</source>
+        <translation><numerusform>%n saniye önce</numerusform><numerusform>%n saniye önce</numerusform></translation>
+    </message>
     <message>
-        <location line="-808"/>
-        <source>&amp;Dashboard</source>
+        <location line="-312"/>
+        <source>About Clam card</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+6"/>
-        <source>&amp;Receive</source>
+        <location line="+1"/>
+        <source>Show information about Clam card</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+6"/>
-        <source>&amp;Send</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+49"/>
+        <location line="+18"/>
         <source>&amp;Unlock Wallet...</source>
         <translation>Cüzdanı &amp;Kilitle...</translation>
     </message>
+    <message numerus="yes">
+        <location line="+297"/>
+        <source>%n minute(s) ago</source>
+        <translation><numerusform>%n dakika önce</numerusform><numerusform>%n dakika önce</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <location line="+4"/>
+        <source>%n hour(s) ago</source>
+        <translation><numerusform>%n saat önce</numerusform><numerusform>%n saat önce</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <location line="+4"/>
+        <source>%n day(s) ago</source>
+        <translation><numerusform>%n gün önce</numerusform><numerusform>%n gün önce</numerusform></translation>
+    </message>
     <message>
-        <location line="+273"/>
+        <location line="+6"/>
         <source>Up to date</source>
         <translation>Güncel</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+7"/>
         <source>Catching up...</source>
         <translation>Aralık kapatılıyor...</translation>
     </message>
     <message>
-        <location line="+113"/>
+        <location line="+10"/>
+        <source>Last received block was generated %1.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+59"/>
+        <source>This transaction is over the size limit.  You can still send it for a fee of %1, which goes to the nodes that process your transaction and helps to support the network.  Do you want to pay the fee?</source>
+        <translation>Bu işlem, büyüklük sınırının üzerindedir. İşleminizi gerçekleştirecek devrelere gidecek ve ağı desteklemeye yardımcı olacak %1 ücretle coin gönderebilirsiniz. Ücreti ödemek istiyor musunuz?</translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>Confirm transaction fee</source>
         <translation>İşlem ücretini onayla</translation>
     </message>
@@ -605,26 +667,21 @@ Adres: %4
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid Linda address or malformed URI parameters.</source>
-        <translation>URI ayrıştırılamadı! Bu, geçersiz bir Linda adresi veya hatalı URI parametreleri nedeniyle olabilir.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid Clam address or malformed URI parameters.</source>
+        <translation>URI ayrıştırılamadı! Bu, geçersiz bir Clam adresi veya hatalı URI parametreleri nedeniyle olabilir.</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>Wallet is &lt;b&gt;not encrypted&lt;/b&gt;</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+8"/>
+        <location line="+18"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
         <translation>Cüzdan &lt;b&gt;şifrelenmiştir&lt;/b&gt; ve şu anda &lt;b&gt;kilidi açıktır&lt;/b&gt;</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+10"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
         <translation>Cüzdan &lt;b&gt;şifrelenmiştir&lt;/b&gt; ve şu anda &lt;b&gt;kilitlidir&lt;/b&gt;</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+25"/>
         <source>Backup Wallet</source>
         <translation>Cüzdanı Yedekle</translation>
     </message>
@@ -644,7 +701,7 @@ Adres: %4
         <translation>Cüzdan verisi, yeni bir konuma kaydedilmeye çalışılırken bir hata oluştu.</translation>
     </message>
     <message numerus="yes">
-        <location line="+91"/>
+        <location line="+76"/>
         <source>%n second(s)</source>
         <translation><numerusform>%n saniye</numerusform><numerusform>%n saniye</numerusform></translation>
     </message>
@@ -654,88 +711,30 @@ Adres: %4
         <translation><numerusform>%n dakika</numerusform><numerusform>%n dakika</numerusform></translation>
     </message>
     <message numerus="yes">
-        <location line="-429"/>
-        <location line="+433"/>
+        <location line="+4"/>
         <source>%n hour(s)</source>
         <translation><numerusform>%n saat</numerusform><numerusform>%n saat</numerusform></translation>
     </message>
-    <message>
-        <location line="-456"/>
-        <source>Processed %1 blocks of transaction history.</source>
-        <translation type="unfinished"/>
-    </message>
     <message numerus="yes">
-        <location line="+27"/>
-        <location line="+433"/>
+        <location line="+4"/>
         <source>%n day(s)</source>
         <translation><numerusform>%n gün</numerusform><numerusform>%n gün</numerusform></translation>
     </message>
-    <message numerus="yes">
-        <location line="-429"/>
-        <location line="+6"/>
-        <source>%n week(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
-    </message>
     <message>
-        <location line="+0"/>
-        <source>%1 and %2</source>
-        <translation type="unfinished"/>
-    </message>
-    <message numerus="yes">
-        <location line="+0"/>
-        <source>%n year(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>%1 behind</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+15"/>
-        <source>Last received block was generated %1 ago.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Transactions after this will not yet be visible.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>Error</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Warning</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Information</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+69"/>
-        <source>This transaction is over the size limit. You can still send it for a fee of %1, which goes to the nodes that process your transaction and helps to support the network. Do you want to pay the fee?</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+324"/>
+        <location line="+18"/>
         <source>Not staking</source>
         <translation>Pay alınmıyor</translation>
     </message>
     <message>
-        <location filename="../bitcoin.cpp" line="+104"/>
-        <source>A fatal error occurred. Linda can no longer continue safely and will quit.</source>
-        <translation>Önemli bir hata oluştu. Linda artık güvenli bir şekilde devam edemez ve şimdi kapatılacak.</translation>
+        <location filename="../bitcoin.cpp" line="+109"/>
+        <source>A fatal error occurred. Clam can no longer continue safely and will quit.</source>
+        <translation>Önemli bir hata oluştu. Clam artık güvenli bir şekilde devam edemez ve şimdi kapatılacak.</translation>
     </message>
 </context>
 <context>
     <name>ClientModel</name>
     <message>
-        <location filename="../clientmodel.cpp" line="+110"/>
+        <location filename="../clientmodel.cpp" line="+90"/>
         <source>Network Alert</source>
         <translation>Ağ Uyarısı</translation>
     </message>
@@ -778,7 +777,7 @@ Adres: %4
         <translation>Düşük Çıktı:</translation>
     </message>
     <message>
-        <location filename="../coincontroldialog.cpp" line="+552"/>
+        <location filename="../coincontroldialog.cpp" line="+551"/>
         <source>no</source>
         <translation>hayır</translation>
     </message>
@@ -992,7 +991,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
  Bu, en az %2 bir ücretin gerektiği anlamına gelir.</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+37"/>
         <location line="+66"/>
         <source>(no label)</source>
         <translation>(boş etiket)</translation>
@@ -1036,7 +1035,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>Bu adres defteri kaydıyla ilişkili etiket. Bu, sadece gönderi adresleri için değiştirilebilir.</translation>
     </message>
     <message>
-        <location filename="../editaddressdialog.cpp" line="+21"/>
+        <location filename="../editaddressdialog.cpp" line="+20"/>
         <source>New receiving address</source>
         <translation>Yeni alım adresi</translation>
     </message>
@@ -1062,8 +1061,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Linda address.</source>
-        <translation>Girilen %1 adresi, geçerli bir Linda adresi değildir.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Clam address.</source>
+        <translation>Girilen %1 adresi, geçerli bir Clam adresi değildir.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1079,10 +1078,10 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
 <context>
     <name>GUIUtil::HelpMessageBox</name>
     <message>
-        <location filename="../guiutil.cpp" line="+426"/>
+        <location filename="../guiutil.cpp" line="+420"/>
         <location line="+12"/>
-        <source>Linda-Qt</source>
-        <translation>Linda-Qt</translation>
+        <source>Clam-Qt</source>
+        <translation>Clam-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -1140,27 +1139,37 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+15"/>
         <source>Pay transaction &amp;fee</source>
-        <translation>İşlem ücreti &amp;öde</translation>
+        <translation>Muamele ücreti &amp;öde</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Reserved amount does not participate in staking and is therefore spendable at any time.</source>
-        <translation>Ayrılan miktar, pay almaya katılamıyor ve bu yüzden herhangi bir anda harcanabilir.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+15"/>
         <source>Reserve</source>
-        <translation>Ayrılan</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Linda after logging in to the system.</source>
-        <translation>Sisteme giriş yaptıktan sonra Linda&apos;i otomatik olarak başlat</translation>
+        <source>Automatically start Clam after logging in to the system.</source>
+        <translation>Sisteme giriş yaptıktan sonra Clam&apos;i otomatik olarak başlat</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Linda on system login</source>
-        <translation>Sisteme girişte Linda&apos;i &amp;başlat</translation>
+        <source>&amp;Start Clam on system login</source>
+        <translation>Sisteme girişte Clam&apos;i &amp;başlat</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Detach block and address databases at shutdown. This means they can be moved to another data directory, but it slows down shutdown. The wallet is always detached.</source>
+        <translation>Kapanışta blok ve adres veritabanlarını birbirinden ayır. Bu, onların başka bir veri klasörüne taşınabileceği anlamına gelir ancak bu işlem kapanışı yavaşlatır. Cüzdan ise her zaman ayrılmıştır.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&amp;Detach databases at shutdown</source>
+        <translation>Kapanışta veritabanlarını &amp;ayır</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -1169,8 +1178,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Linda client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Yönelticide Linda istemci portunu otomatik olarak aç. Bu, sadece yönelticiniz UPnP&apos;i desteklediğinde ve etkin olduğunda çalışır.</translation>
+        <source>Automatically open the Clam client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Yönelticide Clam istemci portunu otomatik olarak aç. Bu, sadece yönelticiniz UPnP&apos;i desteklediğinde ve etkin olduğunda çalışır.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1179,8 +1188,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Linda network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Linda ağına bir SOCKS vekil sunucusu yoluyla bağlan (örn. Tor yoluyla bağlanıldığında)</translation>
+        <source>Connect to the Clam network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Clam ağına bir SOCKS vekil sunucusu yoluyla bağlan (örn. Tor yoluyla bağlanıldığında)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1254,8 +1263,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Linda.</source>
-        <translation>Kullanıcı arabirimi dili buradan ayarlanabilir. Ayar, Linda yeniden başlatıldığında etkin olacaktır.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Clam.</source>
+        <translation>Kullanıcı arabirimi dili buradan ayarlanabilir. Ayar, Clam yeniden başlatıldığında etkin olacaktır.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1269,27 +1278,22 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+9"/>
+        <source>Whether to show Clam addresses in the transaction list or not.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&amp;Display addresses in transaction list</source>
+        <translation>Muamele listesinde adresleri &amp;göster</translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Whether to show coin control features or not.</source>
         <translation>Para kontrol özelliklerinin gösterilip gösterilmeyeceğini ayarlar.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Display coin &amp;control features (experts only!)</source>
-        <translation>Coin &amp;kontrol özelliklerini göster (sadece uzman kişiler!)</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Whether to select the coin outputs randomly or with minimal coin age.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Minimize weight consumption (experimental)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Use black visual theme (requires restart)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1305,10 +1309,10 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+10"/>
         <source>&amp;Apply</source>
-        <translation>&amp;Uygula</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../optionsdialog.cpp" line="+53"/>
+        <location filename="../optionsdialog.cpp" line="+55"/>
         <source>default</source>
         <translation>varsayılan</translation>
     </message>
@@ -1316,13 +1320,13 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <location line="+149"/>
         <location line="+9"/>
         <source>Warning</source>
-        <translation>Uyarı</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting Linda.</source>
-        <translation>Bu ayar, Linda&apos;i yeniden başlattıktan sonra etkin olacaktır.</translation>
+        <source>This setting will take effect after restarting Clam.</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+29"/>
@@ -1338,30 +1342,30 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>Form</translation>
     </message>
     <message>
-        <location line="+46"/>
-        <location line="+247"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Linda network after a connection is established, but this process has not completed yet.</source>
-        <translation>Görüntülenen bilginin tarihi geçmiş olabilir. Cüzdanınız, bağlantı kurulduktan sonra otomatik olarak Linda ağı ile senkronize olur ancak bu süreç, henüz tamamlanmamıştır.</translation>
+        <location line="+33"/>
+        <location line="+231"/>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Clam network after a connection is established, but this process has not completed yet.</source>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="-173"/>
+        <location line="-160"/>
         <source>Stake:</source>
-        <translation>Pay:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+29"/>
         <source>Unconfirmed:</source>
-        <translation>Doğrulanmamış:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="-113"/>
+        <location line="-107"/>
         <source>Wallet</source>
         <translation>Cüzdan</translation>
     </message>
     <message>
         <location line="+49"/>
         <source>Spendable:</source>
-        <translation>Harcanabilir:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+16"/>
@@ -1369,7 +1373,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>Güncel harcanabilir bakiyeniz</translation>
     </message>
     <message>
-        <location line="+80"/>
+        <location line="+71"/>
         <source>Immature:</source>
         <translation>Olgunlaşmamış:</translation>
     </message>
@@ -1379,7 +1383,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>Oluşturulan bakiye henüz olgunlaşmamıştır</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+20"/>
         <source>Total:</source>
         <translation>Toplam:</translation>
     </message>
@@ -1389,33 +1393,25 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>Güncel toplam bakiyeniz</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+46"/>
         <source>&lt;b&gt;Recent transactions&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Son işlemler&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Son muameleler&lt;/b&gt;</translation>
     </message>
     <message>
-        <location line="-118"/>
+        <location line="-108"/>
         <source>Total of transactions that have yet to be confirmed, and do not yet count toward the current balance</source>
-        <translation>Henüz onaylanmamış ve mevcut bakiyede yer almayan işlemler toplamı</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="-32"/>
+        <location line="-29"/>
         <source>Total of coins that was staked, and do not yet count toward the current balance</source>
-        <translation>Pay alınmış ve mevcut bakiyede yer almayan coin toplamı</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../overviewpage.cpp" line="+116"/>
+        <location filename="../overviewpage.cpp" line="+113"/>
         <location line="+1"/>
         <source>out of sync</source>
         <translation>eşleşme dışı</translation>
-    </message>
-</context>
-<context>
-    <name>PaymentServer</name>
-    <message>
-        <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start Linda: click-to-pay handler</source>
-        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -1423,57 +1419,57 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../forms/qrcodedialog.ui" line="+14"/>
         <source>QR Code Dialog</source>
-        <translation>QR Kodu İletisi</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+59"/>
         <source>Request Payment</source>
-        <translation>Ödeme Talep Et</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+56"/>
         <source>Amount:</source>
-        <translation>Miktar:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-44"/>
         <source>Label:</source>
-        <translation>Etiket:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+19"/>
         <source>Message:</source>
-        <translation>Mesaj:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+71"/>
         <source>&amp;Save As...</source>
-        <translation>&amp;Farklı Kaydet...</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../qrcodedialog.cpp" line="+62"/>
         <source>Error encoding URI into QR Code.</source>
-        <translation>URI&apos;nin QR koduna kodlanmasında hata oluştu.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+40"/>
         <source>The entered amount is invalid, please check.</source>
-        <translation>Girilen miktar geçersizdir, lütfen kontrol ediniz.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+23"/>
         <source>Resulting URI too long, try to reduce the text for label / message.</source>
-        <translation>Sonuç URI&apos;si çok uzundur, etiket / mesaj için olan metni kısaltmaya çalışın.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+25"/>
         <source>Save QR Code</source>
-        <translation>QR Kodu&apos;nu Kaydet</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+0"/>
         <source>PNG Images (*.png)</source>
-        <translation>PNG İmgeleri (*.png)</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -1492,11 +1488,13 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <location line="+36"/>
         <location line="+53"/>
         <location line="+23"/>
+        <location line="+23"/>
+        <location filename="../rpcconsole.cpp" line="+348"/>
         <source>N/A</source>
         <translation>Mevcut değil</translation>
     </message>
     <message>
-        <location line="-194"/>
+        <location line="-217"/>
         <source>Client version</source>
         <translation>İstemci sürümü</translation>
     </message>
@@ -1528,7 +1526,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+23"/>
         <source>On testnet</source>
-        <translation>Testnet üzerinde</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+23"/>
@@ -1541,32 +1539,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>Güncel blok sayısı</translation>
     </message>
     <message>
-        <location line="+197"/>
-        <source>&amp;Network Traffic</source>
-        <translation type="unfinished"/>
+        <location line="+23"/>
+        <source>Estimated total blocks</source>
+        <translation>Tahmini toplam blok sayısı</translation>
     </message>
     <message>
-        <location line="+52"/>
-        <source>&amp;Clear</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>Totals</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+64"/>
-        <source>In:</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+80"/>
-        <source>Out:</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="-383"/>
+        <location line="+23"/>
         <source>Last block time</source>
         <translation>Son blok zamanı</translation>
     </message>
@@ -1578,17 +1556,17 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+16"/>
         <source>Command-line options</source>
-        <translation>Komut satırı seçenekleri</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the Linda-Qt help message to get a list with possible Linda command-line options.</source>
-        <translation>Muhtemel Linda komut satırı seçeneklerinin bir listesini getirmek için Linda-Qt yardım mesajını göster</translation>
+        <source>Show the Clam-Qt help message to get a list with possible Clam command-line options.</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>&amp;Show</source>
-        <translation>&amp;Göster</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+24"/>
@@ -1596,29 +1574,29 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>&amp;Konsol</translation>
     </message>
     <message>
-        <location line="-237"/>
+        <location line="-260"/>
         <source>Build date</source>
         <translation>Derleme tarihi</translation>
     </message>
     <message>
         <location line="-104"/>
-        <source>Linda - Debug window</source>
-        <translation>Linda - Hata ayıklama penceresi</translation>
+        <source>Clam - Debug window</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+25"/>
-        <source>Linda Core</source>
-        <translation>Linda Core</translation>
+        <source>Clam Core</source>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+256"/>
+        <location line="+279"/>
         <source>Debug log file</source>
         <translation>Hata ayıklama kütük dosyası</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Linda debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Linda hata ayıklama günlük kütüğü dosyasını, mevcut veri klasöründen aç. Bu işlem, büyük günlük kütüğü dosyaları için birkaç saniye sürebilir.</translation>
+        <source>Open the Clam debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+102"/>
@@ -1626,9 +1604,9 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>Konsolu temizle</translation>
     </message>
     <message>
-        <location filename="../rpcconsole.cpp" line="+325"/>
-        <source>Welcome to the Linda RPC console.</source>
-        <translation>Linda RPC konsoluna hoş geldiniz.</translation>
+        <location filename="../rpcconsole.cpp" line="-33"/>
+        <source>Welcome to the Clam RPC console.</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -1640,47 +1618,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <source>Type &lt;b&gt;help&lt;/b&gt; for an overview of available commands.</source>
         <translation>Mevcut komutların listesi için &lt;b&gt;help&lt;/b&gt; yazınız.</translation>
     </message>
-    <message>
-        <location line="+127"/>
-        <source>%1 B</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>%1 KB</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>%1 MB</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>%1 GB</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>%1 m</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>%1 h</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>%1 h %2 m</source>
-        <translation type="unfinished"/>
-    </message>
 </context>
 <context>
     <name>SendCoinsDialog</name>
     <message>
         <location filename="../forms/sendcoinsdialog.ui" line="+14"/>
-        <location filename="../sendcoinsdialog.cpp" line="+181"/>
+        <location filename="../sendcoinsdialog.cpp" line="+182"/>
         <location line="+5"/>
         <location line="+5"/>
         <location line="+5"/>
@@ -1719,7 +1662,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <location line="+22"/>
         <location line="+35"/>
         <source>0</source>
-        <translation>0</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-19"/>
@@ -1736,8 +1679,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <location line="+86"/>
         <location line="+86"/>
         <location line="+32"/>
-        <source>0.00 BC</source>
-        <translation>123.456 BC {0.00 ?}</translation>
+        <source>0.00 CLAM</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-191"/>
@@ -1747,7 +1690,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+19"/>
         <source>medium</source>
-        <translation>orta</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+32"/>
@@ -1762,7 +1705,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+19"/>
         <source>no</source>
-        <translation>hayır</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+32"/>
@@ -1772,12 +1715,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+35"/>
         <source>Change</source>
-        <translation>Değiştir</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+50"/>
         <source>custom change address</source>
-        <translation>özel adres değişikliği</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+106"/>
@@ -1790,9 +1733,9 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>&amp;Alıcı ekle</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+20"/>
         <source>Remove all transaction fields</source>
-        <translation>Tüm işlem alanlarını kaldır</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
@@ -1800,14 +1743,14 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>Tümünü &amp;temizle</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+28"/>
         <source>Balance:</source>
         <translation>Bakiye:</translation>
     </message>
     <message>
         <location line="+16"/>
-        <source>123.456 BC</source>
-        <translation>123.456 BC</translation>
+        <source>123.456 CLAM</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+31"/>
@@ -1821,8 +1764,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-173"/>
-        <source>Enter a Linda address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Bir Linda adresi gir (örn: B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a Clam address (e.g. x8JdtsqUGiV33P6sMUdfSBHnE7JEUyxTaJ)</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+15"/>
@@ -1867,7 +1810,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+86"/>
         <source>&lt;b&gt;%1&lt;/b&gt; to %2 (%3)</source>
-        <translation>&lt;b&gt;%1&lt;/b&gt; %2&apos;ye (%3)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
@@ -1877,12 +1820,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+1"/>
         <source>Are you sure you want to send %1?</source>
-        <translation>%1 göndermek istediğinizden emin misiniz?</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+0"/>
         <source> and </source>
-        <translation>ve</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+29"/>
@@ -1902,7 +1845,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+5"/>
         <source>The total exceeds your balance when the %1 transaction fee is included.</source>
-        <translation>Toplam, %1 işlem ücreti ilâve edildiğinde bakiyenizi geçmektedir.</translation>
+        <translation>Toplam, %1 muamele ücreti ilâve edildiğinde bakiyenizi geçmektedir.</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1911,18 +1854,18 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+5"/>
-        <source>Error: Transaction creation failed!</source>
+        <source>Error: Transaction creation failed.</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
         <source>Error: The transaction was rejected. This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>Hata: İşlem reddedildi. Bu, örneğin wallet.dat dosyasının bir kopyasını kullandıysanız ve coinler, kopyada harcanmış ve burada harcanmış olarak işaretlenmemişse, cüzdanınızdaki coinlerin bir bölümünün harcanması nedeniyle olabilir. </translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+247"/>
-        <source>WARNING: Invalid Linda address</source>
-        <translation>UYARI: Geçersiz Linda adresi</translation>
+        <location line="+251"/>
+        <source>WARNING: Invalid Clam address</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+13"/>
@@ -1932,7 +1875,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+4"/>
         <source>WARNING: unknown change address</source>
-        <translation>UYARI: bilinmeyen adres değişikliği</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -1940,7 +1883,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../forms/sendcoinsentry.ui" line="+14"/>
         <source>Form</source>
-        <translation>Form</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+15"/>
@@ -1953,25 +1896,25 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>&amp;Şu adrese öde:</translation>
     </message>
     <message>
-        <location line="+34"/>
-        <source>The address to send the payment to (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+60"/>
-        <location filename="../sendcoinsentry.cpp" line="+26"/>
+        <location line="+24"/>
+        <location filename="../sendcoinsentry.cpp" line="+25"/>
         <source>Enter a label for this address to add it to your address book</source>
         <translation>Adres defterinize eklemek için bu adrese ilişik bir etiket giriniz</translation>
     </message>
     <message>
-        <location line="-78"/>
+        <location line="+9"/>
         <source>&amp;Label:</source>
         <translation>&amp;Etiket:</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+18"/>
+        <source>The address to send the payment to  (e.g. x8JdtsqUGiV33P6sMUdfSBHnE7JEUyxTaJ)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Choose address from address book</source>
-        <translation>Adres defterinden adres seç</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+10"/>
@@ -1991,12 +1934,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+7"/>
         <source>Remove this recipient</source>
-        <translation>Bu alıcıyı kaldır</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Linda address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Bir Linda adresi girin (örn: B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a Clam address (e.g. x8JdtsqUGiV33P6sMUdfSBHnE7JEUyxTaJ)</source>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -2019,14 +1962,14 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+18"/>
-        <source>The address to sign the message with (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Mesajın imzalanacağı adres (örn: B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>The address to sign the message with (e.g. x8JdtsqUGiV33P6sMUdfSBHnE7JEUyxTaJ)</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+10"/>
         <location line="+203"/>
         <source>Choose an address from the address book</source>
-        <translation>Adres defterinden adres seç</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-193"/>
@@ -2056,8 +1999,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Linda address</source>
-        <translation>Bu Linda adresine sahip olduğunuzu ispatlamak için mesajı imzala</translation>
+        <source>Sign the message to prove you own this Clam address</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+17"/>
@@ -2083,13 +2026,13 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+21"/>
-        <source>The address the message was signed with (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Mesajın imzalandığı adres (örn: B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>The address the message was signed with (e.g. x8JdtsqUGiV33P6sMUdfSBHnE7JEUyxTaJ)</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified Linda address</source>
-        <translation>Mesajın, belirtilen Linda adresiyle imzalandığından emin olmak için onu doğrula</translation>
+        <source>Verify the message to ensure it was signed with the specified Clam address</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+17"/>
@@ -2099,8 +2042,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Linda address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Bir Linda adresi girin (örn: B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a Clam address (e.g. x8JdtsqUGiV33P6sMUdfSBHnE7JEUyxTaJ)</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-2"/>
@@ -2109,8 +2052,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Linda signature</source>
-        <translation>Linda imzası gir</translation>
+        <source>Enter Clam signature</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+82"/>
@@ -2180,22 +2123,19 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
 </context>
 <context>
-    <name>TrafficGraphWidget</name>
-    <message>
-        <location filename="../trafficgraphwidget.cpp" line="+75"/>
-        <source>KB/s</source>
-        <translation type="unfinished"/>
-    </message>
-</context>
-<context>
     <name>TransactionDesc</name>
     <message>
-        <location filename="../transactiondesc.cpp" line="+25"/>
+        <location filename="../transactiondesc.cpp" line="+19"/>
         <source>Open until %1</source>
         <translation>%1 değerine dek açık</translation>
     </message>
+    <message numerus="yes">
+        <location line="-2"/>
+        <source>Open for %n block(s)</source>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+    </message>
     <message>
-        <location line="+6"/>
+        <location line="+8"/>
         <source>conflicted</source>
         <translation>çakışma</translation>
     </message>
@@ -2215,14 +2155,14 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>%1 teyit</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>Status</source>
         <translation>Durum</translation>
     </message>
     <message numerus="yes">
         <location line="+7"/>
         <source>, broadcast through %n node(s)</source>
-        <translation><numerusform>, %n devre üzerinde yayınlama</numerusform><numerusform>, %n devre üzerinde yayınlama</numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="+4"/>
@@ -2275,7 +2215,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message numerus="yes">
         <location line="-102"/>
         <source>matures in %n more block(s)</source>
-        <translation><numerusform>%n blok içerisinde olgunlaşıyor</numerusform><numerusform>%n blok içerisinde olgunlaşıyor</numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2293,7 +2233,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="-39"/>
         <source>Transaction fee</source>
-        <translation>İşlem ücreti</translation>
+        <translation>Muamele ücreti</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -2313,12 +2253,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+2"/>
         <source>Transaction ID</source>
-        <translation>İşlem NO</translation>
+        <translation>Muamele tanımlayıcı</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Generated coins must mature 10 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>Üretilen coinler, harcanmaya başlamadan önce 510 blokta olgunlaşmalıdır. Bu bloğu ürettiğinizde, blok zincirine eklenmek üzere ağda yayınlanır. Eğer blok, zincire girmede başarısız olursa, bloğun durumu &quot;kabul edilmedi&quot;ye dönüşür ve harcanamaz. Bu, başka bir devre sizden birkaç saniye önce bir blok ürettiyse gerçekleşebilir.</translation>
+        <source>Generated coins must mature 510 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+7"/>
@@ -2328,7 +2268,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+8"/>
         <source>Transaction</source>
-        <translation>İşlem</translation>
+        <translation>Muamele</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -2336,7 +2276,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>Girdiler</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+23"/>
         <source>Amount</source>
         <translation>Meblağ</translation>
     </message>
@@ -2351,17 +2291,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>yanlış</translation>
     </message>
     <message>
-        <location line="-209"/>
+        <location line="-211"/>
         <source>, has not been successfully broadcast yet</source>
         <translation>, henüz başarılı bir şekilde yayınlanmadı</translation>
     </message>
-    <message numerus="yes">
-        <location line="-36"/>
-        <source>Open for %n more block(s)</source>
-        <translation><numerusform>%n blok için aç</numerusform><numerusform>%n blok için aç</numerusform></translation>
-    </message>
     <message>
-        <location line="+71"/>
+        <location line="+35"/>
         <source>unknown</source>
         <translation>bilinmiyor</translation>
     </message>
@@ -2371,18 +2306,18 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../forms/transactiondescdialog.ui" line="+14"/>
         <source>Transaction details</source>
-        <translation>İşlem detayları</translation>
+        <translation>Muamele detayları</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>This pane shows a detailed description of the transaction</source>
-        <translation>Bu pano işlemlerin ayrıntılı açıklamasını gösterir</translation>
+        <translation>Bu pano muamelenin ayrıntılı açıklamasını gösterir</translation>
     </message>
 </context>
 <context>
     <name>TransactionTableModel</name>
     <message>
-        <location filename="../transactiontablemodel.cpp" line="+231"/>
+        <location filename="../transactiontablemodel.cpp" line="+226"/>
         <source>Date</source>
         <translation>Tarih</translation>
     </message>
@@ -2402,7 +2337,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>Meblağ</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+60"/>
         <source>Open until %1</source>
         <translation>%1 değerine dek açık</translation>
     </message>
@@ -2414,7 +2349,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message numerus="yes">
         <location line="-15"/>
         <source>Open for %n more block(s)</source>
-        <translation><numerusform>%n blok için aç</numerusform><numerusform>%n blok için aç</numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="+6"/>
@@ -2482,24 +2417,24 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>(mevcut değil)</translation>
     </message>
     <message>
-        <location line="+194"/>
+        <location line="+190"/>
         <source>Transaction status. Hover over this field to show number of confirmations.</source>
-        <translation>İşlem durumu. Doğrulama sayısını görüntülemek için imleci bu alanda tutunuz.</translation>
+        <translation>Muamele durumu. Doğrulama sayısını görüntülemek için imleci bu alanda tutunuz.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Date and time that the transaction was received.</source>
-        <translation>İşlemin alındığı tarih ve zaman.</translation>
+        <translation>Muamelenin alındığı tarih ve zaman.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Type of transaction.</source>
-        <translation>İşlemin türü.</translation>
+        <translation>Muamele türü.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Destination address of transaction.</source>
-        <translation>İşlemin alıcı adresi.</translation>
+        <translation>Muamelenin alıcı adresi.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2510,13 +2445,13 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
 <context>
     <name>TransactionView</name>
     <message>
-        <location filename="../transactionview.cpp" line="+54"/>
-        <location line="+17"/>
+        <location filename="../transactionview.cpp" line="+55"/>
+        <location line="+16"/>
         <source>All</source>
         <translation>Hepsi</translation>
     </message>
     <message>
-        <location line="-16"/>
+        <location line="-15"/>
         <source>Today</source>
         <translation>Bugün</translation>
     </message>
@@ -2546,7 +2481,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>Aralık...</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+11"/>
         <source>Received with</source>
         <translation>Şununla alınan</translation>
     </message>
@@ -2598,7 +2533,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+1"/>
         <source>Copy transaction ID</source>
-        <translation>İşlem numarasını kopyala</translation>
+        <translation>Muamele kimliğini kopyala</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2608,12 +2543,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+1"/>
         <source>Show transaction details</source>
-        <translation>İşlem detaylarını göster</translation>
+        <translation>Muamele detaylarını göster</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+144"/>
         <source>Export Transaction Data</source>
-        <translation>İşlem Verisini Dışarı Aktar</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -2658,12 +2593,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+4"/>
         <source>Error exporting</source>
-        <translation>Dışarı aktarmada hata</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+0"/>
         <source>Could not write to file %1.</source>
-        <translation>%1 dosyasına yazılamadı.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+100"/>
@@ -2679,17 +2614,17 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
 <context>
     <name>WalletModel</name>
     <message>
-        <location filename="../walletmodel.cpp" line="+208"/>
+        <location filename="../walletmodel.cpp" line="+206"/>
         <source>Sending...</source>
-        <translation>Gönderiyor...</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
     <name>bitcoin-core</name>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="+173"/>
-        <source>Linda version</source>
-        <translation>Linda versiyonu</translation>
+        <location filename="../bitcoinstrings.cpp" line="+33"/>
+        <source>Clam version</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -2698,8 +2633,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or Lindad</source>
-        <translation>-sunucu veya Lindad&apos;ye komut gönder</translation>
+        <source>Send command to -server or clamd</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -2712,19 +2647,19 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>Bir komut için yardım al</translation>
     </message>
     <message>
-        <location line="-147"/>
+        <location line="+2"/>
         <source>Options:</source>
         <translation>Seçenekler:</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: Linda.conf)</source>
-        <translation>Konfigürasyon dosyasını belirt (varsayılan: Linda.conf)</translation>
+        <source>Specify configuration file (default: clam.conf)</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: Lindad.pid)</source>
-        <translation>pid dosyasını belirt (varsayılan: Linda.pid)</translation>
+        <source>Specify pid file (default: clamd.pid)</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
@@ -2737,34 +2672,19 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>Veri dizinini belirt</translation>
     </message>
     <message>
-        <location line="-25"/>
-        <source>%s, you must set a rpcpassword in the configuration file:
-%s
-It is recommended you use the following random password:
-rpcuser=Lindarpc
-rpcpassword=%s
-(you do not need to remember this password)
-The username and password MUST NOT be the same.
-If the file does not exist, create it with owner-readable-only file permissions.
-It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Linda Alert&quot; admin@foo.com
-</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+2"/>
         <source>Set database cache size in megabytes (default: 25)</source>
         <translation>Veritabanı önbellek boyutunu megabayt olarak belirt (varsayılan: 25)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Set database disk log size in megabytes (default: 100)</source>
-        <translation>Veritabanı disk log boyutunu megabayt olarak ayarla (varsayılan: 100)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+6"/>
         <source>Listen for connections on &lt;port&gt; (default: 15714 or testnet: 25714)</source>
-        <translation>&lt;port&gt; üzerinde bağlantıları dinle (varsayılan: 15714 veya testnet: 25714)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -2782,18 +2702,13 @@ for example: alertnotify=echo %%s | mail -s &quot;Linda Alert&quot; admin@foo.co
         <translation>Kendi genel adresinizi tanımlayın</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+5"/>
         <source>Bind to given address. Use [host]:port notation for IPv6</source>
-        <translation>Belirtilen adrese bağlı. IPv6 için [host]:port notasyonunu kullan</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Query for peer addresses via DNS lookup, if low on addresses (default: 1 unless -connect)</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Always query for peer addresses via DNS lookup (default: 0)</source>
+        <location line="+2"/>
+        <source>Stake your coins to support network and gain reward (default: 1)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2807,22 +2722,57 @@ for example: alertnotify=echo %%s | mail -s &quot;Linda Alert&quot; admin@foo.co
         <translation>Aksaklık gösteren eşlerle yeni bağlantıları engelleme süresi, saniye olarak (varsayılan: 86400)</translation>
     </message>
     <message>
-        <location line="-37"/>
+        <location line="-44"/>
         <source>An error occurred while setting up the RPC port %u for listening on IPv4: %s</source>
         <translation>IPv4 üzerinde dinlemek için %u numaralı RPC portunun kurulumu sırasında hata meydana geldi: %s</translation>
     </message>
     <message>
-        <location line="+65"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 15715 or testnet: 25715)</source>
-        <translation>&lt;port&gt; üzerinde JSON-RPC bağlantılarını dinle (varsayılan: 15715 veya testnet: 25715)</translation>
+        <location line="+51"/>
+        <source>Detach block and address databases. Increases shutdown time (default: 0)</source>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="-17"/>
+        <location line="+109"/>
+        <source>Error: The transaction was rejected.  This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-5"/>
+        <source>Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds  </source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-87"/>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 15715 or testnet: 25715)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-11"/>
         <source>Accept command line and JSON-RPC commands</source>
         <translation>Konut satırı ve JSON-RPC komutlarını kabul et</translation>
     </message>
     <message>
+        <location line="+101"/>
+        <source>Error: Transaction creation failed  </source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-5"/>
+        <source>Error: Wallet locked, unable to create transaction  </source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-8"/>
+        <source>Importing blockchain data file.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
         <location line="+1"/>
+        <source>Importing bootstrap blockchain data file.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-88"/>
         <source>Run in the background as a daemon and accept commands</source>
         <translation>Arka planda daemon (servis) olarak çalış ve komutları kabul et</translation>
     </message>
@@ -2837,47 +2787,52 @@ for example: alertnotify=echo %%s | mail -s &quot;Linda Alert&quot; admin@foo.co
         <translation>Dışarıdan gelen bağlantıları kabul et (varsayılan: -proxy veya -connect yoksa 1)</translation>
     </message>
     <message>
-        <location line="-29"/>
+        <location line="-38"/>
         <source>An error occurred while setting up the RPC port %u for listening on IPv6, falling back to IPv4: %s</source>
         <translation>IPv6 üzerinde dinlemek için %u numaralı RPC portu kurulurken bir hata meydana geldi, IPv4&apos;e dönülüyor: %s</translation>
     </message>
     <message>
-        <location line="+96"/>
+        <location line="+117"/>
+        <source>Error initializing database environment %s! To recover, BACKUP THAT DIRECTORY, then remove everything from it except for wallet.dat.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-20"/>
         <source>Set maximum size of high-priority/low-fee transactions in bytes (default: 27000)</source>
-        <translation>Bayt olarak yüksek öncelikli/düşük ücretli işlemlerin maksimum boyutunu belirle (varsayılan: 27000)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+11"/>
         <source>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
-        <translation>Uyarı: -paytxfee çok yüksek bir değere ayarlanmış! Bu, bir işlem gönderdiğiniz takdirde ödeyeceğiniz ücrettir.</translation>
+        <translation>Uyarı: -paytxfee çok yüksek bir değere ayarlanmış! Bu, muamele gönderirseniz ödeyeceğiniz muamele ücretidir.</translation>
     </message>
     <message>
-        <location line="-103"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Linda will not work properly.</source>
-        <translation>Uyarı: Lütfen bilgisayarınızın tarih ve saatinin doğru olduğunu kontrol ediniz! Saatiniz yanlış ise, Linda düzgün çalışmayacaktır.</translation>
+        <location line="+61"/>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Clam will not work properly.</source>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+132"/>
+        <location line="-31"/>
         <source>Warning: error reading wallet.dat! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</source>
-        <translation>Uyarı: wallet.dat dosyasının okunması sırasında bir hata meydana geldi! Tüm anahtarlar doğru bir şekilde okundu, ancak işlem verileri ya da adres defteri girdileri hatalı veya eksik olabilir.</translation>
+        <translation>Uyarı: wallet.dat dosyasının okunması sırasında bir hata meydana geldi! Tüm anahtarlar doğru bir şekilde okundu, ancak muamele verileri ya da adres defteri unsurları hatalı veya eksik olabilir.</translation>
     </message>
     <message>
         <location line="-18"/>
         <source>Warning: wallet.dat corrupt, data salvaged! Original wallet.dat saved as wallet.{timestamp}.bak in %s; if your balance or transactions are incorrect you should restore from a backup.</source>
-        <translation>Uyarı: wallet.dat bozuk, veriler geri kazanıldı! Orijinal wallet.dat, wallet.{zamandamgası}.bak olarak %s klasörüne kaydedildi; bakiyeniz ya da işlemleriniz yanlışsa bir yedekten tekrar yüklemelisiniz.</translation>
+        <translation>Uyarı: wallet.dat bozuk, veriler geri kazanıldı! Özgün wallet.dat, wallet.{zamandamgası}.bak olarak %s klasörüne kaydedildi; bakiyeniz ya da muameleleriniz yanlışsa bir yedeklemeden tekrar yüklemeniz gerekir.</translation>
     </message>
     <message>
-        <location line="-31"/>
+        <location line="-30"/>
         <source>Attempt to recover private keys from a corrupt wallet.dat</source>
         <translation>Bozuk bir wallet.dat dosyasından özel anahtarları geri kazanmayı dene</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Block creation options:</source>
         <translation>Blok oluşturma seçenekleri:</translation>
     </message>
     <message>
-        <location line="-69"/>
+        <location line="-62"/>
         <source>Connect only to the specified node(s)</source>
         <translation>Sadece belirtilen düğüme veya düğümlere bağlan</translation>
     </message>
@@ -2887,27 +2842,32 @@ for example: alertnotify=echo %%s | mail -s &quot;Linda Alert&quot; admin@foo.co
         <translation>Kendi IP adresini keşfet (varsayılan: dinlenildiğinde ve -externalip yoksa 1)</translation>
     </message>
     <message>
-        <location line="+101"/>
+        <location line="+94"/>
         <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
         <translation>Herhangi bir portun dinlenmesi başarısız oldu. Bunu istiyorsanız -listen=0 seçeneğini kullanınız.</translation>
     </message>
     <message>
-        <location line="-91"/>
-        <source>Sync checkpoints policy (default: strict)</source>
-        <translation>Kontrol noktası politikasını senkronize et (varsayılan: sıkı)</translation>
+        <location line="-90"/>
+        <source>Find peers using DNS lookup (default: 1)</source>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+89"/>
+        <location line="+5"/>
+        <source>Sync checkpoints policy (default: strict)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+83"/>
         <source>Invalid -tor address: &apos;%s&apos;</source>
-        <translation>Geçersiz -tor adresi: &apos;%s&apos;</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+4"/>
         <source>Invalid amount for -reservebalance=&lt;amount&gt;</source>
-        <translation>-reservebalance=&lt;amount&gt; için geçersiz miktar</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="-88"/>
+        <location line="-82"/>
         <source>Maximum per-connection receive buffer, &lt;n&gt;*1000 bytes (default: 5000)</source>
         <translation>Bağlantı başına azami alım tamponu, &lt;n&gt;*1000 bayt (varsayılan: 5000)</translation>
     </message>
@@ -2917,39 +2877,49 @@ for example: alertnotify=echo %%s | mail -s &quot;Linda Alert&quot; admin@foo.co
         <translation>Bağlantı başına azami yollama tamponu, &lt;n&gt;*1000 bayt (varsayılan: 1000)</translation>
     </message>
     <message>
-        <location line="-17"/>
+        <location line="-16"/>
         <source>Only connect to nodes in network &lt;net&gt; (IPv4, IPv6 or Tor)</source>
         <translation>Sadece &lt;net&gt; şebekesindeki düğümlere bağlan (IPv4, IPv6 ya da Tor)</translation>
     </message>
     <message>
-        <location line="+31"/>
-        <source>Prepend debug output with timestamp</source>
-        <translation>Tarih bilgisini, hata ayıklama çıktısının başına ekle</translation>
+        <location line="+28"/>
+        <source>Output extra debugging information. Implies all other -debug* options</source>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+1"/>
+        <source>Output extra network debugging information</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Prepend debug output with timestamp</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+35"/>
         <source>SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
         <translation> SSL seçenekleri: (SSL kurulum bilgisi için Bitcoin vikisine bakınız)</translation>
     </message>
     <message>
-        <location line="-81"/>
+        <location line="-74"/>
         <source>Select the version of socks proxy to use (4-5, default: 5)</source>
-        <translation>Kullanılacak socks vekil sunucusunun versiyonunu seç (4-5, varsayılan: 5)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+41"/>
         <source>Send trace/debug info to console instead of debug.log file</source>
         <translation>Trace/hata ayıklama verilerini debug.log dosyası yerine konsola gönder</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+1"/>
         <source>Send trace/debug info to debugger</source>
-        <translation>Hata ayıklayıcıya iz sürme/hata ayıklama bilgisi gönder</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+28"/>
         <source>Set maximum block size in bytes (default: 250000)</source>
-        <translation>Bayt olarak maksimum blok boyutunu belirle (varsayılan: 250000)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-1"/>
@@ -2957,24 +2927,23 @@ for example: alertnotify=echo %%s | mail -s &quot;Linda Alert&quot; admin@foo.co
         <translation>Bayt olarak asgari blok boyutunu tanımla (varsayılan: 0)</translation>
     </message>
     <message>
-        <location line="-35"/>
+        <location line="-29"/>
         <source>Shrink debug.log file on client startup (default: 1 when no -debug)</source>
         <translation>İstemci başlatıldığında debug.log dosyasını küçült (varsayılan: -debug bulunmadığında 1)</translation>
     </message>
     <message>
-        <location line="-43"/>
+        <location line="-42"/>
         <source>Specify connection timeout in milliseconds (default: 5000)</source>
         <translation>Bağlantı zaman aşım süresini milisaniye olarak belirt (varsayılan: 5000)</translation>
     </message>
     <message>
-        <location line="+116"/>
+        <location line="+109"/>
         <source>Unable to sign checkpoint, wrong checkpointkey?
 </source>
-        <translation>Kontrol noktası imzalanamadı, bu bir hatalı kontrol noktası anahtarı mı?
-</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="-86"/>
+        <location line="-80"/>
         <source>Use UPnP to map the listening port (default: 0)</source>
         <translation>Dinlenecek portu haritalamak için UPnP kullan (varsayılan: 0)</translation>
     </message>
@@ -2984,102 +2953,77 @@ for example: alertnotify=echo %%s | mail -s &quot;Linda Alert&quot; admin@foo.co
         <translation>Dinlenecek portu haritalamak için UPnP kullan (varsayılan: dinlenildiğinde 1)</translation>
     </message>
     <message>
-        <location line="-26"/>
+        <location line="-25"/>
         <source>Use proxy to reach tor hidden services (default: same as -proxy)</source>
-        <translation>Tor gizli servisine erişim için vekil sunucu kullan (varsayılan: -proxy ile aynı)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+42"/>
         <source>Username for JSON-RPC connections</source>
         <translation>JSON-RPC bağlantıları için kullanıcı ismi</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+47"/>
         <source>Verifying database integrity...</source>
-        <translation>Veritabanı bütünlüğü doğrulanıyor...</translation>
-    </message>
-    <message>
-        <location line="+44"/>
-        <source>Error: Wallet locked, unable to create transaction!</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+2"/>
-        <source>Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds!</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Error: Transaction creation failed!</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Error: The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Warning</source>
+        <location line="+57"/>
+        <source>WARNING: syncronized checkpoint violation detected, but skipped!</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
-        <source>Information</source>
+        <source>Warning: Disk space is low!</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+2"/>
-        <source>WARNING: syncronized checkpoint violation detected, but skipped!</source>
-        <translation>UYARI: senkronize edilen kontrol noktası ihlali tespit edildi ancak atlandı!</translation>
-    </message>
-    <message>
-        <location line="-1"/>
+        <location line="-2"/>
         <source>Warning: This version is obsolete, upgrade required!</source>
         <translation>Uyarı: Bu sürüm çok eskidir, güncellemeniz gerekir!</translation>
     </message>
     <message>
-        <location line="-54"/>
+        <location line="-48"/>
         <source>wallet.dat corrupt, salvage failed</source>
         <translation>wallet.dat bozuk, geri kazanım başarısız oldu</translation>
     </message>
     <message>
-        <location line="-56"/>
+        <location line="-54"/>
         <source>Password for JSON-RPC connections</source>
         <translation>JSON-RPC bağlantıları için parola</translation>
     </message>
     <message>
-        <location line="-32"/>
+        <location line="-84"/>
+        <source>%s, you must set a rpcpassword in the configuration file:
+ %s
+It is recommended you use the following random password:
+rpcuser=clamrpc
+rpcpassword=%s
+(you do not need to remember this password)
+The username and password MUST NOT be the same.
+If the file does not exist, create it with owner-readable-only file permissions.
+It is also recommended to set alertnotify so you are notified of problems;
+for example: alertnotify=echo %%s | mail -s &quot;Clam Alert&quot; admin@foo.com
+</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+51"/>
+        <source>Find peers using internet relay chat (default: 0)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>Sync time with other nodes. Disable if time on your system is precise e.g. syncing with NTP (default: 1)</source>
-        <translation>Diğer devrelerle saati senkronize et. Sisteminizdeki saat doğru ise devre dışı bırakın, örn: NTC ile senkronize etme (varsayılan: 1)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+15"/>
         <source>When creating transactions, ignore inputs with value less than this (default: 0.01)</source>
-        <translation>İşlem yaratırken, bundan daha küçük değere sahip girdileri yok say (varsayılan: 0.01)</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Output debugging information (default: 0, supplying &lt;category&gt; is optional)</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+2"/>
-        <source>If &lt;category&gt; is not supplied, output all debugging information.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>&lt;category&gt; can be:</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Enter regression test mode, which uses a special chain in which blocks can be solved instantly. This is intended for regression testing tools and app development.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+9"/>
+        <location line="+16"/>
         <source>Allow JSON-RPC connections from specified IP address</source>
         <translation>Belirtilen İP adresinden JSON-RPC bağlantılarını kabul et</translation>
     </message>
@@ -3090,33 +3034,28 @@ for example: alertnotify=echo %%s | mail -s &quot;Linda Alert&quot; admin@foo.co
     </message>
     <message>
         <location line="+1"/>
-        <source>Wait for RPC server to start</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Set the number of threads to service RPC calls (default: 4)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
         <source>Execute command when the best block changes (%s in cmd is replaced by block hash)</source>
         <translation>En iyi blok değiştiğinde komutu çalıştır (komut için %s parametresi blok hash değeri ile değiştirilecektir)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Execute command when a wallet transaction changes (%s in cmd is replaced by TxID)</source>
-        <translation>Bir cüzdan işlemi değiştiğinde komutu çalıştır (komuttaki %s TxID ile değiştirilecektir)</translation>
+        <translation>Bir cüzdan muamelesi değiştiğinde komutu çalıştır (komuttaki %s TxID ile değiştirilecektir)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Require a confirmations for change (default: 0)</source>
-        <translation>Değişim için bir onay sayısı talep et (varsayılan: 0)</translation>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Enforce transaction scripts to use canonical PUSH operators (default: 1)</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>Execute command when a relevant alert is received (%s in cmd is replaced by message)</source>
-        <translation>İlgili alarm alındığında komutu çalıştır (cmd&apos;deki %s, mesaj ile değiştirilecektir)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
@@ -3131,20 +3070,25 @@ for example: alertnotify=echo %%s | mail -s &quot;Linda Alert&quot; admin@foo.co
     <message>
         <location line="+1"/>
         <source>Rescan the block chain for missing wallet transactions</source>
-        <translation>Blok zincirini eksik cüzdan işlemleri için tekrar tara</translation>
+        <translation>Blok zincirini eksik cüzdan muameleleri için tekrar tara</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
+        <source>How many blocks to check at startup (default: 2500, 0 = all)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>How thorough the block verification is (0-6, default: 1)</source>
-        <translation>Blok kontrolünün ne kadar derin olacağı (0-6, varsayılan: 1)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Imports blocks from external blk000?.dat file</source>
-        <translation>Harici blk000?.dat dosyasından blok içeri aktar</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+8"/>
         <source>Use OpenSSL (https) for JSON-RPC connections</source>
         <translation>JSON-RPC bağlantıları için OpenSSL (https) kullan</translation>
     </message>
@@ -3159,49 +3103,49 @@ for example: alertnotify=echo %%s | mail -s &quot;Linda Alert&quot; admin@foo.co
         <translation>Sunucu özel anahtarı (varsayılan: server.pem)</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>Initialization sanity check failed. Linda is shutting down.</source>
-        <translation>Başlangıç uygunluk kontrolü başarısız oldu. Linda kapatılıyor.</translation>
-    </message>
-    <message>
-        <location line="+50"/>
-        <source>Error: Wallet unlocked for staking only, unable to create transaction.</source>
-        <translation>Hata: Cüzdanın kilidi sadece pay almak için açılmıştır, işlem yaratılamıyor.</translation>
-    </message>
-    <message>
-        <location line="+17"/>
-        <source>Error: Disk space is low!</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
         <location line="+1"/>
-        <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
+        <source>Acceptable ciphers (default: TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!AH:!3DES:@STRENGTH)</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+3"/>
-        <source>WARNING: Invalid checkpoint found! Displayed transactions may not be correct! You may need to upgrade, or notify developers.</source>
-        <translation>UYARI: Geçersiz kontrol noktası bulundu! Görüntülenen işlemler doğru olmayabilir! Güncelleme yapmanız veya geliştiricilere haber vermeniz gerekebilir.</translation>
+        <location line="+53"/>
+        <source>Error: Wallet unlocked for staking only, unable to create transaction.</source>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="-174"/>
+        <location line="+18"/>
+        <source>WARNING: Invalid checkpoint found! Displayed transactions may not be correct! You may need to upgrade, or notify developers.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-158"/>
         <source>This help message</source>
         <translation>Bu yardım mesajı</translation>
     </message>
     <message>
-        <location line="+104"/>
+        <location line="+95"/>
         <source>Wallet %s resides outside data directory %s.</source>
-        <translation>Cüzdan %s, veri klasörü %s dışında yer alıyor.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+1"/>
+        <source>Cannot obtain a lock on data directory %s.  Clam is probably already running.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-98"/>
+        <source>Clam</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+140"/>
         <source>Unable to bind to %s on this computer (bind returned error %d, %s)</source>
         <translation>Bu bilgisayarda %s unsuruna bağlanılamadı. (bind şu hatayı iletti: %d, %s)</translation>
     </message>
     <message>
-        <location line="-133"/>
+        <location line="-130"/>
         <source>Connect through socks proxy</source>
-        <translation>Socks vekil sunucu yoluyla bağlan</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
@@ -3209,14 +3153,14 @@ for example: alertnotify=echo %%s | mail -s &quot;Linda Alert&quot; admin@foo.co
         <translation>-addnode, -seednode ve -connect için DNS aramalarına izin ver</translation>
     </message>
     <message>
-        <location line="+126"/>
+        <location line="+122"/>
         <source>Loading addresses...</source>
         <translation>Adresler yükleniyor...</translation>
     </message>
     <message>
-        <location line="-12"/>
+        <location line="-15"/>
         <source>Error loading blkindex.dat</source>
-        <translation>blkindex.dat yüklenirken hata</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
@@ -3225,13 +3169,13 @@ for example: alertnotify=echo %%s | mail -s &quot;Linda Alert&quot; admin@foo.co
     </message>
     <message>
         <location line="+4"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Linda</source>
-        <translation>wallet.dat yüklenirken hata: Cüzdan, daha yeni bir Linda versiyonuna ihtiyaç duyuyor.</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Clam</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart Linda to complete</source>
-        <translation>Cüzdanın yeniden yazılması gerekmektedir: Tamamlamak için Linda&apos;i yeniden başlatın</translation>
+        <source>Wallet needed to be rewritten: restart Clam to complete</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -3264,14 +3208,19 @@ for example: alertnotify=echo %%s | mail -s &quot;Linda Alert&quot; admin@foo.co
         <translation>-externalip adresi çözümlenemedi: &apos;%s&apos;</translation>
     </message>
     <message>
-        <location line="-23"/>
+        <location line="-24"/>
         <source>Invalid amount for -paytxfee=&lt;amount&gt;: &apos;%s&apos;</source>
         <translation>-paytxfee=&lt;meblağ&gt; için geçersiz meblağ: &apos;%s&apos;</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+44"/>
+        <source>Error: could not start node</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+11"/>
         <source>Sending...</source>
-        <translation>Gönderiyor...</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
@@ -3284,67 +3233,32 @@ for example: alertnotify=echo %%s | mail -s &quot;Linda Alert&quot; admin@foo.co
         <translation>Yetersiz bakiye</translation>
     </message>
     <message>
-        <location line="-40"/>
+        <location line="-34"/>
         <source>Loading block index...</source>
         <translation>Blok indeksi yükleniyor...</translation>
     </message>
     <message>
-        <location line="-110"/>
+        <location line="-103"/>
         <source>Add a node to connect to and attempt to keep the connection open</source>
         <translation>Bağlanılacak düğüm ekle ve bağlantıyı zinde tutmaya çalış</translation>
     </message>
     <message>
-        <location line="+125"/>
-        <source>Unable to bind to %s on this computer. Linda is probably already running.</source>
-        <translation>Bu bilgisayarda %s bağlanamadı. Linda muhtemelen halen çalışmaktadır.</translation>
+        <location line="+122"/>
+        <source>Unable to bind to %s on this computer. Clam is probably already running.</source>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="-101"/>
+        <location line="-97"/>
         <source>Fee per KB to add to transactions you send</source>
-        <translation>Gönderdiğiniz işleme eklenmek üzere KB başına ücret</translation>
-    </message>
-    <message>
-        <location line="+34"/>
-        <source>Minimize weight consumption (experimental) (default: 0)</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+8"/>
-        <source>How many blocks to check at startup (default: 500, 0 = all)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Keep at most &lt;n&gt; unconnectable blocks in memory (default: %u)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>Acceptable ciphers (default: TLSv1.2+HIGH:TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!3DES:@STRENGTH)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Warning: Deprecated argument -debugnet ignored, use -debug=net</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+5"/>
+        <location line="+55"/>
         <source>Invalid amount for -mininput=&lt;amount&gt;: &apos;%s&apos;</source>
-        <translation>-mininput=&lt;amount&gt;: &apos;%s&apos; için geçersiz miktar</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Linda is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+4"/>
-        <source>Error initializing wallet database environment %s!</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+17"/>
+        <location line="+25"/>
         <source>Loading wallet...</source>
         <translation>Cüzdan yükleniyor...</translation>
     </message>
@@ -3352,6 +3266,11 @@ for example: alertnotify=echo %%s | mail -s &quot;Linda Alert&quot; admin@foo.co
         <location line="+8"/>
         <source>Cannot downgrade wallet</source>
         <translation>Cüzdan eski biçime geri alınamaz</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cannot initialize keypool</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -3364,22 +3283,22 @@ for example: alertnotify=echo %%s | mail -s &quot;Linda Alert&quot; admin@foo.co
         <translation>Yeniden tarama...</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+5"/>
         <source>Done loading</source>
         <translation>Yükleme tamamlandı</translation>
     </message>
     <message>
-        <location line="-161"/>
+        <location line="-167"/>
         <source>To use the %s option</source>
         <translation>%s seçeneğini kullanmak için</translation>
     </message>
     <message>
-        <location line="+188"/>
+        <location line="+14"/>
         <source>Error</source>
         <translation>Hata</translation>
     </message>
     <message>
-        <location line="-18"/>
+        <location line="+6"/>
         <source>You must set rpcpassword=&lt;password&gt; in the configuration file:
 %s
 If the file does not exist, create it with owner-readable-only file permissions.</source>

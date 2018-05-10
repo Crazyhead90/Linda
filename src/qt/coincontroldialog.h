@@ -57,11 +57,11 @@ private:
         COLUMN_ADDRESS,
         COLUMN_DATE,
         COLUMN_CONFIRMATIONS,
+        COLUMN_AGE,
         COLUMN_PRIORITY,
         COLUMN_TXHASH,
         COLUMN_VOUT_INDEX,
-        COLUMN_AMOUNT_INT64,
-        COLUMN_PRIORITY_INT64
+        COLUMN_AMOUNT_INT64
     };
 
 private slots:
