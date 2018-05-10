@@ -31,6 +31,7 @@
 #define _BITCOIN_QT_PLUGINS_INCLUDED
 #define __INSURE__
 #include <QtPlugin>
+#endif
 #if QT_VERSION < 0x050000
 Q_IMPORT_PLUGIN(qcncodecs)
 Q_IMPORT_PLUGIN(qjpcodecs)
